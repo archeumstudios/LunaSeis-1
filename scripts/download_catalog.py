@@ -6,9 +6,12 @@ from __future__ import annotations
 import argparse
 import hashlib
 import re
+import ssl
 import urllib.parse
 import urllib.request
 from pathlib import Path, PurePosixPath
+
+import certifi
 
 BASE_URL = (
     "https://pds-geosciences.wustl.edu/Lunar/"
@@ -16,6 +19,7 @@ BASE_URL = (
 )
 MANIFEST_NAME = "urn-nasa-pds-apollo_seismic_event_catalog.md5"
 MANIFEST_LINE = re.compile(r"^([0-9A-Fa-f]{32})\s+(.+)$")
+SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
 
 
 def parse_manifest(text: str) -> list[tuple[str, PurePosixPath]]:
@@ -48,7 +52,7 @@ def fetch(url: str, destination: Path) -> None:
     destination.parent.mkdir(parents=True, exist_ok=True)
     temporary = destination.with_suffix(destination.suffix + ".part")
     request = urllib.request.Request(url, headers={"User-Agent": "LunaSeis-1/0.1"})
-    with urllib.request.urlopen(request, timeout=60) as response, temporary.open("wb") as output:
+    with urllib.request.urlopen(request, timeout=60, context=SSL_CONTEXT) as response, temporary.open("wb") as output:
         while block := response.read(1024 * 1024):
             output.write(block)
     temporary.replace(destination)

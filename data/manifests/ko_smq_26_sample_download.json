@@ -1,0 +1,42 @@
+{
+  "event_id": "KO-SMQ-26",
+  "station": "S15",
+  "year": 1975,
+  "doy": 82,
+  "verified_product_count": 4,
+  "verified_total_bytes": 7391202,
+  "products": [
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/082/xa.s15..att.1975.082.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/082/xa.s15..att.1975.082.0.mseed",
+      "bytes": 1163264,
+      "md5": "04421c7c292845e030334899f2a292e5",
+      "local_path": "data/raw/apollo_pse_v1.0/data/xa/continuous_waveform/s15/1975/082/xa.s15..att.1975.082.0.mseed",
+      "verified_md5": "04421c7c292845e030334899f2a292e5"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/082/xa.s15..att.1975.082.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/082/xa.s15..att.1975.082.0.xml",
+      "bytes": 5106,
+      "md5": "48052a163d5b1a46373266501d944009",
+      "local_path": "data/raw/apollo_pse_v1.0/data/xa/continuous_waveform/s15/1975/082/xa.s15..att.1975.082.0.xml",
+      "verified_md5": "48052a163d5b1a46373266501d944009"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/082/xa.s15..shz.1975.082.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/082/xa.s15..shz.1975.082.0.mseed",
+      "bytes": 6217728,
+      "md5": "699b5cd11df89a22bc47dea37726b70e",
+      "local_path": "data/raw/apollo_pse_v1.0/data/xa/continuous_waveform/s15/1975/082/xa.s15..shz.1975.082.0.mseed",
+      "verified_md5": "699b5cd11df89a22bc47dea37726b70e"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/082/xa.s15..shz.1975.082.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/082/xa.s15..shz.1975.082.0.xml",
+      "bytes": 5104,
+      "md5": "65f4a84d418f4c6846a02f651c71f1ad",
+      "local_path": "data/raw/apollo_pse_v1.0/data/xa/continuous_waveform/s15/1975/082/xa.s15..shz.1975.082.0.xml",
+      "verified_md5": "65f4a84d418f4c6846a02f651c71f1ad"
+    }
+  ]
+}

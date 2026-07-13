@@ -1,0 +1,43 @@
+{
+  "event_id": "KO-SMQ-26",
+  "station": "S15",
+  "catalog_start_time": "1975-03-23T21:10:13.000000Z",
+  "time_interpretation": "Onodera corrected start time; treated as event reference, not a published phase pick",
+  "processing": "none; raw SHZ counts; -1 gap sentinel excluded only from metrics/display",
+  "att_mapping": {
+    "target_time": "1975-03-23T21:10:13.000000Z",
+    "nearest_att_time": "1975-03-23T21:10:12.710000Z",
+    "nominal_time_at_nearest_att": "1975-03-23T21:10:17.098717Z",
+    "att_minus_target_seconds": -0.29,
+    "nominal_minus_target_seconds": 4.098717,
+    "att_minus_nominal_seconds": -4.388717
+  },
+  "traces": {
+    "ATT": {
+      "id": "XA.S15..ATT",
+      "start_time": "1975-03-23T00:00:00.344000Z",
+      "end_time": "1975-03-24T00:00:03.966642Z",
+      "sample_rate_hz": 1.65625,
+      "sample_count": 143107,
+      "sentinel_count_full_day": 2,
+      "sentinel_count_plot_window": 0,
+      "plot_window_sample_count": 996
+    },
+    "SHZ": {
+      "id": "XA.S15..SHZ",
+      "start_time": "1975-03-23T00:00:00.353000Z",
+      "end_time": "1975-03-24T00:00:04.560547Z",
+      "sample_rate_hz": 53.0,
+      "sample_count": 4579424,
+      "sentinel_count_full_day": 572484,
+      "sentinel_count_plot_window": 3976,
+      "plot_window_sample_count": 31802
+    }
+  },
+  "visibility_check": {
+    "pre_reference_rms": 0.8380893681987455,
+    "post_reference_rms": 2.98753023871286,
+    "post_to_pre_rms_ratio": 3.5646917286801734,
+    "interpretation": "A ratio above one is supporting evidence only; visual morphology and broader QA remain required."
+  }
+}

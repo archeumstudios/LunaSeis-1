@@ -4,7 +4,7 @@ Last updated: 2026-07-13 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event Onodera shallow catalog is reconciled, its daily SHZ/ATT archive coverage is audited, and an exact checksum-backed download plan exists. Shallow classification remains exploratory pending event-window QA. No models have been trained and no performance results exist.
+Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event Onodera shallow catalog is reconciled, its archive coverage is audited, and representative KO-SMQ-26 waveform feasibility is verified with explicit ATT/gap handling. Shallow classification remains exploratory pending full event-window QA. No models have been trained and no performance results exist.
 
 ## Completed
 
@@ -44,6 +44,9 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - Audited 136 event-station pairs: 128 are complete, and every one of the 74 events has at least one complete SHZ+ATT station-day.
 - Produced an exact deduplicated plan for 508 PDS products across 127 station-days: 779,909,406 bytes (743.78 MiB / 0.72635 GiB), each with an official expected MD5.
 - Kept shallow classification descriptive/exploratory and recorded KO-SMQ-26/KO-SMQ-40 as a repeating pair that must remain split-grouped.
+- Downloaded the four KO-SMQ-26 S15 products (7,391,202 bytes) and verified every official MD5 and size.
+- Mapped its corrected reference through ATT: nearest ATT is -0.290 s and the associated nominal MiniSEED timestamp is +4.099 s relative to the catalog reference.
+- Verified a clear raw emergent SHZ amplitude increase (post/pre RMS 3.56); documented 12.5% isolated one-sample sentinels in the ten-minute SHZ window without interpolating them.
 
 ## Files changed
 
@@ -98,6 +101,13 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - `docs/onodera_2024_catalog_audit.md`
 - `docs/shallow_waveform_coverage.md`
 - `docs/decisions/0009-updated-shallow-catalog-scope.md`
+- `scripts/download_shallow_sample.py`
+- `scripts/audit_shallow_sample.py`
+- `tests/test_download_shallow_sample.py`
+- `data/manifests/ko_smq_26_sample_download.json`
+- `results/predictions/ko_smq_26_waveform_audit.json`
+- `results/figures/ko_smq_26_raw_shz.png`
+- `docs/ko_smq_26_sample_audit.md`
 
 ## Commands and verification
 
@@ -127,6 +137,10 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - Independently asserted event coverage, product/path uniqueness, exact byte sum, MD5 shape, and event-manifest SHA-256.
 - Ran `.venv/bin/python -m unittest discover -s tests -p 'test_*.py' -v`; all 10 tests passed.
 - Ran `git diff --check`; passed. Removed temporary PDF/download directories after source inspection.
+- Ran `.venv/bin/python scripts/download_shallow_sample.py`; four products and 7,391,202 bytes passed exact size and official MD5 checks.
+- Ran `.venv/bin/python scripts/audit_shallow_sample.py`; generated the timing/gap audit and raw plot, then visually inspected the full-resolution figure.
+- Independently measured gap-run structure: 3,975 isolated one-sample sentinels in an exact ten-minute slice; no continuous outage.
+- Reran `.venv/bin/python -m unittest discover -s tests -p 'test_*.py' -v`; all 11 tests passed, and the sample downloader was idempotently re-verified.
 
 ## Decisions
 
@@ -152,7 +166,8 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - Waveform reuse has an operational CC0 basis; catalog and catalog-derived dataset licensing still requires written PDS clarification before republication.
 - Full environment portability beyond the tested Apple Silicon Python 3.12 setup remains to be verified later in Colab/Linux.
 - No standalone author-deposited Onodera catalog file/checksum was found; the local manifest is a transparent transcription of corrected article tables, not an official machine-readable release.
+- The KO-SMQ-26 result establishes one-event feasibility only; the remaining 73 events may contain gaps, weak signals, artifacts, or ambiguous reference timing.
 
 ## Exact next task
 
-Download one checksum-verified representative KO event station-day from `data/manifests/shallow_pilot_download_plan.json` and audit its ATT-corrected event window, gaps, and visible SHZ signal before authorizing the full 0.73 GiB shallow download.
+Download the remaining checksum-pinned products in `data/manifests/shallow_pilot_download_plan.json`, then generate an automated per-event/station ATT, gap, and raw-signal quality manifest before any preprocessing or training.

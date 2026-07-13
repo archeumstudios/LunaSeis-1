@@ -16,8 +16,9 @@ positive_events:
   unified_candidate_manifest: data/manifests/unified_positive_events.csv
   unified_candidate_status: not_frozen_nonshallow_waveform_qa_pending
   nonshallow_download_plan: data/manifests/nonshallow_download_plan.json
-  nonshallow_download_status: batch_1_verified_batches_2_to_4_pending
+  nonshallow_download_status: batches_1_and_2_verified_batches_3_and_4_pending
   nonshallow_batch_1_quality: data/manifests/nonshallow_batch_1_request_quality.csv
+  nonshallow_batch_2_quality: data/manifests/nonshallow_batch_2_request_quality.csv
   accepted_t2_codes: [A, M, C, H, L, S]
   accepted_grades: [A, B]
   require_positive_visibility_flag: true

@@ -46,3 +46,6 @@ Contains authoritative code/grade decoding, full and conservative counts, year/s
 - `nonshallow_batch_1_download_receipt.json`: exact-size/MD5 verification receipt for all 5,398 Batch 1 products.
 - `nonshallow_batch_1_window_quality.csv`: one row per audited positive channel with ATT mapping, gaps, raw range/edge occupancy, descriptive RMS, and integrity status.
 - `nonshallow_batch_1_request_quality.csv`: channel-integrity aggregation per physical event/station request.
+- `nonshallow_batch_2_download_receipt.json`: exact-size/MD5 verification receipt for all 3,270 Batch 2 products.
+- `nonshallow_batch_2_window_quality.csv`: Batch 2 positive-channel ATT/gap audit with descriptive raw metrics.
+- `nonshallow_batch_2_request_quality.csv`: Batch 2 channel-integrity aggregation per physical event/station request.

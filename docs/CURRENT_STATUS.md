@@ -4,7 +4,7 @@ Last updated: 2026-07-13 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility is achieved and Phase 1 is active. The 1,314-event registry and shallow QA are established; nonshallow Batch 1 is fully checksum-verified and locally audited. Batch 1 contributes 648 usable, two questionable, and eight rejected nonshallow events; Batches 2–4 remain pending. No models have been trained and no performance results exist.
+Phase 0 feasibility is achieved and Phase 1 is active. The 1,314-event registry and shallow QA are established; nonshallow Batches 1 and 2 are fully checksum-verified and locally audited. Cross-station aggregation now gives 946 usable, three questionable, nine rejected-only, and 282 not-yet-covered nonshallow events; Batches 3–4 remain pending. No models have been trained and no performance results exist.
 
 ## Completed
 
@@ -65,6 +65,11 @@ Phase 0 feasibility is achieved and Phase 1 is active. The 1,314-event registry 
 - Audited 658 events, 842 event-station requests, and 2,234 positive-channel windows with ATT-aware timing and raw gap/extreme-value/RMS metadata.
 - Classified 648 Batch 1 events usable, two questionable, and eight rejected on gap/ATT integrity only; visually reviewed the aggregate figure and documented all suspicious cases.
 - Updated the unified registry with Batch 1 QA status/stations while preserving every physical label and evaluation group.
+- Downloaded and independently re-verified all 3,270 Batch 2 products totaling 2,145,595,149 bytes across 502 station-days.
+- Audited 599 Batch 2 events, 599 event-station requests, and 1,337 positive-channel windows using the unchanged ATT/gap procedure.
+- Classified 586 Batch 2 events usable, three questionable, and ten rejected within the batch; reviewed every suspicious request and the aggregate QA figure.
+- Generalized unified-registry attachment to discover and combine all available audited batches, preserving station-specific rejected evidence.
+- Rebuilt the registry with 946 usable, three questionable, nine rejected-only, and 282 pending nonshallow events; every event label and evaluation group remained unchanged.
 
 ## Files changed
 
@@ -159,9 +164,17 @@ Phase 0 feasibility is achieved and Phase 1 is active. The 1,314-event registry 
 - `results/figures/nonshallow_batch_1_quality_overview.png`
 - `docs/nonshallow_batch_1_audit.md`
 - `docs/decisions/0013-nonshallow-batch-1-integrity-result.md`
+- `data/manifests/nonshallow_batch_2_download_receipt.json`
+- `data/manifests/nonshallow_batch_2_window_quality.csv`
+- `data/manifests/nonshallow_batch_2_request_quality.csv`
+- `results/predictions/nonshallow_batch_2_quality_summary.json`
+- `results/figures/nonshallow_batch_2_quality_overview.png`
+- `docs/nonshallow_batch_2_audit.md`
+- `docs/decisions/0014-nonshallow-batch-2-integrity-result.md`
 
 ## Commands and verification
 
+- Ran script compilation, the full 26-test regression suite, Ruby YAML parsing, `git diff --check`, and explicit Batch 2 receipt/QA/registry invariants; all passed. An initial optional Python `yaml` import was unavailable, so YAML validation was rerun successfully with the system Ruby parser.
 - Ran script compilation, YAML parsing, the full 25-test suite, `git diff --check`, and explicit Batch 1 receipt/QA/registry invariants, including checks that every physical label and evaluation group remained unchanged; all passed.
 
 - Inspected with `ls -la`, `find`, `rg --files`, and `git status`.
@@ -209,6 +222,10 @@ Phase 0 feasibility is achieved and Phase 1 is active. The 1,314-event registry 
 - Ran `scripts/audit_nonshallow_batch.py --batch-id 1`; generated channel/request CSVs, aggregate JSON, and a visually inspected overview figure.
 - Reviewed the two questionable and eight rejected events individually from row-level metrics; rejection evidence is severe waveform loss and/or ATT displacement, not amplitude.
 - Rebuilt `unified_positive_events.csv` and its SHA-256 audit with Batch 1 outcomes attached.
+- Ran `scripts/download_nonshallow_batch.py --batch-id 2 --workers 4`; verified 3,270/3,270 products and the exact planned total, then reran it with all products reused and re-verified from disk.
+- Ran `scripts/audit_nonshallow_batch.py --batch-id 2`; generated 1,337 channel rows, 599 request rows, aggregate JSON, and an overview figure.
+- Reviewed all three questionable and ten rejected Batch 2 requests from row-level gap and ATT evidence and visually inspected the full-resolution aggregate figure.
+- Rebuilt the unified registry from all existing batch QA files; explicitly compared it with the committed registry and confirmed identical event IDs, physical labels, and evaluation groups.
 
 ## Decisions
 
@@ -227,6 +244,7 @@ Phase 0 feasibility is achieved and Phase 1 is active. The 1,314-event registry 
 - Represent each physical candidate once; merge corrected legacy shallow identities with PDS and never conflate positive visibility with audited waveform integrity.
 - Use only positive channels plus ATT for first-pass nonshallow QA, include required midnight boundary days, and download in four bounded station-day batches if authorized.
 - Accept the 648 Batch 1 events passing gap/ATT integrity, preserve two as questionable, exclude eight from usable windows, and keep RMS/extreme-value metrics descriptive.
+- Attach Batch 2 station-level outcomes using the same integrity rules; aggregate physical-event usability across audited stations while preserving rejected requests and keeping amplitude metrics descriptive.
 
 ## Unresolved uncertainties
 
@@ -243,10 +261,11 @@ Phase 0 feasibility is achieved and Phase 1 is active. The 1,314-event registry 
 - The 1,240 nonshallow candidates have catalog visibility but not the SHZ/ATT window integrity audit completed for shallow events.
 - Seven corrected legacy shallow events retain PDS grade C and three are ungraded; their inclusion comes from Onodera provenance and must be handled explicitly in sensitivity analyses.
 - The 81 nonshallow candidates without an archive-backed positive request may reflect deployment/archive/visibility inconsistencies and require source-specific review before any permanent exclusion claim.
-- Availability for the 582 nonshallow events not covered by Batch 1 does not establish gap-free windows; Batches 2–4 ATT/gap QA remains pending.
 - Batch 1 extreme-value occupancy flags possible constant/saturated/quantized windows but lacks a frozen physical clipping rule; it cannot yet drive exclusion.
 - Batch 1's two questionable ATT offsets and provisional thresholds require all-batch sensitivity analysis before protocol freeze.
+- Batch 2's three questionable cases and provisional thresholds require all-batch sensitivity analysis before protocol freeze.
+- The 282 nonshallow events not yet covered after Batches 1–2 still require Batches 3–4 QA or explicit archive-unavailable handling.
 
 ## Exact next task
 
-Download and checksum-verify nonshallow Batch 2 (3,270 products; 2,145,595,149 bytes), then apply the identical event/station/channel ATT-gap audit and attach its outcomes before proceeding to Batch 3.
+Download and checksum-verify nonshallow Batch 3 (4,014 products; 2,145,641,669 bytes), then apply the identical event/station/channel ATT-gap audit and attach its outcomes before proceeding to Batch 4.

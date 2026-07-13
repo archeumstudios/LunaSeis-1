@@ -15,5 +15,6 @@
 | 2026-07-13 | 0011 | Build one event-level positive registry; merge 28 legacy shallow identities and retain source-specific QA status. | Appending catalogs duplicates events, and PDS visibility is not equivalent to audited waveform usability. | Accepted candidate-registry rule |
 | 2026-07-13 | 0012 | Plan minimum positive channels plus ATT in four station-day-preserving download batches. | The checksum-backed 7.11 GiB selection is storage-safe and resumable; downloading unrelated channels is unnecessary for the first QA gate. | Accepted plan; download not yet executed |
 | 2026-07-13 | 0013 | Attach Batch 1 gap/ATT outcomes while keeping amplitude metrics descriptive. | Eight events cannot support reliable windows; amplitude filtering would bias labels and erase low-SNR cases. | Accepted Batch 1 result; thresholds provisional |
+| 2026-07-13 | 0014 | Attach Batch 2 gap/ATT outcomes and aggregate event usability across audited stations. | A physical event remains usable when another audited station is intact; rejected station evidence must still be preserved. | Accepted Batch 2 result; thresholds provisional |
 
 Formal records live in `docs/decisions/`.

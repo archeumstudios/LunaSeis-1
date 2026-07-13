@@ -1,7 +1,8 @@
 import unittest
 from datetime import datetime
+from pathlib import Path
 
-from scripts.build_unified_positive_manifest import corrected_time, split_group
+from scripts.build_unified_positive_manifest import corrected_time, discover_nonshallow_quality, split_group
 
 
 class UnifiedPositiveManifestTests(unittest.TestCase):
@@ -16,6 +17,10 @@ class UnifiedPositiveManifestTests(unittest.TestCase):
         left = split_group("KO-SMQ-26", "shallow_moonquake", "")
         right = split_group("KO-SMQ-40", "shallow_moonquake", "")
         self.assertEqual(left, right)
+
+    def test_explicit_nonshallow_quality_paths_are_preserved(self):
+        paths = [Path("batch_2.csv"), Path("batch_1.csv")]
+        self.assertEqual(discover_nonshallow_quality(paths), paths)
 
 
 if __name__ == "__main__":

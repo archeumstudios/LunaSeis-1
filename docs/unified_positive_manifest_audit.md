@@ -14,7 +14,7 @@ Every row preserves source catalog and source IDs, physical class, PDS T2/grade/
 
 ## 3. Attached waveform QA
 
-All 74 shallow events carry audited station fields and window counts. Batch 1 QA is attached to 658 nonshallow events: 648 usable, two questionable, and eight rejected. The remaining 582 nonshallow candidates are pending later-batch QA or archive-unavailable; positive visibility is not promoted to verified waveform usability.
+All 74 shallow events carry audited station fields and window counts. Batches 1 and 2 QA are attached and aggregate evidence across stations: 946 nonshallow events have a usable request, three are questionable, nine have only rejected requests, and 282 remain pending later-batch QA or archive-unavailable. Positive visibility is not promoted to verified waveform usability.
 
 ## 4. Leakage grouping
 
@@ -26,7 +26,7 @@ Rejected shallow station windows are absent from `usable_stations` but remain re
 
 ## 6. Candidate status
 
-No model-ready claim is made. Seventy-four shallow and 648 Batch 1 nonshallow events are `candidate_integrity_audited`; two Batch 1 events are questionable, eight are excluded for integrity, and 582 nonshallow candidates remain pending. No background samples or train/validation/test assignments exist yet.
+No model-ready claim is made. Seventy-four shallow and 946 nonshallow events are `candidate_integrity_audited`; three nonshallow events are questionable, nine are excluded for integrity, and 282 remain pending. No background samples or train/validation/test assignments exist yet.
 
 ## 7. Duplicate, overlap, and conflict audit
 

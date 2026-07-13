@@ -53,11 +53,15 @@
     "shallow_events_with_usable_window": 74,
     "shallow_rejected_windows_preserved": 4,
     "shallow_questionable_windows_preserved": 1,
-    "nonshallow_status": "Batch 1 QA attached where covered; remaining batches pending; positive visibility is not waveform validation",
-    "nonshallow_batch_1_event_status_counts": {
-      "usable_integrity": 648,
-      "reject_integrity": 8,
-      "questionable_integrity": 2
+    "nonshallow_status": "Batches 1,2 QA attached where covered; remaining batches pending; positive visibility is not waveform validation",
+    "nonshallow_attached_batches": [
+      "1",
+      "2"
+    ],
+    "nonshallow_audited_event_status_counts": {
+      "usable_integrity": 946,
+      "reject_integrity": 9,
+      "questionable_integrity": 3
     }
   },
   "leakage_groups": {
@@ -77,6 +81,6 @@
     "legacy_onodera_pds_class_conflicts": [],
     "result": "pass"
   },
-  "manifest_sha256": "1cf67243ebb4f2f4dc4138f26b59c43306d4a1a08bf0b2fc23fda425f13400fa",
+  "manifest_sha256": "915b9cd5874b2ccccb13a13dd39f936bff6c36fd9e056b9911961228cc33be35",
   "scope_warning": "Candidate manifest, not a frozen training set. Nonshallow waveform QA, background sampling, and split assignment remain pending."
 }

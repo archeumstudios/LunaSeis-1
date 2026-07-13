@@ -4,7 +4,7 @@ Last updated: 2026-07-13 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event Onodera shallow catalog, all planned SHZ/ATT products, and 128 available event-station windows are integrity-audited. Every event retains a usable window, while shallow classification remains exploratory. No models have been trained and no performance results exist.
+Phase 0 feasibility is achieved and Phase 1 is active. A leakage-aware unified registry now contains 1,314 positive-event candidates with corrected catalog merging, source-specific QA status, and conflict checks. Shallow waveform QA is complete; nonshallow waveform QA remains pending. No models have been trained and no performance results exist.
 
 ## Completed
 
@@ -50,6 +50,12 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - Downloaded/reused and independently size/MD5-verified all 508 shallow-plan products totaling 779,909,406 bytes.
 - Audited all 128 complete event-station windows: 123 usable, one questionable, and four rejected for raw integrity; all 74 events retain at least one usable station.
 - Recorded descriptive signal ratios (88 strong, 23 weak, 15 without clear elevation, two unquantifiable) without using them to alter labels or integrity status.
+- Combined conservative PDS candidates and corrected shallow events into one 1,314-row physical-event registry without duplicating the 28 overlapping legacy shallow records.
+- Preserved source IDs, labels/grades, time precision/semantics, stations/channels, licensing notes, and explicit pending/audited QA status.
+- Attached shallow QA, removed four rejected station windows from usable-station fields while retaining all rejected/questionable audit records, and kept all 74 shallow events as candidates with at least one usable station.
+- Assigned indivisible physical-event, 115 deep-family, and KO-SMQ-26/KO-SMQ-40 repeating-pair evaluation groups.
+- Passed duplicate ID, source ownership, same-minute overlap, cross-class conflict, and legacy PDS-type checks.
+- Counted 609 deep, 623 natural-impact, 74 shallow, and eight artificial-impact physical candidates; nonshallow candidates remain pending waveform QA.
 
 ## Files changed
 
@@ -121,6 +127,12 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - `results/figures/shallow_window_quality_overview.png`
 - `docs/shallow_window_quality_audit.md`
 - `docs/decisions/0010-shallow-window-integrity-gate.md`
+- `scripts/build_unified_positive_manifest.py`
+- `tests/test_build_unified_positive_manifest.py`
+- `data/manifests/unified_positive_events.csv`
+- `data/manifests/unified_positive_event_audit.json`
+- `docs/unified_positive_manifest_audit.md`
+- `docs/decisions/0011-unified-positive-candidate-registry.md`
 
 ## Commands and verification
 
@@ -158,6 +170,9 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - Ran `.venv/bin/python scripts/audit_shallow_windows.py`; generated 128 row-level QA records, aggregate JSON, and a visually reviewed overview figure.
 - Corrected an over-strict initial ATT-gap rule before freezing results: timing quality now uses nearest valid ATT displacement while retaining ATT gap counts as metadata.
 - Ran `.venv/bin/python -m compileall -q scripts` and the complete unit-test suite; all 14 tests passed. Independently asserted download totals, row counts, status counts, and one usable station for every event.
+- Ran `.venv/bin/python scripts/build_unified_positive_manifest.py`; generated 1,314 candidate rows and the machine-readable source/QA/leakage/conflict audit.
+- Verified 1,240 PDS nonshallow plus 74 corrected shallow candidates, 28 exact source merges, 46 KO additions, 824 evaluation groups, and a clean overlap/conflict result.
+- Ran the full regression suite (17 tests), script compilation, YAML parsing, `git diff --check`, manifest SHA-256 verification, and explicit invariants for all eight requested gates; all passed.
 
 ## Decisions
 
@@ -173,6 +188,7 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - Treat physical event and deep-family ID as indivisible split groups, including across stations in LOSO evaluation.
 - Use only the 2026-corrected Onodera tables for the 74-event shallow audit; preserve attribution and CC BY-NC constraints.
 - Do not promote shallow classification to a headline task; require window QA and group KO-SMQ-26/KO-SMQ-40 together.
+- Represent each physical candidate once; merge corrected legacy shallow identities with PDS and never conflate positive visibility with audited waveform integrity.
 
 ## Unresolved uncertainties
 
@@ -186,7 +202,9 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - Automated integrity QA now covers all 74 events, but morphology/artifact review beyond aggregate metrics remains incomplete.
 - The 20%/50% SHZ-gap and 1 s/10 s ATT thresholds are provisional engineering gates requiring sensitivity analysis before protocol freeze.
 - Fifteen intact windows lack a clear raw RMS increase and two are unquantifiable; they require review without label demotion or cherry-picking.
+- The 1,240 nonshallow candidates have catalog visibility but not the SHZ/ATT window integrity audit completed for shallow events.
+- Seven corrected legacy shallow events retain PDS grade C and three are ungraded; their inclusion comes from Onodera provenance and must be handled explicitly in sensitivity analyses.
 
 ## Exact next task
 
-Construct the unified positive-event candidate manifest across PDS classes and corrected shallow events, applying physical-event/repeating-family grouping and the raw-window integrity gate before freezing any background sampling or model split.
+Plan and execute a storage-bounded waveform availability/integrity audit for the 1,240 nonshallow candidates, beginning with exact station-day/product deduplication and byte sizing before any additional bulk download.

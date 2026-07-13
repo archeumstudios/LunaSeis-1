@@ -33,3 +33,8 @@ Contains authoritative code/grade decoding, full and conservative counts, year/s
 - `ko_smq_26_sample_download.json`: checksum-verification receipt for the representative S15 day, including local paths, exact bytes, and verified MD5 values.
 - `shallow_plan_download_receipt.json`: aggregate proof that all 508 planned products and 779,909,406 bytes passed exact size and MD5 verification.
 - `shallow_window_quality.csv`: one row per complete event-station pair with ATT mapping, SHZ/ATT gaps, raw RMS screening values, descriptive signal support, and integrity status.
+
+## Unified positive-event registry
+
+- `unified_positive_events.csv`: one row per physical positive candidate with source/time/label provenance, event and evaluation groups, reported stations/channels, shallow-window QA aggregation, candidate status, and release note. It is not a frozen training manifest.
+- `unified_positive_event_audit.json`: exact class/station counts, source reconciliation, QA coverage, leakage-group counts, duplicate/conflict checks, scope warning, and SHA-256 of the unified CSV.

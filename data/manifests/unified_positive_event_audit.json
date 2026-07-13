@@ -1,0 +1,77 @@
+{
+  "candidate_event_count": 1314,
+  "counts_by_class": {
+    "artificial_impact_lm": 4,
+    "artificial_impact_sivb": 4,
+    "deep_moonquake_assigned": 604,
+    "deep_moonquake_unclassified": 5,
+    "natural_impact": 623,
+    "shallow_moonquake": 74
+  },
+  "counts_by_station_and_class": {
+    "S12": {
+      "artificial_impact_lm": 3,
+      "artificial_impact_sivb": 4,
+      "deep_moonquake_assigned": 405,
+      "deep_moonquake_unclassified": 2,
+      "natural_impact": 367
+    },
+    "S14": {
+      "artificial_impact_lm": 4,
+      "artificial_impact_sivb": 3,
+      "deep_moonquake_assigned": 509,
+      "deep_moonquake_unclassified": 3,
+      "natural_impact": 455,
+      "shallow_moonquake": 30
+    },
+    "S15": {
+      "artificial_impact_lm": 3,
+      "artificial_impact_sivb": 2,
+      "deep_moonquake_assigned": 348,
+      "deep_moonquake_unclassified": 1,
+      "natural_impact": 337,
+      "shallow_moonquake": 68
+    },
+    "S16": {
+      "artificial_impact_lm": 1,
+      "artificial_impact_sivb": 1,
+      "deep_moonquake_assigned": 364,
+      "deep_moonquake_unclassified": 3,
+      "natural_impact": 256,
+      "shallow_moonquake": 25
+    }
+  },
+  "source_reconciliation": {
+    "pds_rows_input": 13057,
+    "pds_conservative_nonshallow_candidates": 1240,
+    "corrected_shallow_events": 74,
+    "legacy_shallow_merged_with_pds": 28,
+    "new_ko_events": 46,
+    "pds_conservative_shallow_rows_replaced": 18
+  },
+  "waveform_qa": {
+    "shallow_events_with_usable_window": 74,
+    "shallow_rejected_windows_preserved": 4,
+    "shallow_questionable_windows_preserved": 1,
+    "nonshallow_status": "pending waveform QA; positive visibility is not waveform validation"
+  },
+  "leakage_groups": {
+    "unique_evaluation_groups": 824,
+    "deep_family_groups": 115,
+    "deep_events_in_family_groups": 604,
+    "shallow_repeating_pair": [
+      "KO-SMQ-26",
+      "KO-SMQ-40"
+    ]
+  },
+  "overlap_conflict_audit": {
+    "duplicate_unified_event_ids": {},
+    "duplicate_source_id_ownership": {},
+    "same_minute_multiple_candidate_events": {},
+    "same_minute_cross_class_conflicts": {},
+    "legacy_onodera_pds_class_conflicts": [],
+    "result": "pass"
+  },
+  "manifest_sha256": "1bf4c57fc2c20ac130b3f24ef7947383e4e4522ae91f63099c3a85fa6b5b0c57",
+  "scope_warning": "Candidate manifest, not a frozen training set. Nonshallow waveform QA, background sampling, and split assignment remain pending."
+}

@@ -25,7 +25,8 @@ Phase 1 initial scoping completed on 2026-07-13:
 - retained shallow classification as descriptive/exploratory pending event-window QA.
 - checksum-downloaded and visually audited KO-SMQ-26 as the first updated-catalog waveform; its emergent SHZ signal is visible with explicit ATT mapping and isolated gap sentinels.
 - downloaded and MD5-verified all 508 shallow-plan products, audited 128 event-station windows, and retained at least one usable raw window for every one of the 74 events.
+- built a 1,314-event unified positive candidate registry with corrected source merging, exact provenance, rejected-window retention, and event/family leakage groups; overlap/conflict checks passed.
 
-Phase 1 remains active for broader positive/background manifest construction, exhaustive literature chaining, ATT/catalog timing reconciliation, and final protocol/split freeze.
+Phase 1 remains active for nonshallow waveform QA, background manifest construction, exhaustive literature chaining, ATT/catalog timing reconciliation, and final protocol/split freeze.
 
 Later phases: literature/data audit; reproducible preprocessing; baselines; compact neural models; generalization/calibration; continuous scanning/retention simulation; reproduction audit; paper; public release.

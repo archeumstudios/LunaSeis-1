@@ -1,0 +1,25 @@
+{
+  "record_status": "candidate_pending_waveform_timing_validation",
+  "source_bundle": "urn:nasa:pds:apollo_seismic_event_catalog::1.0",
+  "source_origin_table": "nakamura_1983_ai_locations.csv",
+  "source_arrival_table": "nakamura_1983_ai_arrivals.csv",
+  "event_name": "15 S-IVB",
+  "event_category": "artificial_impact",
+  "published_origin_fields": {
+    "year": 71,
+    "julian_day": 210,
+    "hour": 20,
+    "minute": 58,
+    "second": 42.9
+  },
+  "provisional_calendar_time": "1971-07-29T20:58:42.900",
+  "published_p_arrival_fields": {
+    "S12": "20:59:37.9",
+    "S14": "20:59:19.5"
+  },
+  "validation_notes": [
+    "The catalog description states that event times are preserved as published.",
+    "The time standard and relationship to waveform sample/timing-trace time remain to be validated.",
+    "This record is a Phase 0 pipeline target, not a frozen training label."
+  ]
+}

@@ -21,7 +21,9 @@ Phase 1 initial scoping completed on 2026-07-13:
 - designed event/family-disjoint leave-one-station-out evaluation;
 - completed the first systematic literature search pass and revised candidate novelty;
 - recorded conservative publication policy pending written PDS clarification for catalog-derived datasets.
+- reconciled the corrected 74-event Onodera shallow catalog against PDS (28 exact legacy matches and 46 new events), verified at least one SHZ+ATT station-day per event, and produced an MD5-backed 0.73 GiB download plan;
+- retained shallow classification as descriptive/exploratory pending event-window QA.
 
-Phase 1 remains active for updated-catalog reconciliation, waveform coverage/artifact inventory, exhaustive literature chaining, and final protocol freeze.
+Phase 1 remains active for event-window waveform/gap QA, exhaustive literature chaining, ATT/catalog timing reconciliation, and final protocol freeze.
 
 Later phases: literature/data audit; reproducible preprocessing; baselines; compact neural models; generalization/calibration; continuous scanning/retention simulation; reproduction audit; paper; public release.

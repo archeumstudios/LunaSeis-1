@@ -23,3 +23,10 @@ Important: blanks in source visibility fields mean unclear/not positively marked
 ## `data/manifests/event_label_audit.json`
 
 Contains authoritative code/grade decoding, full and conservative counts, year/station/channel breakdowns, exact duplicate-minute checks, assigned deep-family sizes, and limitations. Counts describe catalog metadata and may shrink after waveform availability and gap validation.
+
+## Updated shallow-event manifests
+
+- `onodera_2024_shallow_events.csv`: 74 corrected event records, provenance group, reported/audited stations, positive PDS SP visibility, and row-level reconciliation status.
+- `onodera_2024_reconciliation.json`: source DOIs/license, schema, reconciliation counts, limitations, and SHA-256 for the event CSV.
+- `onodera_2024_shallow_coverage.csv`: one row per requested event-station pair with ATT/SHZ/label availability and selected daily bytes.
+- `shallow_pilot_download_plan.json`: deduplicated official product paths, URLs, exact byte sizes, and NASA manifest MD5 values. This is a plan, not downloaded data.

@@ -1,0 +1,34 @@
+{
+  "article_doi": "10.1029/2023JE008153",
+  "preprint_doi": "10.22541/essoar.169841663.38914436/v1",
+  "correction_publication_date": "2026-02-09",
+  "license": "CC BY-NC (article and embedded tables)",
+  "schema": [
+    "event_id",
+    "source_group",
+    "year",
+    "doy",
+    "start_time_utc",
+    "reported_stations",
+    "station_basis",
+    "positive_pds_sp_stations",
+    "pds_match_event_key",
+    "pds_match_type_code",
+    "reconciliation_status"
+  ],
+  "total_events": 74,
+  "legacy_yn_events": 28,
+  "new_ko_events": 46,
+  "legacy_exact_pds_matches": 28,
+  "new_event_pds_minute_overlap": {
+    "new_no_pds_same_start_minute": 46
+  },
+  "legacy_events_without_positive_pds_sp_flag": [
+    "YN-SMQ-7",
+    "YN-SMQ-8",
+    "YN-SMQ-12",
+    "YN-SMQ-15"
+  ],
+  "events_csv_sha256": "4fc3cbc7a9ecb93fef5901525fa984bdc7987888122e9e92332fdd2ba11a7153",
+  "integrity_note": "Times and KO station fields transcribed from the corrected 2026 Tables 1/2; legacy times independently match PDS H rows exactly at minute resolution."
+}

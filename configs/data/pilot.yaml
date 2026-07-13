@@ -1,6 +1,9 @@
 source:
   waveform_bundle: "urn:nasa:pds:apollo_pse::1.0"
   catalog_bundle: "urn:nasa:pds:apollo_seismic_event_catalog::1.0"
+  updated_shallow_article_doi: "10.1029/2023JE008153"
+  updated_shallow_correction_date: "2026-02-09"
+  updated_shallow_table_license: "CC BY-NC"
 
 scope:
   stations: [S12, S14, S15, S16]
@@ -20,6 +23,10 @@ labels:
   primary: [event, catalog_negative_background]
   exploratory_secondary: [deep_moonquake, natural_impact]
   descriptive_only: [shallow_moonquake, artificial_impact]
+  shallow_manifest: data/manifests/onodera_2024_shallow_events.csv
+  shallow_use_status: event_window_qa_required_before_training
+  shallow_repeating_groups:
+    - [KO-SMQ-26, KO-SMQ-40]
 
 timing:
   preserve_nominal_mseed_time: true

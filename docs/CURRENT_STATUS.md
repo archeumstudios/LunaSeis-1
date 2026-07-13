@@ -4,7 +4,7 @@ Last updated: 2026-07-13 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility is achieved and Phase 1 has begun. Publication policy, PDS event labels/grades/counts, repeating-family leakage, multiclass feasibility, pilot split design, and the initial structured literature landscape are documented. No models have been trained and no performance results exist.
+Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event Onodera shallow catalog is reconciled, its daily SHZ/ATT archive coverage is audited, and an exact checksum-backed download plan exists. Shallow classification remains exploratory pending event-window QA. No models have been trained and no performance results exist.
 
 ## Completed
 
@@ -39,6 +39,11 @@ Phase 0 feasibility is achieved and Phase 1 has begun. Publication policy, PDS e
 - Designed event-disjoint and deep-family-disjoint leave-one-station-out evaluation with chronological validation and no final-station tuning.
 - Completed an initial systematic scoping search and extracted ten priority peer-reviewed records plus four screened/background records.
 - Established that 2026 FNO work already overlaps lightweight raw-waveform detection/efficiency and that a 2024 short-period catalog expands shallow events from 28 to 74; candidate novelty and labels were revised accordingly.
+- Located the authoritative Onodera 2024 article and its 2026 correction; found no separately deposited machine-readable catalog and documented the article tables' CC BY-NC terms.
+- Transcribed the corrected tables into a provenance-preserving manifest and reconciled all 28 legacy events exactly to PDS `H` rows; all 46 KO events are absent from the PDS table at the same-minute level.
+- Audited 136 event-station pairs: 128 are complete, and every one of the 74 events has at least one complete SHZ+ATT station-day.
+- Produced an exact deduplicated plan for 508 PDS products across 127 station-days: 779,909,406 bytes (743.78 MiB / 0.72635 GiB), each with an official expected MD5.
+- Kept shallow classification descriptive/exploratory and recorded KO-SMQ-26/KO-SMQ-40 as a repeating pair that must remain split-grouped.
 
 ## Files changed
 
@@ -82,6 +87,17 @@ Phase 0 feasibility is achieved and Phase 1 has begun. Publication policy, PDS e
 - `literature/screening_log.csv`
 - `literature/literature_matrix.csv`
 - `literature/state_of_the_field.md`
+- `scripts/reconcile_shallow_catalog.py`
+- `scripts/build_shallow_download_plan.py`
+- `tests/test_reconcile_shallow_catalog.py`
+- `tests/test_build_shallow_download_plan.py`
+- `data/manifests/onodera_2024_shallow_events.csv`
+- `data/manifests/onodera_2024_reconciliation.json`
+- `data/manifests/onodera_2024_shallow_coverage.csv`
+- `data/manifests/shallow_pilot_download_plan.json`
+- `docs/onodera_2024_catalog_audit.md`
+- `docs/shallow_waveform_coverage.md`
+- `docs/decisions/0009-updated-shallow-catalog-scope.md`
 
 ## Commands and verification
 
@@ -106,6 +122,11 @@ Phase 0 feasibility is achieved and Phase 1 has begun. Publication policy, PDS e
 - Ran `scripts/audit_event_labels.py` across all 13,057 rows and independently checked headline counts/family sizes.
 - Searched NASA/PDS/NTRS, publisher, DOI, and institutional sources with documented queries; extracted the initial literature matrix.
 - Added and ran catalog-time conversion tests, including invalid-HHMM rejection.
+- Ran `.venv/bin/python scripts/reconcile_shallow_catalog.py`; verified 74 rows, 28 exact PDS shallow matches, 46 new same-minute absences, and the generated CSV SHA-256.
+- Ran `.venv/bin/python scripts/build_shallow_download_plan.py`; queried official PDS day listings and MD5 manifest and generated the 508-product plan.
+- Independently asserted event coverage, product/path uniqueness, exact byte sum, MD5 shape, and event-manifest SHA-256.
+- Ran `.venv/bin/python -m unittest discover -s tests -p 'test_*.py' -v`; all 10 tests passed.
+- Ran `git diff --check`; passed. Removed temporary PDF/download directories after source inspection.
 
 ## Decisions
 
@@ -119,17 +140,19 @@ Phase 0 feasibility is achieved and Phase 1 has begun. Publication policy, PDS e
 - Publish code, manifests, aggregate analyses, and models with PDS citations; do not mirror raw archives or catalog-derived labeled datasets before release review/PDS clarification.
 - Keep binary detection primary; broad multiclass is unsupported by the initial conservative PDS-only counts.
 - Treat physical event and deep-family ID as indivisible split groups, including across stations in LOSO evaluation.
+- Use only the 2026-corrected Onodera tables for the 74-event shallow audit; preserve attribution and CC BY-NC constraints.
+- Do not promote shallow classification to a headline task; require window QA and group KO-SMQ-26/KO-SMQ-40 together.
 
 ## Unresolved uncertainties
 
 - Exact scalable ATT correction/interpolation policy and catalog-pick time-basis reconciliation remain unresolved.
-- The Onodera 2024 updated short-period catalog is not yet integrated with the 2019 PDS catalog; final shallow counts/labels remain open.
+- The corrected Onodera catalog is integrated, but event-window gap/signal quality and independent confidence for the 46 KO detections remain unaudited.
 - Written PDS clarification is still required before publishing catalog CSVs or catalog-derived labeled windows.
-- Source-specific catalog overlap is documented conceptually but full row-level reconciliation remains for the updated event manifest.
 - The candidate event's time standard and precise relationship to waveform/timing-trace time remain unresolved.
 - Waveform reuse has an operational CC0 basis; catalog and catalog-derived dataset licensing still requires written PDS clarification before republication.
 - Full environment portability beyond the tested Apple Silicon Python 3.12 setup remains to be verified later in Colab/Linux.
+- No standalone author-deposited Onodera catalog file/checksum was found; the local manifest is a transparent transcription of corrected article tables, not an official machine-readable release.
 
 ## Exact next task
 
-Obtain and schema-audit the Onodera 2024 updated Apollo short-period event catalog, verify its license/access path, and reconcile its 74 shallow events against the 28-event PDS table without changing the frozen pilot split rules.
+Download one checksum-verified representative KO event station-day from `data/manifests/shallow_pilot_download_plan.json` and audit its ATT-corrected event window, gaps, and visible SHZ signal before authorizing the full 0.73 GiB shallow download.

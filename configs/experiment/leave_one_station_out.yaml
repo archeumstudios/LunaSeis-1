@@ -1,0 +1,27 @@
+protocol: event_and_family_disjoint_leave_one_station_out
+
+outer_folds:
+  held_out_stations: [S12, S14, S15, S16]
+  remove_test_events_from_other_training_stations: true
+
+grouping:
+  physical_event_indivisible: true
+  deep_family_id_indivisible: true
+  split_before_augmentation: true
+
+model_selection:
+  validation: chronological_grouped_within_training_stations
+  test_station_used_for_tuning: false
+  threshold_selected_on_validation_only: true
+
+evaluation:
+  window_metrics: [precision, recall, f1, pr_auc]
+  event_metrics: [event_recall, false_positives_per_hour]
+  continuous_scanning_required: true
+  report_per_station: true
+  aggregate_only_with_class_and_duration_counts: true
+
+status:
+  exact_dates: pending_waveform_coverage_audit
+  exact_window_length: pending_signal_duration_audit
+  event_matching_tolerance: must_be_frozen_before_final_test

@@ -1,0 +1,40 @@
+source:
+  waveform_bundle: "urn:nasa:pds:apollo_pse::1.0"
+  catalog_bundle: "urn:nasa:pds:apollo_seismic_event_catalog::1.0"
+
+scope:
+  stations: [S12, S14, S15, S16]
+  primary_channels: [MH1, MH2, MHZ]
+  optional_channels: [SHZ]
+  apollo17_lspe: excluded
+
+positive_events:
+  catalog: levent.1008weber.csv
+  accepted_t2_codes: [A, M, C, H, L, S]
+  accepted_grades: [A, B]
+  require_positive_visibility_flag: true
+  split_unit: physical_event
+  deep_family_group: N2
+
+labels:
+  primary: [event, catalog_negative_background]
+  exploratory_secondary: [deep_moonquake, natural_impact]
+  descriptive_only: [shallow_moonquake, artificial_impact]
+
+timing:
+  preserve_nominal_mseed_time: true
+  preserve_att_earth_reception_time: true
+  correction_policy: pending_audit
+  catalog_minute_is_not_phase_pick: true
+
+negative_sampling:
+  name: catalog_negative_background
+  exclude_event_buffers: true
+  exclude_known_quality_disturbances_when_documented: true
+  sample_only_after_split_assignment: true
+
+preprocessing:
+  status: not_frozen
+  gap_sentinel: -1
+  interpolate_gaps: false
+  normalization_uses_training_only: true

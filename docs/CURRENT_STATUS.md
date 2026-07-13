@@ -4,7 +4,7 @@ Last updated: 2026-07-13 (Asia/Kolkata)
 
 ## State
 
-The central Phase 0 event-to-waveform feasibility milestone is achieved for the Apollo 15 S-IVB impact. Verified waveforms were downloaded, loaded, timing/gaps audited, and plotted without preprocessing. Broader archive/legal audit remains open. No models have been trained and no performance results exist.
+Phase 0 feasibility is achieved and Phase 1 has begun. Publication policy, PDS event labels/grades/counts, repeating-family leakage, multiclass feasibility, pilot split design, and the initial structured literature landscape are documented. No models have been trained and no performance results exist.
 
 ## Completed
 
@@ -30,6 +30,15 @@ The central Phase 0 event-to-waveform feasibility milestone is achieved for the 
 - Matched published arrivals through ATT: nominal mapped time is +0.330 s at S12 and +5.233 s at S14 relative to published arrival.
 - Generated and visually verified the first unprocessed LunaSeis-1 waveform plot; a strong event signal is visible at both stations.
 - Recorded the Phase 0 feasibility result and the scientific limits of this one-event validation.
+- Audited NASA science-data, PDS citation, and NASA brand policies; raw PSE observations are operationally treated as CC0, while bulk event-catalog/labeled-derivative republication is deferred pending written PDS clarification.
+- Decoded all PDS `T2` event codes, A/B/C grade meanings, quality codes, and station/channel visibility fields from the official XML label.
+- Parsed all 13,057 `levent` rows into a local analytical manifest and produced class/year/station/channel counts.
+- Found no exact duplicate catalog start-minute keys; identified 319 assigned deep-family IDs and quantified the largest repeating families.
+- Defined a conservative A/B pilot pool: 609 deep events, 623 natural impacts, 18 shallow events, and 8 artificial impacts.
+- Rejected broad four-class classification for the initial pilot; retained deep-versus-natural-impact only as exploratory secondary work.
+- Designed event-disjoint and deep-family-disjoint leave-one-station-out evaluation with chronological validation and no final-station tuning.
+- Completed an initial systematic scoping search and extracted ten priority peer-reviewed records plus four screened/background records.
+- Established that 2026 FNO work already overlaps lightweight raw-waveform detection/efficiency and that a 2024 short-period catalog expands shallow events from 28 to 74; candidate novelty and labels were revised accordingly.
 
 ## Files changed
 
@@ -58,6 +67,21 @@ The central Phase 0 event-to-waveform feasibility milestone is achieved for the 
 - `docs/phase0_alignment_result.md`
 - `docs/decisions/0006-att-aware-window-timing.md`
 - `docs/ROADMAP.md`
+- `docs/data_publication_policy.md`
+- `scripts/audit_event_labels.py`
+- `tests/test_audit_event_labels.py`
+- `data/manifests/event_label_audit.json`
+- `data/manifests/events_audit.csv`
+- `docs/event_label_audit.md`
+- `docs/data_dictionary.md`
+- `configs/data/pilot.yaml`
+- `configs/experiment/leave_one_station_out.yaml`
+- `docs/decisions/0007-primary-task-and-multiclass-scope.md`
+- `docs/decisions/0008-event-and-family-disjoint-loso.md`
+- `literature/search_log.md`
+- `literature/screening_log.csv`
+- `literature/literature_matrix.csv`
+- `literature/state_of_the_field.md`
 
 ## Commands and verification
 
@@ -77,6 +101,11 @@ The central Phase 0 event-to-waveform feasibility milestone is achieved for the 
 - Reran the pilot downloader after download to verify idempotent integrity checks.
 - Ran `scripts/audit_pilot_waveforms.py` with pinned Python dependencies and inspected its JSON output.
 - Visually inspected the full-resolution plot for signal visibility, correct channel labeling, markers, gaps, and disclosure of absent preprocessing.
+- Queried official NASA Science Data License, PDS citation, NASA science-information, and NASA media/brand guidance.
+- Parsed field descriptions directly from the PDS4 `levent.1008weber.xml` label.
+- Ran `scripts/audit_event_labels.py` across all 13,057 rows and independently checked headline counts/family sizes.
+- Searched NASA/PDS/NTRS, publisher, DOI, and institutional sources with documented queries; extracted the initial literature matrix.
+- Added and ran catalog-time conversion tests, including invalid-HHMM rejection.
 
 ## Decisions
 
@@ -87,15 +116,20 @@ The central Phase 0 event-to-waveform feasibility milestone is achieved for the 
 - Use a known artificial impact with two published station arrivals for the first alignment test; this is a feasibility choice, not a final taxonomy choice.
 - Use MiniSEED with StationXML and PDS labels for the pilot; include ATT and preserve explicit gaps.
 - Treat nominal and ATT-derived timestamps as separate provenance fields; no silent global timing shift.
+- Publish code, manifests, aggregate analyses, and models with PDS citations; do not mirror raw archives or catalog-derived labeled datasets before release review/PDS clarification.
+- Keep binary detection primary; broad multiclass is unsupported by the initial conservative PDS-only counts.
+- Treat physical event and deep-family ID as indivisible split groups, including across stations in LOSO evaluation.
 
 ## Unresolved uncertainties
 
 - Exact scalable ATT correction/interpolation policy and catalog-pick time-basis reconciliation remain unresolved.
-- Full `levent` class/grade decoding, duplicate reconciliation, and final label mappings remain to be audited.
+- The Onodera 2024 updated short-period catalog is not yet integrated with the 2019 PDS catalog; final shallow counts/labels remain open.
+- Written PDS clarification is still required before publishing catalog CSVs or catalog-derived labeled windows.
+- Source-specific catalog overlap is documented conceptually but full row-level reconciliation remains for the updated event manifest.
 - The candidate event's time standard and precise relationship to waveform/timing-trace time remain unresolved.
-- Redistribution/licensing guidance remains unresolved; no republication is authorized by assumption.
+- Waveform reuse has an operational CC0 basis; catalog and catalog-derived dataset licensing still requires written PDS clarification before republication.
 - Full environment portability beyond the tested Apple Silicon Python 3.12 setup remains to be verified later in Colab/Linux.
 
 ## Exact next task
 
-Complete the remaining Phase 0 source-policy audit by verifying NASA PDS redistribution, attribution, and processed-derivative guidance from authoritative policy documents, then record what may legally be published on GitHub/Hugging Face.
+Obtain and schema-audit the Onodera 2024 updated Apollo short-period event catalog, verify its license/access path, and reconcile its 74 shallow events against the 28-event PDS table without changing the frozen pilot split rules.

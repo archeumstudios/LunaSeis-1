@@ -1,0 +1,15 @@
+record_id,title,year,source_type,status,reason,doi_or_url
+L001,A New Archive of Apollo's Lunar Seismic Data,2022,journal,include,Canonical restored PSE archive and timing/data-quality documentation,10.3847/PSJ/ac87af
+L002,New identification of deep moonquakes in the Apollo lunar seismic data,2003,journal,include,Canonical correlation and cluster-based deep-event expansion,10.1016/S0031920103002103
+L003,New events discovered in the Apollo lunar seismic data,2005,journal,include,Defines grades and repeating-family detection risks,10.1029/2005JE002414
+L004,Identification of new events in Apollo 16 lunar seismic data by Hidden Markov Model-based event detection and classification,2015,journal,include,Direct single-station automated detection/classification predecessor,10.1002/2015JE004862
+L005,Detecting moonquakes using convolutional neural networks a non-local training set and transfer learning,2021,journal,include,Direct CNN planetary detection and telemetry-prioritization predecessor,10.1093/gji/ggab083
+L006,Thermal Moonquake Characterization and Cataloging Using Frequency-Based Algorithms and Stochastic Gradient Descent,2023,journal,include,Reproducible ML-assisted LSPE thermal catalog,10.1029/2022JE007704
+L007,New Views of Lunar Seismicity Brought by Analysis of Newly Discovered Moonquakes in Apollo Short-Period Seismic Data,2024,journal,include,Expands shallow events and changes viable label inventory,10.1029/2023JE008153
+L008,Newly Discovered Temperature-Related Long-Period Signals in Lunar Seismic Data by Deep Learning,2024,journal,include,Shows station/instrument thermal shortcut risk,10.1029/2024EA003676
+L009,Fourier Neural Operator for Moonquake Detection,2026,journal,include,Direct overlap with lightweight raw-waveform detection and efficiency claims,10.1029/2025EA004792
+L010,Discovery of Repeating Shallow Moonquakes in the Apollo Lunar Seismic Data,2026,journal,include,New evidence of shallow-event repetition and grouping risk,10.1029/2026GL122541
+L011,How to Train Your Lander Automatic Moonquake Detection using Machine Learning,2023,poster,retain,Useful NASA summary but not primary evidence where journal version exists,https://ntrs.nasa.gov/citations/20230001962
+L012,Classifying Deep Moonquakes Using Machine Learning Algorithms,2022,conference_abstract,retain,Direct deep-nest CNN classification signal but insufficient methods detail,https://www.hou.usra.edu/meetings/lpsc2022/pdf/2393.pdf
+L013,A new moonquake catalog from Apollo 17 geophone data,2017,conference_abstract,background,LSPE extension intentionally outside primary PSE scope,https://ntrs.nasa.gov/citations/20170002695
+L014,Detecting earthquakes over a seismic network using single-station similarity measures,2018,journal,adjacent,Useful false-alarm and multistation methodology but not lunar,10.1093/gji/ggy100

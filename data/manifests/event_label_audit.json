@@ -1,0 +1,395 @@
+{
+  "source_bundle": "urn:nasa:pds:apollo_seismic_event_catalog::1.0",
+  "source_file": "levent.1008weber.csv",
+  "total_rows": 13057,
+  "type_code_mapping": {
+    "A": "deep_moonquake_assigned",
+    "M": "deep_moonquake_unclassified",
+    "C": "natural_impact",
+    "H": "shallow_moonquake",
+    "L": "artificial_impact_lm",
+    "S": "artificial_impact_sivb",
+    "T": "suspected_thermal_long_period",
+    "Z": "mostly_short_period",
+    "X": "special",
+    "": "unclassified_blank"
+  },
+  "grade_definition": {
+    "A": "high SNR, generally impulsive onset; phases may be visible",
+    "B": "lower SNR and more gradual emergence; distinct envelope",
+    "C": "inferior SNR, often dominated by one-digital-unit fluctuations",
+    "ungraded": "no Bulow grade; not equivalent to false event"
+  },
+  "all_event_counts_by_class": {
+    "artificial_impact_lm": 4,
+    "artificial_impact_sivb": 5,
+    "deep_moonquake_assigned": 7082,
+    "deep_moonquake_unclassified": 317,
+    "mostly_short_period": 255,
+    "natural_impact": 1743,
+    "shallow_moonquake": 28,
+    "special": 34,
+    "suspected_thermal_long_period": 266,
+    "unclassified_blank": 3323
+  },
+  "all_grade_counts": {
+    "A": 263,
+    "B": 1018,
+    "C": 7123,
+    "ungraded": 4653
+  },
+  "counts_by_year_and_class": {
+    "1969": {
+      "artificial_impact_lm": 1,
+      "deep_moonquake_assigned": 37,
+      "deep_moonquake_unclassified": 2,
+      "natural_impact": 13,
+      "unclassified_blank": 18
+    },
+    "1970": {
+      "artificial_impact_sivb": 1,
+      "deep_moonquake_assigned": 408,
+      "deep_moonquake_unclassified": 2,
+      "natural_impact": 61,
+      "unclassified_blank": 152
+    },
+    "1971": {
+      "artificial_impact_lm": 2,
+      "artificial_impact_sivb": 2,
+      "deep_moonquake_assigned": 1068,
+      "deep_moonquake_unclassified": 9,
+      "mostly_short_period": 45,
+      "natural_impact": 208,
+      "shallow_moonquake": 3,
+      "unclassified_blank": 575
+    },
+    "1972": {
+      "artificial_impact_lm": 1,
+      "artificial_impact_sivb": 2,
+      "deep_moonquake_assigned": 1431,
+      "deep_moonquake_unclassified": 162,
+      "mostly_short_period": 68,
+      "natural_impact": 226,
+      "shallow_moonquake": 4,
+      "special": 12,
+      "suspected_thermal_long_period": 86,
+      "unclassified_blank": 1015
+    },
+    "1973": {
+      "deep_moonquake_assigned": 998,
+      "deep_moonquake_unclassified": 57,
+      "mostly_short_period": 47,
+      "natural_impact": 250,
+      "shallow_moonquake": 4,
+      "special": 2,
+      "suspected_thermal_long_period": 84,
+      "unclassified_blank": 454
+    },
+    "1974": {
+      "deep_moonquake_assigned": 778,
+      "deep_moonquake_unclassified": 29,
+      "mostly_short_period": 21,
+      "natural_impact": 336,
+      "shallow_moonquake": 5,
+      "suspected_thermal_long_period": 18,
+      "unclassified_blank": 189
+    },
+    "1975": {
+      "deep_moonquake_assigned": 583,
+      "deep_moonquake_unclassified": 19,
+      "mostly_short_period": 12,
+      "natural_impact": 289,
+      "shallow_moonquake": 7,
+      "suspected_thermal_long_period": 8,
+      "unclassified_blank": 169
+    },
+    "1976": {
+      "deep_moonquake_assigned": 796,
+      "deep_moonquake_unclassified": 16,
+      "mostly_short_period": 43,
+      "natural_impact": 189,
+      "shallow_moonquake": 5,
+      "special": 15,
+      "suspected_thermal_long_period": 52,
+      "unclassified_blank": 495
+    },
+    "1977": {
+      "deep_moonquake_assigned": 983,
+      "deep_moonquake_unclassified": 21,
+      "mostly_short_period": 19,
+      "natural_impact": 171,
+      "special": 5,
+      "suspected_thermal_long_period": 18,
+      "unclassified_blank": 256
+    }
+  },
+  "conservative_pilot_rule": "valid catalog time AND T2 in primary physical classes AND grade A/B AND at least one positive Bulow channel-visibility flag",
+  "conservative_pilot_counts_by_class": {
+    "artificial_impact_lm": 4,
+    "artificial_impact_sivb": 4,
+    "deep_moonquake_assigned": 604,
+    "deep_moonquake_unclassified": 5,
+    "natural_impact": 623,
+    "shallow_moonquake": 18
+  },
+  "conservative_pilot_counts_by_station_and_class": {
+    "S12": {
+      "artificial_impact_lm": 3,
+      "artificial_impact_sivb": 4,
+      "deep_moonquake_assigned": 405,
+      "deep_moonquake_unclassified": 2,
+      "natural_impact": 367,
+      "shallow_moonquake": 14
+    },
+    "S14": {
+      "artificial_impact_lm": 4,
+      "artificial_impact_sivb": 3,
+      "deep_moonquake_assigned": 509,
+      "deep_moonquake_unclassified": 3,
+      "natural_impact": 455,
+      "shallow_moonquake": 17
+    },
+    "S15": {
+      "artificial_impact_lm": 3,
+      "artificial_impact_sivb": 2,
+      "deep_moonquake_assigned": 348,
+      "deep_moonquake_unclassified": 1,
+      "natural_impact": 337,
+      "shallow_moonquake": 16
+    },
+    "S16": {
+      "artificial_impact_lm": 1,
+      "artificial_impact_sivb": 1,
+      "deep_moonquake_assigned": 364,
+      "deep_moonquake_unclassified": 3,
+      "natural_impact": 256,
+      "shallow_moonquake": 13
+    }
+  },
+  "conservative_pilot_counts_by_channel_and_class": {
+    "S12.MH1": {
+      "artificial_impact_lm": 1,
+      "artificial_impact_sivb": 2,
+      "deep_moonquake_assigned": 309,
+      "deep_moonquake_unclassified": 2,
+      "natural_impact": 286,
+      "shallow_moonquake": 11
+    },
+    "S12.MH2": {
+      "artificial_impact_lm": 3,
+      "artificial_impact_sivb": 4,
+      "deep_moonquake_assigned": 388,
+      "deep_moonquake_unclassified": 2,
+      "natural_impact": 358,
+      "shallow_moonquake": 14
+    },
+    "S12.MHZ": {
+      "artificial_impact_lm": 3,
+      "artificial_impact_sivb": 4,
+      "deep_moonquake_assigned": 385,
+      "deep_moonquake_unclassified": 2,
+      "natural_impact": 351,
+      "shallow_moonquake": 14
+    },
+    "S14.MH1": {
+      "artificial_impact_lm": 3,
+      "artificial_impact_sivb": 2,
+      "deep_moonquake_assigned": 350,
+      "deep_moonquake_unclassified": 2,
+      "natural_impact": 331,
+      "shallow_moonquake": 14
+    },
+    "S14.MH2": {
+      "artificial_impact_lm": 3,
+      "artificial_impact_sivb": 2,
+      "deep_moonquake_assigned": 455,
+      "deep_moonquake_unclassified": 3,
+      "natural_impact": 387,
+      "shallow_moonquake": 17
+    },
+    "S14.MHZ": {
+      "artificial_impact_lm": 2,
+      "artificial_impact_sivb": 1,
+      "deep_moonquake_assigned": 105,
+      "deep_moonquake_unclassified": 1,
+      "natural_impact": 105,
+      "shallow_moonquake": 5
+    },
+    "S14.SHZ": {
+      "artificial_impact_lm": 3,
+      "artificial_impact_sivb": 3,
+      "deep_moonquake_assigned": 216,
+      "deep_moonquake_unclassified": 2,
+      "natural_impact": 325,
+      "shallow_moonquake": 17
+    },
+    "S15.MH1": {
+      "artificial_impact_lm": 1,
+      "artificial_impact_sivb": 1,
+      "deep_moonquake_assigned": 273,
+      "deep_moonquake_unclassified": 1,
+      "natural_impact": 289,
+      "shallow_moonquake": 12
+    },
+    "S15.MH2": {
+      "artificial_impact_lm": 1,
+      "artificial_impact_sivb": 1,
+      "deep_moonquake_assigned": 321,
+      "deep_moonquake_unclassified": 1,
+      "natural_impact": 303,
+      "shallow_moonquake": 13
+    },
+    "S15.MHZ": {
+      "artificial_impact_lm": 1,
+      "artificial_impact_sivb": 1,
+      "deep_moonquake_assigned": 181,
+      "deep_moonquake_unclassified": 1,
+      "natural_impact": 202,
+      "shallow_moonquake": 11
+    },
+    "S15.SHZ": {
+      "artificial_impact_lm": 3,
+      "artificial_impact_sivb": 2,
+      "deep_moonquake_assigned": 62,
+      "natural_impact": 163,
+      "shallow_moonquake": 16
+    },
+    "S16.MH1": {
+      "artificial_impact_lm": 1,
+      "artificial_impact_sivb": 1,
+      "deep_moonquake_assigned": 358,
+      "deep_moonquake_unclassified": 3,
+      "natural_impact": 249,
+      "shallow_moonquake": 12
+    },
+    "S16.MH2": {
+      "artificial_impact_lm": 1,
+      "artificial_impact_sivb": 1,
+      "deep_moonquake_assigned": 340,
+      "deep_moonquake_unclassified": 3,
+      "natural_impact": 244,
+      "shallow_moonquake": 13
+    },
+    "S16.MHZ": {
+      "artificial_impact_lm": 1,
+      "artificial_impact_sivb": 1,
+      "deep_moonquake_assigned": 205,
+      "deep_moonquake_unclassified": 2,
+      "natural_impact": 198,
+      "shallow_moonquake": 10
+    },
+    "S16.SHZ": {
+      "artificial_impact_lm": 1,
+      "artificial_impact_sivb": 1,
+      "deep_moonquake_assigned": 38,
+      "deep_moonquake_unclassified": 2,
+      "natural_impact": 124,
+      "shallow_moonquake": 13
+    }
+  },
+  "exact_duplicate_catalog_start_minutes": {},
+  "deep_assigned_family_audit": {
+    "assigned_events": 7082,
+    "unique_family_ids": 319,
+    "largest_families": {
+      "A1": 443,
+      "A8": 327,
+      "A10": 230,
+      "A18": 214,
+      "A6": 178,
+      "A14": 166,
+      "A20": 153,
+      "A9": 148,
+      "A7": 86,
+      "A44": 86,
+      "A204": 85,
+      "A23": 80,
+      "A5": 76,
+      "A218": 74,
+      "A25": 72,
+      "A35": 70,
+      "A21": 69,
+      "A201": 69,
+      "A39": 65,
+      "A33": 63
+    },
+    "family_size_distribution": {
+      "1": 1,
+      "2": 21,
+      "3": 36,
+      "4": 34,
+      "5": 18,
+      "6": 13,
+      "7": 23,
+      "8": 9,
+      "9": 10,
+      "10": 9,
+      "11": 9,
+      "12": 8,
+      "13": 1,
+      "14": 7,
+      "15": 4,
+      "16": 6,
+      "17": 3,
+      "18": 6,
+      "19": 6,
+      "20": 2,
+      "21": 5,
+      "22": 1,
+      "23": 4,
+      "24": 1,
+      "25": 2,
+      "26": 5,
+      "27": 2,
+      "29": 3,
+      "32": 5,
+      "34": 5,
+      "35": 5,
+      "36": 4,
+      "38": 1,
+      "39": 3,
+      "41": 1,
+      "42": 1,
+      "43": 1,
+      "44": 2,
+      "45": 3,
+      "46": 2,
+      "47": 2,
+      "48": 1,
+      "49": 2,
+      "50": 4,
+      "51": 1,
+      "52": 2,
+      "53": 1,
+      "54": 1,
+      "55": 1,
+      "57": 1,
+      "62": 1,
+      "63": 1,
+      "65": 1,
+      "69": 2,
+      "70": 1,
+      "72": 1,
+      "74": 1,
+      "76": 1,
+      "80": 1,
+      "85": 1,
+      "86": 2,
+      "148": 1,
+      "153": 1,
+      "166": 1,
+      "178": 1,
+      "214": 1,
+      "230": 1,
+      "327": 1,
+      "443": 1
+    },
+    "split_requirement": "all events from one family_id must remain in one split"
+  },
+  "limitations": [
+    "Catalog start time is minute-resolution and is not necessarily a phase arrival.",
+    "Blank visibility means unclear/not positively marked, not confirmed absence.",
+    "A/B-only eligibility is a conservative pilot definition, not a final scientific exclusion.",
+    "Source-specific arrival/location tables intentionally overlap with levent and are not extra independent events."
+  ]
+}

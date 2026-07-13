@@ -42,6 +42,7 @@ def main() -> None:
     parser.add_argument("--pds-events", type=Path, default=Path("data/manifests/events_audit.csv"))
     parser.add_argument("--shallow-events", type=Path, default=Path("data/manifests/onodera_2024_shallow_events.csv"))
     parser.add_argument("--shallow-quality", type=Path, default=Path("data/manifests/shallow_window_quality.csv"))
+    parser.add_argument("--nonshallow-batch-quality", type=Path, default=Path("data/manifests/nonshallow_batch_1_request_quality.csv"))
     parser.add_argument("--output", type=Path, default=Path("data/manifests/unified_positive_events.csv"))
     parser.add_argument("--audit", type=Path, default=Path("data/manifests/unified_positive_event_audit.json"))
     args = parser.parse_args()
@@ -56,6 +57,11 @@ def main() -> None:
     quality_by_event = defaultdict(list)
     for row in quality:
         quality_by_event[row["event_id"]].append(row)
+    nonshallow_by_event = defaultdict(list)
+    if args.nonshallow_batch_quality.exists():
+        with args.nonshallow_batch_quality.open(encoding="utf-8", newline="") as stream:
+            for row in csv.DictReader(stream):
+                nonshallow_by_event[row["event_id"]].append(row)
 
     records = []
     # Conservative PDS physical candidates, excluding shallow rows replaced by the corrected source.
@@ -65,6 +71,20 @@ def main() -> None:
         if row["event_class"] == "shallow_moonquake":
             continue
         group, group_type = split_group(row["event_key"], row["event_class"], row["family_id"])
+        batch_rows = nonshallow_by_event.get(row["event_key"], [])
+        usable_stations = [item["station"] for item in batch_rows if item["request_integrity_status"] == "usable_integrity"]
+        questionable_stations = [item["station"] for item in batch_rows if item["request_integrity_status"] == "questionable_integrity"]
+        rejected_stations = [item["station"] for item in batch_rows if item["request_integrity_status"] == "reject_integrity"]
+        qa_status = (
+            "usable_integrity" if usable_stations else "questionable_integrity" if questionable_stations
+            else "reject_integrity" if rejected_stations else "not_covered_batch_1"
+        )
+        candidate_status = {
+            "usable_integrity": "candidate_integrity_audited",
+            "questionable_integrity": "candidate_questionable_integrity",
+            "reject_integrity": "excluded_failed_integrity",
+            "not_covered_batch_1": "candidate_pending_waveform_qa",
+        }[qa_status]
         records.append({
             "event_id": row["event_key"], "physical_event_group": f"event:{row['event_key']}",
             "evaluation_group": group, "evaluation_group_type": group_type,
@@ -77,7 +97,11 @@ def main() -> None:
             "waveform_qa_scope": "not_yet_audited_for_unified_manifest",
             "usable_stations": "", "questionable_stations": "", "rejected_stations": "",
             "usable_window_count": "", "questionable_window_count": "", "rejected_window_count": "",
-            "candidate_status": "candidate_pending_waveform_qa",
+            "candidate_status": candidate_status,
+            "nonshallow_qa_status": qa_status, "nonshallow_qa_batches": "1" if batch_rows else "",
+            "nonshallow_usable_stations": semicolon(usable_stations),
+            "nonshallow_questionable_stations": semicolon(questionable_stations),
+            "nonshallow_rejected_stations": semicolon(rejected_stations),
             "label_provenance": "PDS T2 physical class; conservative A/B and positive-visibility rule",
             "license_release_note": "PDS-derived manifest release review required",
         })
@@ -107,6 +131,8 @@ def main() -> None:
             "rejected_stations": semicolon(rejected), "usable_window_count": str(len(usable)),
             "questionable_window_count": str(len(questionable)), "rejected_window_count": str(len(rejected)),
             "candidate_status": "candidate_integrity_audited" if usable else "excluded_no_usable_window",
+            "nonshallow_qa_status": "not_applicable_shallow", "nonshallow_qa_batches": "",
+            "nonshallow_usable_stations": "", "nonshallow_questionable_stations": "", "nonshallow_rejected_stations": "",
             "label_provenance": "Onodera 2024 tables corrected 2026; legacy rows reconciled exactly to PDS",
             "license_release_note": "CC BY-NC article-table derivation; attribution and release review required",
         })
@@ -155,7 +181,11 @@ def main() -> None:
             "shallow_events_with_usable_window": sum(row["event_class"] == "shallow_moonquake" and row["candidate_status"] == "candidate_integrity_audited" for row in records),
             "shallow_rejected_windows_preserved": sum(int(row["rejected_window_count"] or 0) for row in records),
             "shallow_questionable_windows_preserved": sum(int(row["questionable_window_count"] or 0) for row in records),
-            "nonshallow_status": "pending waveform QA; positive visibility is not waveform validation",
+            "nonshallow_status": "Batch 1 QA attached where covered; remaining batches pending; positive visibility is not waveform validation",
+            "nonshallow_batch_1_event_status_counts": dict(Counter(
+                row["nonshallow_qa_status"] for row in records
+                if row["event_class"] != "shallow_moonquake" and row["nonshallow_qa_status"] != "not_covered_batch_1"
+            )),
         },
         "leakage_groups": {
             "unique_evaluation_groups": len({row["evaluation_group"] for row in records}),

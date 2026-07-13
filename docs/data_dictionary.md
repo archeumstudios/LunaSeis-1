@@ -43,3 +43,6 @@ Contains authoritative code/grade decoding, full and conservative counts, year/s
 
 - `nonshallow_waveform_requests.csv`: one row per event/station request with positive channels, boundary-complete station-days, complete/missing channel results, and station-request usability.
 - `nonshallow_download_plan.json`: exact selected product paths, URLs, bytes, official MD5 values, deterministic batch IDs/summaries, missing-event list, channel totals, and request-manifest SHA-256. It is a plan, not downloaded data.
+- `nonshallow_batch_1_download_receipt.json`: exact-size/MD5 verification receipt for all 5,398 Batch 1 products.
+- `nonshallow_batch_1_window_quality.csv`: one row per audited positive channel with ATT mapping, gaps, raw range/edge occupancy, descriptive RMS, and integrity status.
+- `nonshallow_batch_1_request_quality.csv`: channel-integrity aggregation per physical event/station request.

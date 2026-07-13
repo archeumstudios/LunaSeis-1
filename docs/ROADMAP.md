@@ -27,7 +27,8 @@ Phase 1 initial scoping completed on 2026-07-13:
 - downloaded and MD5-verified all 508 shallow-plan products, audited 128 event-station windows, and retained at least one usable raw window for every one of the 74 events.
 - built a 1,314-event unified positive candidate registry with corrected source merging, exact provenance, rejected-window retention, and event/family leakage groups; overlap/conflict checks passed.
 - audited nonshallow PDS availability and produced an exact 15,106-product, 7.11 GiB checksum-backed plan in four bounded batches; 1,159 of 1,240 candidates retain an archive-backed positive station request.
+- downloaded and MD5-verified all 5,398 Batch 1 products and audited 658 events: 648 usable, two questionable, and eight rejected for raw gap/ATT integrity.
 
-Phase 1 remains active for batched nonshallow download/window QA, background manifest construction, exhaustive literature chaining, ATT/catalog timing reconciliation, and final protocol/split freeze.
+Phase 1 remains active for nonshallow Batches 2–4 download/window QA, background manifest construction, exhaustive literature chaining, ATT/catalog timing reconciliation, and final protocol/split freeze.
 
 Later phases: literature/data audit; reproducible preprocessing; baselines; compact neural models; generalization/calibration; continuous scanning/retention simulation; reproduction audit; paper; public release.

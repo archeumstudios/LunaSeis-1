@@ -1,0 +1,29 @@
+{
+  "batch_id": 1,
+  "covered_events": 658,
+  "covered_event_station_requests": 842,
+  "audited_channel_windows": 2234,
+  "channel_integrity_counts": {
+    "usable_integrity": 2195,
+    "reject_integrity": 32,
+    "questionable_integrity": 7
+  },
+  "request_integrity_counts": {
+    "usable_integrity": 827,
+    "reject_integrity": 12,
+    "questionable_integrity": 3
+  },
+  "event_integrity_counts": {
+    "usable_integrity": 648,
+    "reject_integrity": 8,
+    "questionable_integrity": 2
+  },
+  "class_counts_for_covered_events": {
+    "artificial_impact_lm": 4,
+    "deep_moonquake_assigned": 334,
+    "natural_impact": 314,
+    "artificial_impact_sivb": 4,
+    "deep_moonquake_unclassified": 2
+  },
+  "warning": "Integrity uses gaps and ATT proximity only. RMS and edge-value fractions are descriptive and never alter labels."
+}

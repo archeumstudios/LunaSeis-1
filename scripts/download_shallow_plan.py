@@ -25,13 +25,17 @@ def verify_one(product: dict, destination: Path) -> tuple[str, int, bool]:
         for attempt in range(4):
             try:
                 fetch(str(product["url"]), target)
-                break
+                valid = target.stat().st_size == expected_bytes and md5sum(target) == expected_md5
+                if valid:
+                    break
+                target.unlink(missing_ok=True)
+                raise RuntimeError(f"Integrity failure for {relative}")
             except Exception:
                 target.with_suffix(target.suffix + ".part").unlink(missing_ok=True)
                 if attempt == 3:
                     raise
                 time.sleep(1.5 * (attempt + 1))
-    if target.stat().st_size != expected_bytes or md5sum(target) != expected_md5:
+    if not target.exists() or target.stat().st_size != expected_bytes or md5sum(target) != expected_md5:
         raise RuntimeError(f"Integrity failure for {relative}")
     return str(relative), expected_bytes, reused
 

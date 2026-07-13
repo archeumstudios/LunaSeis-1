@@ -31,3 +31,5 @@ Contains authoritative code/grade decoding, full and conservative counts, year/s
 - `onodera_2024_shallow_coverage.csv`: one row per requested event-station pair with ATT/SHZ/label availability and selected daily bytes.
 - `shallow_pilot_download_plan.json`: deduplicated official product paths, URLs, exact byte sizes, and NASA manifest MD5 values. This is a plan, not downloaded data.
 - `ko_smq_26_sample_download.json`: checksum-verification receipt for the representative S15 day, including local paths, exact bytes, and verified MD5 values.
+- `shallow_plan_download_receipt.json`: aggregate proof that all 508 planned products and 779,909,406 bytes passed exact size and MD5 verification.
+- `shallow_window_quality.csv`: one row per complete event-station pair with ATT mapping, SHZ/ATT gaps, raw RMS screening values, descriptive signal support, and integrity status.

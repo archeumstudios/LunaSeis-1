@@ -1,0 +1,8 @@
+{
+  "source_plan": "data/manifests/shallow_pilot_download_plan.json",
+  "verified_product_count": 508,
+  "verified_total_bytes": 779909406,
+  "downloaded_product_count_this_run": 504,
+  "reused_product_count_this_run": 4,
+  "integrity": "exact size and MD5 verified for every product"
+}

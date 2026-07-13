@@ -4,7 +4,7 @@ Last updated: 2026-07-13 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event Onodera shallow catalog is reconciled, its archive coverage is audited, and representative KO-SMQ-26 waveform feasibility is verified with explicit ATT/gap handling. Shallow classification remains exploratory pending full event-window QA. No models have been trained and no performance results exist.
+Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event Onodera shallow catalog, all planned SHZ/ATT products, and 128 available event-station windows are integrity-audited. Every event retains a usable window, while shallow classification remains exploratory. No models have been trained and no performance results exist.
 
 ## Completed
 
@@ -47,6 +47,9 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - Downloaded the four KO-SMQ-26 S15 products (7,391,202 bytes) and verified every official MD5 and size.
 - Mapped its corrected reference through ATT: nearest ATT is -0.290 s and the associated nominal MiniSEED timestamp is +4.099 s relative to the catalog reference.
 - Verified a clear raw emergent SHZ amplitude increase (post/pre RMS 3.56); documented 12.5% isolated one-sample sentinels in the ten-minute SHZ window without interpolating them.
+- Downloaded/reused and independently size/MD5-verified all 508 shallow-plan products totaling 779,909,406 bytes.
+- Audited all 128 complete event-station windows: 123 usable, one questionable, and four rejected for raw integrity; all 74 events retain at least one usable station.
+- Recorded descriptive signal ratios (88 strong, 23 weak, 15 without clear elevation, two unquantifiable) without using them to alter labels or integrity status.
 
 ## Files changed
 
@@ -108,6 +111,16 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - `results/predictions/ko_smq_26_waveform_audit.json`
 - `results/figures/ko_smq_26_raw_shz.png`
 - `docs/ko_smq_26_sample_audit.md`
+- `scripts/download_shallow_plan.py`
+- `scripts/audit_shallow_windows.py`
+- `tests/test_download_shallow_plan.py`
+- `tests/test_audit_shallow_windows.py`
+- `data/manifests/shallow_plan_download_receipt.json`
+- `data/manifests/shallow_window_quality.csv`
+- `results/predictions/shallow_window_quality_summary.json`
+- `results/figures/shallow_window_quality_overview.png`
+- `docs/shallow_window_quality_audit.md`
+- `docs/decisions/0010-shallow-window-integrity-gate.md`
 
 ## Commands and verification
 
@@ -141,6 +154,10 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - Ran `.venv/bin/python scripts/audit_shallow_sample.py`; generated the timing/gap audit and raw plot, then visually inspected the full-resolution figure.
 - Independently measured gap-run structure: 3,975 isolated one-sample sentinels in an exact ten-minute slice; no continuous outage.
 - Reran `.venv/bin/python -m unittest discover -s tests -p 'test_*.py' -v`; all 11 tests passed, and the sample downloader was idempotently re-verified.
+- Ran `.venv/bin/python scripts/download_shallow_plan.py --workers 4`; verified 508/508 products and exact total bytes, reusing four prior KO-SMQ-26 products.
+- Ran `.venv/bin/python scripts/audit_shallow_windows.py`; generated 128 row-level QA records, aggregate JSON, and a visually reviewed overview figure.
+- Corrected an over-strict initial ATT-gap rule before freezing results: timing quality now uses nearest valid ATT displacement while retaining ATT gap counts as metadata.
+- Ran `.venv/bin/python -m compileall -q scripts` and the complete unit-test suite; all 14 tests passed. Independently asserted download totals, row counts, status counts, and one usable station for every event.
 
 ## Decisions
 
@@ -166,8 +183,10 @@ Phase 0 feasibility is achieved and Phase 1 is active. The corrected 74-event On
 - Waveform reuse has an operational CC0 basis; catalog and catalog-derived dataset licensing still requires written PDS clarification before republication.
 - Full environment portability beyond the tested Apple Silicon Python 3.12 setup remains to be verified later in Colab/Linux.
 - No standalone author-deposited Onodera catalog file/checksum was found; the local manifest is a transparent transcription of corrected article tables, not an official machine-readable release.
-- The KO-SMQ-26 result establishes one-event feasibility only; the remaining 73 events may contain gaps, weak signals, artifacts, or ambiguous reference timing.
+- Automated integrity QA now covers all 74 events, but morphology/artifact review beyond aggregate metrics remains incomplete.
+- The 20%/50% SHZ-gap and 1 s/10 s ATT thresholds are provisional engineering gates requiring sensitivity analysis before protocol freeze.
+- Fifteen intact windows lack a clear raw RMS increase and two are unquantifiable; they require review without label demotion or cherry-picking.
 
 ## Exact next task
 
-Download the remaining checksum-pinned products in `data/manifests/shallow_pilot_download_plan.json`, then generate an automated per-event/station ATT, gap, and raw-signal quality manifest before any preprocessing or training.
+Construct the unified positive-event candidate manifest across PDS classes and corrected shallow events, applying physical-event/repeating-family grouping and the raw-window integrity gate before freezing any background sampling or model split.

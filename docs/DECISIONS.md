@@ -11,5 +11,6 @@
 | 2026-07-13 | 0007 | Keep binary detection primary; restrict deep-versus-natural-impact classification to exploratory work. | Conservative PDS counts support about 600 events in each of those classes but only 18 shallow and 8 artificial impacts. | Accepted for pilot; revisit with newer catalog |
 | 2026-07-13 | 0008 | Make LOSO folds event-disjoint and deep-family-disjoint across stations. | Seeing the same physical event or repeating family at training stations would inflate apparent held-out-station generalization. | Accepted protocol constraint |
 | 2026-07-13 | 0009 | Integrate the corrected 74-event Onodera shallow catalog, but keep shallow classification descriptive/exploratory. | Coverage exists for all events, but S15-centric discovery, label uncertainty, correlation, and sample size do not support headline four-class claims. | Accepted; window QA required before use |
+| 2026-07-13 | 0010 | Gate shallow windows by SHZ gaps and nearest valid ATT mapping; keep raw signal ratios descriptive. | Availability alone misses local outages, while signal-conditioned acceptance risks selection bias and label inflation. | Provisional thresholds; sensitivity analysis required |
 
 Formal records live in `docs/decisions/`.

@@ -24,7 +24,8 @@ Phase 1 initial scoping completed on 2026-07-13:
 - reconciled the corrected 74-event Onodera shallow catalog against PDS (28 exact legacy matches and 46 new events), verified at least one SHZ+ATT station-day per event, and produced an MD5-backed 0.73 GiB download plan;
 - retained shallow classification as descriptive/exploratory pending event-window QA.
 - checksum-downloaded and visually audited KO-SMQ-26 as the first updated-catalog waveform; its emergent SHZ signal is visible with explicit ATT mapping and isolated gap sentinels.
+- downloaded and MD5-verified all 508 shallow-plan products, audited 128 event-station windows, and retained at least one usable raw window for every one of the 74 events.
 
-Phase 1 remains active for full shallow-event download/window QA, exhaustive literature chaining, ATT/catalog timing reconciliation, and final protocol freeze.
+Phase 1 remains active for broader positive/background manifest construction, exhaustive literature chaining, ATT/catalog timing reconciliation, and final protocol/split freeze.
 
 Later phases: literature/data audit; reproducible preprocessing; baselines; compact neural models; generalization/calibration; continuous scanning/retention simulation; reproduction audit; paper; public release.

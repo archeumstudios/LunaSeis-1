@@ -1,0 +1,26 @@
+{
+  "event_station_windows": 128,
+  "events": 74,
+  "integrity_status_counts": {
+    "usable_integrity": 123,
+    "reject_integrity": 4,
+    "questionable_integrity": 1
+  },
+  "signal_support_counts": {
+    "strong_ratio": 88,
+    "weak_ratio": 23,
+    "no_clear_ratio": 15,
+    "not_quantifiable": 2
+  },
+  "event_level_integrity_counts": {
+    "usable": 74
+  },
+  "thresholds": {
+    "usable_max_gap_fraction": 0.2,
+    "questionable_max_gap_fraction": 0.5,
+    "usable_max_nearest_att_offset_seconds": 1.0,
+    "questionable_max_nearest_att_offset_seconds": 10.0,
+    "att_gap_policy": "report ATT gaps; judge timing integrity by distance to nearest valid ATT sample"
+  },
+  "scientific_warning": "Signal ratio is descriptive and never changes the physical label or integrity status."
+}

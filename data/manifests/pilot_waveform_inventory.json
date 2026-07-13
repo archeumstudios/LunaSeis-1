@@ -1,0 +1,44 @@
+{
+  "source_bundle": "urn:nasa:pds:apollo_pse::1.0",
+  "base_url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/",
+  "selection": {
+    "network": "XA",
+    "stations": ["S12", "S14"],
+    "year": 1971,
+    "julian_day": 210,
+    "reason": "Apollo 15 S-IVB Phase 0 event-to-waveform alignment"
+  },
+  "sample_rates_hz": {
+    "MH1": 6.625,
+    "MH2": 6.625,
+    "MHZ": 6.625,
+    "SHZ": 53.0,
+    "ATT": 1.65625
+  },
+  "planned_total_bytes": 7924909,
+  "products": [
+    {"path": "data/xa/metadata/stationxml.xa.0.sxml", "bytes": 181458, "md5": "7c99dd4bbc67db737c593c51a23abefd"},
+    {"path": "data/xa/metadata/stationxml.xa.0.xml", "bytes": 8990, "md5": "125a0a8db53a3669d52fa5d7c8d9c810"},
+    {"path": "data/xa/continuous_waveform/s12/1971/210/xa.s12..att.1971.210.0.mseed", "bytes": 540672, "md5": "9044206e4df47e9abbb76108537bc771"},
+    {"path": "data/xa/continuous_waveform/s12/1971/210/xa.s12..att.1971.210.0.xml", "bytes": 5105, "md5": "86bdb55ad537919b84a86c00c03e250f"},
+    {"path": "data/xa/continuous_waveform/s12/1971/210/xa.s12.00.mh1.1971.210.0.mseed", "bytes": 172032, "md5": "e17cc5f4cb5b9fbf82720206e3532b2f"},
+    {"path": "data/xa/continuous_waveform/s12/1971/210/xa.s12.00.mh1.1971.210.0.xml", "bytes": 5159, "md5": "38326cf65d10c76893145b1dddd1c126"},
+    {"path": "data/xa/continuous_waveform/s12/1971/210/xa.s12.00.mh2.1971.210.0.mseed", "bytes": 172032, "md5": "a45edfb36a07a949415cae60bf704025"},
+    {"path": "data/xa/continuous_waveform/s12/1971/210/xa.s12.00.mh2.1971.210.0.xml", "bytes": 5159, "md5": "3d30511599d36c984d86e5ab697de8fb"},
+    {"path": "data/xa/continuous_waveform/s12/1971/210/xa.s12.00.mhz.1971.210.0.mseed", "bytes": 172032, "md5": "f88c1a87d1a873ce8b79d229f6e0f307"},
+    {"path": "data/xa/continuous_waveform/s12/1971/210/xa.s12.00.mhz.1971.210.0.xml", "bytes": 5159, "md5": "4ca02062cb51382c5975adf5f8437229"},
+    {"path": "data/xa/continuous_waveform/s14/1971/210/xa.s14..att.1971.210.0.mseed", "bytes": 1163264, "md5": "8cfeba06a5c726691cd61582f8cf3b09"},
+    {"path": "data/xa/continuous_waveform/s14/1971/210/xa.s14..att.1971.210.0.xml", "bytes": 5106, "md5": "baba4556dc2e8cf49b3d7682b1adf4d9"},
+    {"path": "data/xa/continuous_waveform/s14/1971/210/xa.s14..shz.1971.210.0.mseed", "bytes": 4354048, "md5": "c0859b212503c49d0e589908a5f414bc"},
+    {"path": "data/xa/continuous_waveform/s14/1971/210/xa.s14..shz.1971.210.0.xml", "bytes": 5104, "md5": "8398c7bf669280b53127833828817447"},
+    {"path": "data/xa/continuous_waveform/s14/1971/210/xa.s14.00.mh1.1971.210.0.mseed", "bytes": 372736, "md5": "fa6ce9acffe5d78ce6ff7e53b3b5f36f"},
+    {"path": "data/xa/continuous_waveform/s14/1971/210/xa.s14.00.mh1.1971.210.0.xml", "bytes": 5159, "md5": "05c7213edaa13959ede0d1b401e84e3c"},
+    {"path": "data/xa/continuous_waveform/s14/1971/210/xa.s14.00.mh2.1971.210.0.mseed", "bytes": 372736, "md5": "12f0546604e12c4871f0b1b8d1442aac"},
+    {"path": "data/xa/continuous_waveform/s14/1971/210/xa.s14.00.mh2.1971.210.0.xml", "bytes": 5159, "md5": "c3bd5ac51a9e55901ff62448db055910"},
+    {"path": "data/xa/continuous_waveform/s14/1971/210/xa.s14.00.mhz.1971.210.0.mseed", "bytes": 368640, "md5": "664115b931650c872631ea8b844725de"},
+    {"path": "data/xa/continuous_waveform/s14/1971/210/xa.s14.00.mhz.1971.210.0.xml", "bytes": 5159, "md5": "318bef876e7ab6e34eb235387da53f5c"}
+  ],
+  "known_absence": [
+    {"station": "S12", "channel": "SHZ", "date": "1971-210", "evidence": "No product in official day directory"}
+  ]
+}

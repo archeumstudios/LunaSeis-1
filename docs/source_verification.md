@@ -15,7 +15,7 @@ Verified: 2026-07-12 against official NASA PDS/PDS Geosciences Node pages and PD
 - Network directory visible in the archive: `xa`.
 - A continuous product spans one UTC Earth day. The `ATT` timing trace records reception time on Earth, not sampling time, and therefore includes Moon–Earth travel and Earth-rotation effects. Event alignment must account for the archive documentation rather than treating `ATT` naively.
 - File naming and location-code rules are documented in the official bundle README. Mid-period `MH1`, `MH2`, and `MHZ` use location `00` for peaked mode and `01` for flat mode; short-period `SHZ` and timing `ATT` have no location code.
-- The official PDS instrument context states long-period sampling at 6.6252 Hz and vertical short-period sampling at 15 Hz. These values are verified as instrument-level documentation but must still be checked against each selected product's metadata before processing.
+- The archive's 2022 Software Interface Specification and StationXML define nominal sampling as 6.625 Hz for `MH1`, `MH2`, and `MHZ`; 53 Hz for `SHZ`; and 1.65625 Hz for `ATT`. An earlier PDS instrument-context description encountered during discovery stated 15 Hz for the short-period instrument, but that value must not be used for these archive products. Product labels and StationXML remain authoritative for processing.
 
 ## Expanded event catalog bundle
 

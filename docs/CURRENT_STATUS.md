@@ -4,7 +4,7 @@ Last updated: 2026-07-13 (Asia/Kolkata)
 
 ## State
 
-Phase 0 catalog acquisition and structural audit are complete. One artificial-impact event is selected as the candidate for the first waveform alignment. No waveform data have been downloaded, no models trained, and no scientific results produced.
+Phase 0 catalog work and pilot waveform inventory audit are complete. The exact waveform subset, metadata, expected sizes, checksums, channels, and timing cautions are documented. No waveform samples have yet been downloaded, no models trained, and no scientific results produced.
 
 ## Completed
 
@@ -20,6 +20,10 @@ Phase 0 catalog acquisition and structural audit are complete. One artificial-im
 - Audited 11 catalog CSV schemas and generated a machine-readable schema report.
 - Inspected the official four-page catalog-description PDF by text extraction and rendered-page review.
 - Selected the Apollo 15 S-IVB artificial impact (1971, Julian day 210) as the Phase 0 pilot candidate, with published P arrivals at stations 12 and 14.
+- Verified candidate-day availability for S12 and S14 and enumerated all products and official MD5 values.
+- Selected MiniSEED plus StationXML/PDS labels: 7,924,909 bytes (about 7.6 MiB), versus over 250 MB for equivalent GeoCSV waveforms.
+- Verified product metadata rates: 6.625 Hz mid-period, 53 Hz SHZ, and 1.65625 Hz ATT; corrected the earlier 15 Hz discovery-stage note.
+- Documented ATT reception-time semantics, nominal-time drift, uncorrected 1.2-1.4 s Moon-Earth delay, station synchronization risk, and gap sentinels.
 
 ## Files changed
 
@@ -34,6 +38,10 @@ Phase 0 catalog acquisition and structural audit are complete. One artificial-im
 - `docs/catalog_audit.md`
 - `docs/DECISIONS.md`
 - `docs/decisions/0004-phase-0-pilot-event.md`
+- `data/manifests/pilot_waveform_inventory.json`
+- `docs/waveform_inventory_audit.md`
+- `docs/source_verification.md`
+- `docs/decisions/0005-pilot-waveform-format.md`
 
 ## Commands and verification
 
@@ -46,6 +54,9 @@ Phase 0 catalog acquisition and structural audit are complete. One artificial-im
 - Ran `python3 -m unittest discover -s tests -p 'test_download_catalog.py' -v`; 2 tests passed.
 - Ran `python3 scripts/audit_catalog.py`; audited 11 CSV files and wrote the schema manifest.
 - Converted Julian day 210 of 1971 independently to 1971-07-29 for the candidate record.
+- Inspected official S12/S14 day directories, StationXML, PDS MD5 manifest, and the 41-page 2022 Software Interface Specification.
+- Checksum-verified the locally cached StationXML, its PDS label, and the specification PDF.
+- Recomputed the planned product total from every listed file size: 7,924,909 bytes.
 
 ## Decisions
 
@@ -54,10 +65,11 @@ Phase 0 catalog acquisition and structural audit are complete. One artificial-im
 - Treat the PDS event catalog as multiple source tables requiring semantic reconciliation, not an immediately usable flat label file.
 - Product metadata, not only instrument-level documentation, will determine actual processing sample rates.
 - Use a known artificial impact with two published station arrivals for the first alignment test; this is a feasibility choice, not a final taxonomy choice.
+- Use MiniSEED with StationXML and PDS labels for the pilot; include ATT and preserve explicit gaps.
 
 ## Unresolved uncertainties
 
-- Product-level station/channel metadata, timing semantics, availability, gaps, and sample rates remain to be audited.
+- Actual MiniSEED contents, gaps around the candidate, and ATT-derived timing at the event remain to be inspected after download.
 - Full `levent` class/grade decoding, duplicate reconciliation, and final label mappings remain to be audited.
 - The candidate event's time standard and precise relationship to waveform/timing-trace time remain unresolved.
 - Redistribution/licensing guidance remains unresolved; no republication is authorized by assumption.
@@ -65,4 +77,4 @@ Phase 0 catalog acquisition and structural audit are complete. One artificial-im
 
 ## Exact next task
 
-Inspect the Apollo PSE inventory and StationXML for 1971 Julian day 210, calculate the exact size of only the station 12 and 14 candidate-day products, and document the correct channels/timing interpretation before downloading waveform samples.
+Implement a manifest-driven pilot waveform downloader, download the selected 7,924,909-byte subset, verify all 20 checksums and sizes, then inspect MiniSEED trace coverage and gaps around the published arrivals without preprocessing the signal.

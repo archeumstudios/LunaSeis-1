@@ -1,10 +1,10 @@
 # Current status
 
-Last updated: 2026-07-13 (Asia/Kolkata)
+Last updated: 2026-07-14 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility is achieved and Phase 1 is active. All positive-waveform QA is complete. Independent-background v0.1 adds 710 integrity-usable official-archive days and 22,444 event-buffered catalog-negative windows. The shortcut audit confirms that the old S12 metric was background-frame inflated. No neural model has been trained; Decision 0017 permits the first pilot tiny-CNN experiment, while paper-level claims remain blocked pending contiguous-scanning rules.
+Phase 0 feasibility is achieved and Phase 1 is active. All positive-waveform QA and independent-background v0.1 are complete. A deterministic 3,057-parameter tiny CNN has been trained across all four frozen LOSO folds. Results are strongly station-dependent and do not consistently beat logistic regression, so H1 is not supported by this pilot. Shortcut counterfactuals do not indicate validity-mask-only prediction. Decision 0018 freezes continuous-scanning v0.1; paper claims remain blocked pending a newly selected untouched contiguous-day evaluation.
 
 ## Completed
 
@@ -87,6 +87,14 @@ Phase 0 feasibility is achieved and Phase 1 is active. All positive-waveform QA 
 - Constructed 22,444 distinct ten-minute catalog-negative windows after applying ±1-hour buffers around all PDS and corrected shallow catalog times.
 - Reran energy, STA/LTA, and handcrafted logistic baselines on independent days; S12 logistic changed from 0.870 F1 / 0.284 FP h⁻¹ to 0.795 / 2.123, confirming material background-frame inflation.
 - Opened pilot-only tiny-CNN development while retaining a block on paper-level claims and final evaluation.
+- Installed and pinned CPU PyTorch 2.13.0 in the project-local environment.
+- Implemented deterministic native-cadence tiny-CNN training with training-fold-only waveform scaling, validation-loss checkpoint selection, validation-only thresholds, sample predictions, state checkpoints, and TorchScript exports.
+- Preserved the first 512-bin temporal-averaging run as a failed ablation after its validation loss remained near random guessing and its scores failed to separate classes.
+- Trained the corrected 3,057-parameter model across S12/S14/S15/S16 held-out folds. F1 is 0.874/0.714/0.632/0.663 and false positives per hour are 0.462/3.154/5.731/1.553 respectively.
+- Determined that the tiny CNN beats the matched logistic baseline only at S12; it is worse at S14/S15 and has lower F1 but fewer false alarms at S16. H1 is not supported by this pilot.
+- Ran waveform-zero, all-valid, all-zero, score-gap, and score-RMS shortcut sensitivities. Waveform-zero F1 collapses to 0.008–0.121 and score-gap correlations remain 0.024–0.071.
+- Measured 3,057 parameters, approximately 16 KB state checkpoints, approximately 30 KB TorchScript exports, local single-window CPU latency of 0.20–0.25 ms, and post-loading fold training time of 4.5–11.4 seconds.
+- Visually reviewed the CNN/logistic comparison figure and froze continuous-scanning v0.1 before any contiguous evaluation.
 
 ## Files changed
 
@@ -217,8 +225,12 @@ Exact additional files changed for the all-batch/split/baseline task: `configs/d
 
 Exact files changed for independent-background v0.1: `configs/data/pilot.yaml`, `configs/experiment/leave_one_station_out.yaml`, `data/manifests/independent_background_station_days.csv`, `data/manifests/independent_background_download_plan.json`, `data/manifests/independent_background_batch_1_download_receipt.json`, `data/manifests/independent_background_day_quality.csv`, `data/manifests/independent_background_windows.csv`, `docs/CURRENT_STATUS.md`, `docs/DECISIONS.md`, `docs/ROADMAP.md`, `docs/data_dictionary.md`, `docs/research_protocol_v0.2.md`, `docs/independent_background_v0.1_audit.md`, `docs/decisions/0017-independent-background-and-pilot-training-gate.md`, `results/figures/independent_background_baselines_v0.1.png`, `results/predictions/independent_background_audit.json`, `results/predictions/independent_background_baselines_v0.1.json`, `scripts/audit_independent_background.py`, `scripts/build_independent_background_plan.py`, `scripts/download_nonshallow_batch.py`, `scripts/run_pilot_baselines.py`, `tests/test_audit_independent_background.py`, and `tests/test_build_independent_background_plan.py`.
 
+Exact files changed for tiny-CNN pilot v0.1: `.gitignore`, `configs/model/tiny_cnn_v0.1.yaml`, `configs/evaluation/continuous_scanning_v0.1.yaml`, `docs/CURRENT_STATUS.md`, `docs/DECISIONS.md`, `docs/ROADMAP.md`, `docs/data_dictionary.md`, `docs/tiny_cnn_pilot_v0.1.md`, `docs/decisions/0018-tiny-cnn-pilot-and-scanning-freeze.md`, `models/checkpoints/tiny_cnn_pilot_v0.1/*`, `requirements-lock.txt`, `results/figures/tiny_cnn_512bin_failed_ablation.png`, `results/figures/tiny_cnn_pilot_v0.1.png`, `results/predictions/tiny_cnn_512bin_failed_ablation.json`, `results/predictions/tiny_cnn_512bin_failed_ablation/*`, `results/predictions/tiny_cnn_pilot_v0.1.json`, `results/predictions/tiny_cnn_pilot_v0.1/*`, `results/predictions/tiny_cnn_shortcut_audit_v0.1.json`, `scripts/audit_tiny_cnn_shortcuts.py`, `scripts/run_tiny_cnn_pilot.py`, `tests/test_audit_tiny_cnn_shortcuts.py`, and `tests/test_run_tiny_cnn_pilot.py`.
+
 ## Commands and verification
 
+- Installed PyTorch into `.venv`, regenerated the exact dependency lock, ran the 512-bin failed ablation and native-cadence pilot twice deterministically, ran shortcut counterfactual inference, inspected score distributions and learning curves, measured efficiency, and visually inspected the final comparison figure.
+- Ran model-specific unit tests, script compilation, full regression tests, YAML parsing, artifact/hash/count/metric invariants, deterministic rerun comparison, and `git diff --check`.
 - Ran script compilation, the full 33-test regression suite, independent selection/receipt/day-gap/event-buffer/baseline invariants, YAML parsing, and `git diff --check`; all passed.
 - Built the independent plan from official archive directory discovery, ran the resumable downloader and disk-only reconciliation, audited 928 selected days, constructed event-buffered windows, reran all three baselines, and visually inspected the independent comparison figure.
 - Ran script compilation, the full 31-test regression suite, dataset-manifest hash/leakage audit, registry/receipt/label invariants, YAML parsing, and `git diff --check`; all passed.
@@ -301,6 +313,7 @@ Exact files changed for independent-background v0.1: `configs/data/pilot.yaml`, 
 - Freeze nearest-valid ATT mapping plus primary and sensitivity integrity thresholds without claiming catalog phase-pick semantics are resolved.
 - Freeze group-disjoint LOSO pilot splits and primary MH preprocessing; block neural training on the coverage-selected background frame.
 - Adopt independent-background v0.1, retire positive-conditioned metrics from decisions, and permit only pilot neural training while final claims remain blocked.
+- Retain the tiny-CNN pilot as mixed/negative evidence, preserve the failed averaging ablation, and freeze continuous-scanning v0.1 before selecting the untouched contiguous evaluation frame.
 
 ## Unresolved uncertainties
 
@@ -321,7 +334,11 @@ Exact files changed for independent-background v0.1: `configs/data/pilot.yaml`, 
 - The catalog start-time physical meaning and absolute time standard remain unresolved even though computational ATT mapping is frozen.
 - Independent windows are sampled ten-minute segments rather than fully contiguous trigger evaluation; FP h⁻¹ remains diagnostic.
 - The background-frame sensitivity across S12/S15/S16 requires station-specific error and acquisition-artifact analysis during neural development.
+- Tiny-CNN cross-station behavior is unstable; S12 improvement does not generalize to S14–S16.
+- S14 CNN score has a 0.500 correlation with waveform RMS in the pilot test subset and needs amplitude/acquisition sensitivity analysis.
+- Local CPU latency and memory measurements are Apple-Silicon microbenchmarks, not portable deployment measurements.
+- The frozen scanning protocol has not yet been executed on a newly selected untouched contiguous-day frame.
 
 ## Exact next task
 
-Implement and run the first tiny 1D CNN pilot on frozen LOSO groups and independent-background training/validation windows, without interpreting the held-out results as final paper performance.
+Select and checksum-plan a newly seeded, untouched contiguous-day evaluation frame for all four stations under continuous-scanning v0.1, without inspecting model scores or downloading data until the storage and overlap audit passes.

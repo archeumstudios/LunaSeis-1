@@ -63,3 +63,8 @@ Contains authoritative code/grade decoding, full and conservative counts, year/s
 - `independent_background_windows.csv`: fold-specific ten-minute catalog-negative windows from usable independent days.
 - `results/predictions/independent_background_audit.json`: day/window counts and integrity summary.
 - `results/predictions/independent_background_baselines_v0.1.json`: classical shortcut-audit results on independent days; still diagnostic rather than final scanning results.
+- `results/predictions/tiny_cnn_pilot_v0.1.json`: fold training histories, train-only scales, validation-selected thresholds, held-out metrics, hashes, and efficiency measurements.
+- `results/predictions/tiny_cnn_pilot_v0.1/*_predictions.csv`: sample-level held-out scores and labels for reproducible pilot analysis.
+- `results/predictions/tiny_cnn_shortcut_audit_v0.1.json`: coverage-channel and waveform-zero counterfactual inference audit.
+- `models/checkpoints/tiny_cnn_pilot_v0.1/`: small state-dict and TorchScript pilot checkpoints; not final release weights.
+- `configs/evaluation/continuous_scanning_v0.1.yaml`: prospectively frozen window, stride, threshold, trigger merging, event matching, and reporting rules.

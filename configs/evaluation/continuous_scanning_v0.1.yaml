@@ -1,0 +1,30 @@
+name: continuous_scanning_v0.1
+status: frozen_before_first_contiguous_scan
+scope: pilot_protocol_not_final_paper_result
+input:
+  window_seconds: 600
+  stride_seconds: 60
+  inferred_reference_offset_seconds: 120
+threshold:
+  source: training_stations_chronological_validation_only
+  primary_rule: highest_score_threshold_with_validation_recall_at_least_0.90
+  sensitivity_rule: validation_maximum_f1
+triggering:
+  positive_window: score_greater_than_or_equal_to_threshold
+  merge_inferred_references_within_seconds: 300
+  trigger_time: inferred_reference_of_highest_score_window_in_merged_group
+matching:
+  primary_tolerance_seconds: 180
+  sensitivity_tolerances_seconds: [60, 300]
+  one_trigger_matches_at_most_one_catalog_event: true
+  one_catalog_event_matches_at_most_one_trigger: true
+  assignment: smallest_absolute_time_difference_then_highest_score
+reporting:
+  duration_denominator: all_integrity_usable_scanned_time
+  false_alarm_metrics: [false_positive_triggers_per_hour, false_positive_triggers_per_day]
+  detection_metrics: [event_recall, precision, f1, latency_seconds]
+  retention: union_of_threshold_positive_600_second_windows
+  retention_claim: simulation_only
+final_gate:
+  independently_selected_untouched_contiguous_days_required: true
+  current_independent_window_sample_is_final_test: false

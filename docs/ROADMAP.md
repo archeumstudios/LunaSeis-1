@@ -34,7 +34,9 @@ Phase 1 initial scoping completed on 2026-07-13:
 - ran three classical pilot baselines; high false-alarm rates and an anomalous S12 handcrafted result triggered a neural-training gate pending an independent continuous background frame and shortcut audit.
 - selected 928 official-archive days independently of event dates, verified 1.586 GB of ATT/MH products, retained 710 integrity-usable days, and built 22,444 event-buffered catalog-negative windows.
 - reran all baselines on the independent frame; the S12 result degraded materially, confirming the shortcut concern and opening only pilot neural training while final claims remain blocked.
+- trained a deterministic 3,057-parameter tiny CNN across all four LOSO folds, preserved a failed temporal-averaging ablation, and found mixed station-dependent results that do not support consistent superiority over logistic regression.
+- completed waveform/missingness shortcut counterfactuals, measured local efficiency, saved checkpoints/predictions/configuration, and froze continuous-scanning protocol v0.1 before any contiguous evaluation.
 
-Phase 1 remains active for exhaustive literature chaining, final continuous-scanning rules, and release/licensing clarification. Pilot neural development is permitted by Decision 0017; final claims remain blocked.
+Phase 1 remains active for exhaustive literature chaining, untouched contiguous scanning, and release/licensing clarification. Pilot neural development is permitted; final claims remain blocked.
 
 Later phases: literature/data audit; reproducible preprocessing; baselines; compact neural models; generalization/calibration; continuous scanning/retention simulation; reproduction audit; paper; public release.

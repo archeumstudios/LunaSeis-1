@@ -1,0 +1,28 @@
+name: tiny_cnn_v0.1
+status: pilot_only_not_paper_result
+seed: 20260714
+input:
+  channels: [median_centered_waveform, valid_sample_fraction]
+  window_seconds: 600
+  target_samples: 4096
+  cadence_policy: preserve_native_samples_then_zero_pad; no averaging or interpolation
+  gap_interpolation: false
+  waveform_scale: training_fold_standard_deviation_only
+architecture:
+  convolution_channels: [8, 16, 24]
+  kernels: [9, 7, 5]
+  strides: [2, 2, 2]
+  pooling: concatenate_global_average_and_max
+  output: binary_logit
+training:
+  epochs: 20
+  batch_size: 64
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  checkpoint_selection: minimum_validation_log_loss
+  decision_threshold: maximum_validation_f1
+evaluation:
+  folds: [holdout_S12, holdout_S14, holdout_S15, holdout_S16]
+  background_selection: exact_deterministic_baseline_v0.1_balanced_subset
+  final_paper_claim: prohibited

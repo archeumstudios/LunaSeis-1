@@ -20,5 +20,6 @@
 | 2026-07-13 | 0016 | Freeze leakage-safe pilot splits/preprocessing but block neural training on coverage-selected backgrounds. | Pilot baselines reveal high false alarms and an anomalously strong S12 result requiring shortcut audit. | Accepted training gate |
 | 2026-07-13 | 0017 | Adopt fixed-seed independent archive days, retire positive-conditioned metrics, and permit only pilot neural training. | The independent frame materially reduces S12 performance and confirms background-selection inflation; contiguous scanning is still pending. | Accepted pilot gate; final claims blocked |
 | 2026-07-14 | 0018 | Retain the tiny-CNN pilot as mixed/negative evidence and freeze continuous-scanning v0.1 prospectively. | The CNN improves only S12, fails to consistently beat logistic regression, and requires untouched contiguous evaluation before any paper claim. | Accepted pilot result and scanning protocol |
+| 2026-07-14 | 0019 | Authorize the fixed-seed 112-day untouched contiguous frame without replacement. | It has zero prior station-day overlap, balanced station coverage, complete ATT/MH products, official checksums, and a 163.4 MiB budget; only seven events remain prospectively recall-eligible. | Accepted download plan; scoring blocked pending QA |
 
 Formal records live in `docs/decisions/`.

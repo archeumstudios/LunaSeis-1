@@ -36,6 +36,8 @@ Phase 1 initial scoping completed on 2026-07-13:
 - reran all baselines on the independent frame; the S12 result degraded materially, confirming the shortcut concern and opening only pilot neural training while final claims remain blocked.
 - trained a deterministic 3,057-parameter tiny CNN across all four LOSO folds, preserved a failed temporal-averaging ablation, and found mixed station-dependent results that do not support consistent superiority over logistic regression.
 - completed waveform/missingness shortcut counterfactuals, measured local efficiency, saved checkpoints/predictions/configuration, and froze continuous-scanning protocol v0.1 before any contiguous evaluation.
+- selected two untouched 14-day blocks per station without event/model conditioning, verified zero prior station-day overlap, and produced a 448-product, 163.4 MiB NASA-MD5-backed plan covering 2,688 station-hours.
+- audited catalog coverage only after selection: seven events remain prospectively recall-eligible pending waveform QA, so false-trigger measurement is primary and recall will be descriptive.
 
 Phase 1 remains active for exhaustive literature chaining, untouched contiguous scanning, and release/licensing clarification. Pilot neural development is permitted; final claims remain blocked.
 

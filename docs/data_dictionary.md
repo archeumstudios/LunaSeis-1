@@ -68,3 +68,7 @@ Contains authoritative code/grade decoding, full and conservative counts, year/s
 - `results/predictions/tiny_cnn_shortcut_audit_v0.1.json`: coverage-channel and waveform-zero counterfactual inference audit.
 - `models/checkpoints/tiny_cnn_pilot_v0.1/`: small state-dict and TorchScript pilot checkpoints; not final release weights.
 - `configs/evaluation/continuous_scanning_v0.1.yaml`: prospectively frozen window, stride, threshold, trigger merging, event matching, and reporting rules.
+- `contiguous_evaluation_station_days.csv`: fixed-seed untouched 14-day block membership, completeness, selected channel, bytes, and explicit zero prior-day overlap.
+- `contiguous_evaluation_download_plan.json`: exact 448-product paths, URLs, bytes, NASA MD5s, blocks, and selection provenance; planned but not downloaded.
+- `contiguous_evaluation_catalog_audit.csv`: post-selection catalog references, prior fold exposure, and prospective recall eligibility.
+- `results/predictions/contiguous_evaluation_plan_audit.json`: compact overlap, catalog, and eligibility audit with CSV checksum.

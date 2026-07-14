@@ -4,7 +4,7 @@ Last updated: 2026-07-14 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility is achieved and Phase 1 is active. All positive-waveform QA and independent-background v0.1 are complete. A deterministic 3,057-parameter tiny CNN has been trained across all four frozen LOSO folds. Results are strongly station-dependent and do not consistently beat logistic regression, so H1 is not supported by this pilot. Shortcut counterfactuals do not indicate validity-mask-only prediction. Decision 0018 freezes continuous-scanning v0.1; paper claims remain blocked pending a newly selected untouched contiguous-day evaluation.
+Phase 0 feasibility is achieved and Phase 1 is active. Positive-waveform QA, independent-background v0.1, and the mixed-result tiny-CNN pilot are complete. Continuous-scanning v0.1 is frozen. An untouched balanced frame of 112 station-days is selected and checksum-planned under Decision 0019, but not downloaded or scored. It contains 2,688 station-hours and seven prospectively recall-eligible candidate events pending waveform QA. Paper claims remain blocked.
 
 ## Completed
 
@@ -95,6 +95,13 @@ Phase 0 feasibility is achieved and Phase 1 is active. All positive-waveform QA 
 - Ran waveform-zero, all-valid, all-zero, score-gap, and score-RMS shortcut sensitivities. Waveform-zero F1 collapses to 0.008–0.121 and score-gap correlations remain 0.024–0.071.
 - Measured 3,057 parameters, approximately 16 KB state checkpoints, approximately 30 KB TorchScript exports, local single-window CPU latency of 0.20–0.25 ms, and post-loading fold training time of 4.5–11.4 seconds.
 - Visually reviewed the CNN/logistic comparison figure and froze continuous-scanning v0.1 before any contiguous evaluation.
+- Selected two fixed-seed, nonoverlapping 14-day blocks per station from official archive days after excluding 3,146 previously exposed station-days; event catalogs, channel quality, and model scores were not read during selection.
+- Corrected a location-code discovery defect (`01` versus `00`) before accepting completeness; the original selected dates remained unchanged and now reproduce exactly.
+- Verified zero prior station-day overlap and complete ATT plus primary-MH availability for all 112 selected days, balanced at 28 days per station.
+- Produced an exact plan for 448 products and 171,375,344 bytes (163.44 MiB), each with official NASA MD5 and archive-listed size; no waveform was downloaded.
+- Audited catalog coverage only after selection: 315 station-specific references to 263 unique catalog events, with seven unified candidates untouched by any prior role in their station fold and pending waveform QA.
+- Excluded 16 prior-fold-exposed candidate occurrences from future untouched event-recall claims and retained the other 292 references for catalog-time false-alarm protection only.
+- Authorized the bounded download under Decision 0019 while keeping model scoring blocked until checksum and full-day integrity QA pass.
 
 ## Files changed
 
@@ -227,8 +234,12 @@ Exact files changed for independent-background v0.1: `configs/data/pilot.yaml`, 
 
 Exact files changed for tiny-CNN pilot v0.1: `.gitignore`, `configs/model/tiny_cnn_v0.1.yaml`, `configs/evaluation/continuous_scanning_v0.1.yaml`, `docs/CURRENT_STATUS.md`, `docs/DECISIONS.md`, `docs/ROADMAP.md`, `docs/data_dictionary.md`, `docs/tiny_cnn_pilot_v0.1.md`, `docs/decisions/0018-tiny-cnn-pilot-and-scanning-freeze.md`, `models/checkpoints/tiny_cnn_pilot_v0.1/*`, `requirements-lock.txt`, `results/figures/tiny_cnn_512bin_failed_ablation.png`, `results/figures/tiny_cnn_pilot_v0.1.png`, `results/predictions/tiny_cnn_512bin_failed_ablation.json`, `results/predictions/tiny_cnn_512bin_failed_ablation/*`, `results/predictions/tiny_cnn_pilot_v0.1.json`, `results/predictions/tiny_cnn_pilot_v0.1/*`, `results/predictions/tiny_cnn_shortcut_audit_v0.1.json`, `scripts/audit_tiny_cnn_shortcuts.py`, `scripts/run_tiny_cnn_pilot.py`, `tests/test_audit_tiny_cnn_shortcuts.py`, and `tests/test_run_tiny_cnn_pilot.py`.
 
+Exact files changed for untouched contiguous evaluation planning: `configs/evaluation/continuous_scanning_v0.1.yaml`, `data/manifests/contiguous_evaluation_station_days.csv`, `data/manifests/contiguous_evaluation_download_plan.json`, `data/manifests/contiguous_evaluation_catalog_audit.csv`, `docs/CURRENT_STATUS.md`, `docs/DECISIONS.md`, `docs/ROADMAP.md`, `docs/data_dictionary.md`, `docs/contiguous_evaluation_plan_v0.1.md`, `docs/decisions/0019-untouched-contiguous-frame-plan.md`, `results/predictions/contiguous_evaluation_plan_audit.json`, `scripts/audit_contiguous_evaluation_plan.py`, `scripts/build_contiguous_evaluation_plan.py`, `tests/test_audit_contiguous_evaluation_plan.py`, and `tests/test_build_contiguous_evaluation_plan.py`.
+
 ## Commands and verification
 
+- Ran the fixed-seed archive-block selector, inspected 112 official PDS day listings, resolved actual MiniSEED location codes from listings, attached official MD5s, reran selection for reproducibility, and ran the post-selection catalog/exposure audit without model scores.
+- Verified exact product/byte/day/station/block totals, zero prior overlap, 112/112 channel completeness, manifest hashes, seven strict untouched candidate IDs, 52 GiB free storage, YAML parsing, script compilation, full regression tests, and `git diff --check`.
 - Installed PyTorch into `.venv`, regenerated the exact dependency lock, ran the 512-bin failed ablation and native-cadence pilot twice deterministically, ran shortcut counterfactual inference, inspected score distributions and learning curves, measured efficiency, and visually inspected the final comparison figure.
 - Ran model-specific unit tests, script compilation, full regression tests, YAML parsing, artifact/hash/count/metric invariants, deterministic rerun comparison, and `git diff --check`.
 - Ran script compilation, the full 33-test regression suite, independent selection/receipt/day-gap/event-buffer/baseline invariants, YAML parsing, and `git diff --check`; all passed.
@@ -314,6 +325,7 @@ Exact files changed for tiny-CNN pilot v0.1: `.gitignore`, `configs/model/tiny_c
 - Freeze group-disjoint LOSO pilot splits and primary MH preprocessing; block neural training on the coverage-selected background frame.
 - Adopt independent-background v0.1, retire positive-conditioned metrics from decisions, and permit only pilot neural training while final claims remain blocked.
 - Retain the tiny-CNN pilot as mixed/negative evidence, preserve the failed averaging ablation, and freeze continuous-scanning v0.1 before selecting the untouched contiguous evaluation frame.
+- Accept the fixed 112-day frame without replacement, authorize only its checksum-gated 163.4 MiB download, and keep model scoring blocked until full-day integrity QA.
 
 ## Unresolved uncertainties
 
@@ -338,7 +350,9 @@ Exact files changed for tiny-CNN pilot v0.1: `.gitignore`, `configs/model/tiny_c
 - S14 CNN score has a 0.500 correlation with waveform RMS in the pilot test subset and needs amplitude/acquisition sensitivity analysis.
 - Local CPU latency and memory measurements are Apple-Silicon microbenchmarks, not portable deployment measurements.
 - The frozen scanning protocol has not yet been executed on a newly selected untouched contiguous-day frame.
+- The untouched frame has only seven prospectively eligible candidate events before waveform QA, so event recall cannot be a stable headline estimate.
+- The 112 selected days are archive-complete but their actual gap/ATT integrity is unknown until download.
 
 ## Exact next task
 
-Select and checksum-plan a newly seeded, untouched contiguous-day evaluation frame for all four stations under continuous-scanning v0.1, without inspecting model scores or downloading data until the storage and overlap audit passes.
+Download and exact-size/NASA-MD5 verify all 448 contiguous-frame products, then audit full-day ATT/MH gaps and eligible-event visibility without running any model inference.

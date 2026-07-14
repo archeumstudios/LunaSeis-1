@@ -28,3 +28,8 @@ reporting:
 final_gate:
   independently_selected_untouched_contiguous_days_required: true
   current_independent_window_sample_is_final_test: false
+  selected_station_days: data/manifests/contiguous_evaluation_station_days.csv
+  download_plan: data/manifests/contiguous_evaluation_download_plan.json
+  catalog_audit: data/manifests/contiguous_evaluation_catalog_audit.csv
+  selection_status: frozen_planned_not_downloaded
+  model_scoring: blocked_pending_download_and_day_integrity_QA

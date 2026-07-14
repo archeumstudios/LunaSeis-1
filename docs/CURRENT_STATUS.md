@@ -4,7 +4,7 @@ Last updated: 2026-07-14 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility and the planned binary-detection experiment cycle are complete. Both frozen continuous tests remain negative and consumed. Subsequent development-only comparison selected a 2,761-parameter depthwise CNN at 0.9115 mean validation-event recall and 0.2106 merged triggers/hour, but a full-day S15 smoke scan persistently activated on all 1,418 scored windows. The model is packaged as a functioning research/software prototype authored by Advaith Praveen (APRK), not an operational detector. GitHub-facing documentation, cards, manuscript draft, tables, citation metadata, notebook, checkpoints, inference CLI, and a literature-backed public-claims boundary now exist; clean Linux/Colab reproduction and explicit publication remain open.
+Phase 0 feasibility and the planned binary-detection experiment cycle are complete. Both frozen continuous tests remain negative and consumed. Subsequent development-only comparison selected a 2,761-parameter depthwise CNN at 0.9115 mean validation-event recall and 0.2106 merged triggers/hour, but a full-day S15 smoke scan persistently activated on all 1,418 scored windows. The model is packaged as a functioning research/software prototype authored by Advaith Praveen (APRK), not an operational detector. GitHub-facing documentation, cards, manuscript draft, tables, citation metadata, notebook, checkpoints, inference CLI, and a literature-backed public-claims boundary now exist. On 2026-07-14, the user reported successful Linux and Google Colab reproduction; exact environment versions and execution transcripts were not supplied or independently archived. Explicit publication remains open.
 
 ## Completed
 
@@ -281,7 +281,11 @@ Exact files changed for the release-prototype cycle: `.github/workflows/tests.ym
 
 Exact files changed for the release-claims freeze: `README.md`, `paper/manuscript.md`, `literature/state_of_the_field.md`, `docs/RELEASE_CLAIMS.md`, `docs/RELEASE_CHECKLIST.md`, `docs/data_dictionary.md`, `docs/DECISIONS.md`, `docs/decisions/0026-release-claims-boundary.md`, and `docs/CURRENT_STATUS.md`.
 
+Exact files changed for the user-reported portability checkpoint: `docs/RELEASE_CHECKLIST.md` and `docs/CURRENT_STATUS.md`.
+
 ## Commands and verification
+
+- Recorded the user's 2026-07-14 report that Linux reproduction and the Google Colab notebook succeeded. No distribution, package-version transcript, Colab output artifact, or independent rerun was provided, so the permanent record preserves that evidence boundary.
 
 - Rechecked the direct Apollo ML predecessors from their publisher/DOI records: Knapmeyer-Endrun and Hammer (2015), Civilini et al. (2021), Onodera (2024), and Al-Qadasi and Bin Waheed (2026). Froze supported/prohibited public wording in `docs/RELEASE_CLAIMS.md` and added manuscript references without making an absolute novelty claim.
 - Reran all 56 unit tests, compiled `lunaseis`, scripts, and tests, parsed every YAML config plus `CITATION.cff` with the system Ruby YAML parser, and ran `git diff --check`; all passed. The project virtual environment does not include the optional PyYAML module, so the equivalent Python YAML check was not used.
@@ -431,4 +435,4 @@ Exact files changed for the release-claims freeze: `README.md`, `paper/manuscrip
 
 ## Exact next task
 
-Recreate the release candidate and execute its notebook in a clean Linux/Colab environment before any GitHub/Hugging Face/Zenodo publication.
+Design and reserve a genuinely new event-rich untouched continuous evaluation set before further detector optimization or any operational-performance claim.

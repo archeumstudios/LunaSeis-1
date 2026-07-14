@@ -8,6 +8,18 @@ LunaSeis-1 asks a harder question than balanced-window accuracy: can a compact d
 
 The honest answer from the present study is: **not yet operationally**. The selected 2,761-parameter depthwise CNN is a functioning, open inference prototype and performs well on leakage-controlled development events, but two prospectively frozen continuous tests exposed missed events and excessive false alarms. Those failures are preserved rather than hidden.
 
+## Research Paper
+
+### *LunaSeis-1: When Balanced Apollo Seismic Detection Fails Under Cross-Station Continuous Scanning*
+
+**Author:** Advaith Praveen (APRK) · **Publisher:** Archeum Studios · **Version:** 0.1.0
+
+[**Read the research paper on GitHub**](output/pdf/LunaSeis-1_Research_Paper.pdf) · [**Download the PDF**](https://github.com/archeumstudios/LunaSeis-1/raw/main/output/pdf/LunaSeis-1_Research_Paper.pdf) · [**View the manuscript source**](paper/manuscript.md)
+
+[![First page of the LunaSeis-1 research paper](paper/figures/research_paper_preview.png)](output/pdf/LunaSeis-1_Research_Paper.pdf)
+
+The paper reports the complete study design, data provenance, leakage controls, model training, three frozen continuous evaluations, exact uncertainty intervals, limitations, and negative operational result. Click the paper cover above to open the complete six-page PDF.
+
 ## What is scientifically interesting
 
 - 1,314 reconciled physical-event candidates from official PDS and corrected shallow-moonquake sources.
@@ -107,7 +119,7 @@ tests/          Leakage, integrity, preprocessing, and inference tests
 
 ## Reproduce the evidence
 
-See [Reproducibility guide](docs/REPRODUCIBILITY.md), [model card](docs/MODEL_CARD.md), [dataset card](docs/DATASET_CARD.md), [Colab-ready inference tutorial](output/jupyter-notebook/lunaseis_inference_colab.ipynb), [manuscript draft](paper/manuscript.md), and the [full development/test report](docs/artifact_robust_continuous_validation_and_v0.2.md).
+See [Reproducibility guide](docs/REPRODUCIBILITY.md), [model card](docs/MODEL_CARD.md), [dataset card](docs/DATASET_CARD.md), [Colab-ready inference tutorial](output/jupyter-notebook/lunaseis_inference_colab.ipynb), [research paper](output/pdf/LunaSeis-1_Research_Paper.pdf), and the [full development/test report](docs/artifact_robust_continuous_validation_and_v0.2.md).
 
 Raw NASA files are intentionally excluded from Git. Download scripts reconstruct permitted inputs from official PDS sources and verify exact sizes and MD5 hashes.
 

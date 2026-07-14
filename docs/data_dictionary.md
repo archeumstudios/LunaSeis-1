@@ -97,4 +97,4 @@ Contains authoritative code/grade decoding, full and conservative counts, year/s
 - `paper/tables/*.csv`: compact machine-readable inventory, continuous-test, and development-model tables.
 - `grade_c_challenge_*.csv/json`: frozen plan, integrity audit, protected catalog context, window scores, merged triggers, and final lower-confidence confirmation result.
 - `paper/figures/`: consistent publication figures in 300-DPI PNG and vector PDF formats.
-- `output/pdf/lunaseis_1_manuscript_preprint.pdf`: rendered, visually audited pre-release manuscript.
+- `output/pdf/LunaSeis-1_Research_Paper.pdf`: rendered, visually audited six-page research paper.

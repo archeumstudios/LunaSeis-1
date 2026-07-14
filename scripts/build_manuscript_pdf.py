@@ -12,7 +12,7 @@ from reportlab.lib.styles import ParagraphStyle,getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.platypus import BaseDocTemplate,Frame,Image,PageTemplate,Paragraph,Spacer,KeepTogether,Table,TableStyle
 
-ROOT=Path(__file__).resolve().parents[1];OUTPUT=ROOT/"output/pdf/lunaseis_1_manuscript_preprint.pdf"
+ROOT=Path(__file__).resolve().parents[1];OUTPUT=ROOT/"output/pdf/LunaSeis-1_Research_Paper.pdf"
 
 
 def markup(text:str)->str:
@@ -20,12 +20,12 @@ def markup(text:str)->str:
 
 
 def footer(canvas,doc):
-    canvas.saveState();canvas.setStrokeColor(colors.HexColor("#CBD2D9"));canvas.line(22*mm,15*mm,188*mm,15*mm);canvas.setFont("Helvetica",7.5);canvas.setFillColor(colors.HexColor("#52606D"));canvas.drawString(22*mm,10*mm,"LunaSeis-1 - Advaith Praveen (APRK) - pre-release manuscript");canvas.drawRightString(188*mm,10*mm,str(doc.page));canvas.restoreState()
+    canvas.saveState();canvas.setStrokeColor(colors.HexColor("#CBD2D9"));canvas.line(22*mm,15*mm,188*mm,15*mm);canvas.setFont("Helvetica",7.5);canvas.setFillColor(colors.HexColor("#52606D"));canvas.drawString(22*mm,10*mm,"LunaSeis-1 - Research Paper v0.1.0 - Advaith Praveen (APRK)");canvas.drawRightString(188*mm,10*mm,str(doc.page));canvas.restoreState()
 
 
 def main()->None:
     OUTPUT.parent.mkdir(parents=True,exist_ok=True);styles=getSampleStyleSheet();body=ParagraphStyle("Body",parent=styles["BodyText"],fontName="Helvetica",fontSize=9.3,leading=13.2,alignment=TA_JUSTIFY,spaceAfter=5);h1=ParagraphStyle("H1",parent=styles["Heading1"],fontName="Helvetica-Bold",fontSize=14,leading=17,spaceBefore=10,spaceAfter=6,textColor=colors.HexColor("#17324D"));h2=ParagraphStyle("H2",parent=styles["Heading2"],fontName="Helvetica-Bold",fontSize=11,leading=14,spaceBefore=8,spaceAfter=4,textColor=colors.HexColor("#17324D"));title=ParagraphStyle("Title",parent=styles["Title"],fontName="Helvetica-Bold",fontSize=20,leading=24,alignment=TA_CENTER,textColor=colors.HexColor("#102A43"));center=ParagraphStyle("Center",parent=body,alignment=TA_CENTER);caption=ParagraphStyle("Caption",parent=body,fontSize=8,leading=10.5,textColor=colors.HexColor("#52606D"),spaceAfter=10)
-    doc=BaseDocTemplate(str(OUTPUT),pagesize=A4,rightMargin=22*mm,leftMargin=22*mm,topMargin=20*mm,bottomMargin=20*mm,title="LunaSeis-1",author="Advaith Praveen (APRK)");frame=Frame(doc.leftMargin,doc.bottomMargin,doc.width,doc.height,id="normal");doc.addPageTemplates(PageTemplate(id="paper",frames=frame,onPage=footer))
+    doc=BaseDocTemplate(str(OUTPUT),pagesize=A4,rightMargin=22*mm,leftMargin=22*mm,topMargin=20*mm,bottomMargin=20*mm,title="LunaSeis-1 Research Paper",subject="Cross-station continuous Apollo seismic detection",author="Advaith Praveen (APRK)");frame=Frame(doc.leftMargin,doc.bottomMargin,doc.width,doc.height,id="normal");doc.addPageTemplates(PageTemplate(id="paper",frames=frame,onPage=footer))
     lines=(ROOT/"paper/manuscript.md").read_text().splitlines();story=[];paragraph=[];table_rows=[];figure_captions=[];collecting_figures=False
     def flush():
         nonlocal paragraph

@@ -37,7 +37,8 @@ Phase 0 feasibility and the complete binary-detection experiment cycle are finis
 - Added a machine-checkable manuscript evidence audit and three interval regression tests.
 - Fixed the canonical public URL as `https://github.com/archeumstudios/LunaSeis-1`, added package/citation metadata and release notes, and authorized an APRK01 fork without rewriting authorship.
 - Published the canonical public repository and non-draft v0.1.0 release; attached the manuscript PDF and `SHA256SUMS`; added Apollo, lunar-seismology, seismology, machine-learning, and PyTorch topics.
-- Created and verified the public `APRK01/LunaSeis-1` fork. GitHub's contributor endpoint attributes 29 contributions to `APRK01`.
+- Created and verified the public `APRK01/LunaSeis-1` fork. GitHub's contributor endpoint attributes the complete commit history to `APRK01`.
+- Promoted the paper to a top-level README feature with a clickable full-page cover preview, direct browser and download links, and the descriptive filename `LunaSeis-1_Research_Paper.pdf`.
 - Audited NASA science-data, PDS citation, and NASA brand policies; raw PSE observations are operationally treated as CC0, while bulk event-catalog/labeled-derivative republication is deferred pending written PDS clarification.
 - Decoded all PDS `T2` event codes, A/B/C grade meanings, quality codes, and station/channel visibility fields from the official XML label.
 - Parsed all 13,057 `levent` rows into a local analytical manifest and produced class/year/station/channel counts.
@@ -473,6 +474,12 @@ Commands/tests: regenerated and asserted headline evidence from all three frozen
 ## Exact next task
 
 Create the optional Hugging Face model mirror with the four depthwise checkpoints and the existing model card.
+
+## Research-paper visibility update
+
+Files changed: `README.md`, `scripts/build_manuscript_pdf.py`, `output/pdf/LunaSeis-1_Research_Paper.pdf`, removed `output/pdf/lunaseis_1_manuscript_preprint.pdf`, `paper/figures/research_paper_preview.png`, `release/SHA256SUMS`, `docs/data_dictionary.md`, and `docs/CURRENT_STATUS.md`.
+
+Verification: rebuilt the research paper with final title/subject metadata and a `Research Paper v0.1.0` footer; confirmed six A4 pages; rendered and visually inspected the new first-page preview; verified its RGB dimensions as 1241 × 1754; reran the full test suite, evidence audit, release checksums, and Git diff validation; checked the public README and PDF links after push.
 
 ## Public GitHub release preparation
 

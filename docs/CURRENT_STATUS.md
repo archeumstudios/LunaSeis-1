@@ -4,7 +4,7 @@ Last updated: 2026-07-14 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility and the complete binary-detection experiment cycle are finished. Three prospectively frozen continuous frames are consumed and negative. The final lower-confidence Grade-C challenge contained 63 previously unexposed physical impacts over 1,505.35 station-hours; the frozen 2,761-parameter depthwise CNN recovered 12/63, produced 1,306 false triggers (0.868/hour), and retained 75.38% of the stream. Across all 6,748.22 frozen station-hours, the project does not establish an operational detector. It is packaged as a functioning negative-result research/software prototype authored by Advaith Praveen (APRK), with GitHub documentation, model/data cards, a six-page visually audited preprint PDF, vector/300-DPI figures, tables, citation metadata, notebook, checkpoints, inference CLI, copyright separation, and a literature-backed public-claims boundary. An internal adversarial pre-submission review passed after major revision; this is not represented as independent peer review. On 2026-07-14, the user reported successful Linux and Google Colab reproduction; exact environment versions and execution transcripts were not independently archived. The author subsequently authorized public GitHub release under `archeumstudios`, with genuine `APRK01` commit attribution and an `APRK01` fork. Hugging Face and archival DOI mirrors are optional later tasks.
+Phase 0 feasibility and the complete binary-detection experiment cycle are finished. Three prospectively frozen continuous frames are consumed and negative. The final lower-confidence Grade-C challenge contained 63 previously unexposed physical impacts over 1,505.35 station-hours; the frozen 2,761-parameter depthwise CNN recovered 12/63, produced 1,306 false triggers (0.868/hour), and retained 75.38% of the stream. Across all 6,748.22 frozen station-hours, the project does not establish an operational detector. It is packaged as a functioning negative-result research/software prototype authored by Advaith Praveen (APRK), with GitHub documentation, model/data cards, a six-page visually audited preprint PDF, vector/300-DPI figures, tables, citation metadata, notebook, checkpoints, inference CLI, copyright separation, and a literature-backed public-claims boundary. An internal adversarial pre-submission review passed after major revision; this is not represented as independent peer review. On 2026-07-14, the user reported successful Linux and Google Colab reproduction; exact environment versions and execution transcripts were not independently archived. Public release v0.1.0 is live at `https://github.com/archeumstudios/LunaSeis-1`; GitHub verifies `APRK01` as the contributor and `https://github.com/APRK01/LunaSeis-1` as its public fork. Hugging Face and archival DOI mirrors are optional later tasks.
 
 ## Completed
 
@@ -36,6 +36,8 @@ Phase 0 feasibility and the complete binary-detection experiment cycle are finis
 - Fixed the PDF renderer so Markdown result tables are included; rebuilt the manuscript as six A4 pages and visually inspected every rendered page without clipping or overlap.
 - Added a machine-checkable manuscript evidence audit and three interval regression tests.
 - Fixed the canonical public URL as `https://github.com/archeumstudios/LunaSeis-1`, added package/citation metadata and release notes, and authorized an APRK01 fork without rewriting authorship.
+- Published the canonical public repository and non-draft v0.1.0 release; attached the manuscript PDF and `SHA256SUMS`; added Apollo, lunar-seismology, seismology, machine-learning, and PyTorch topics.
+- Created and verified the public `APRK01/LunaSeis-1` fork. GitHub's contributor endpoint attributes 29 contributions to `APRK01`.
 - Audited NASA science-data, PDS citation, and NASA brand policies; raw PSE observations are operationally treated as CC0, while bulk event-catalog/labeled-derivative republication is deferred pending written PDS clarification.
 - Decoded all PDS `T2` event codes, A/B/C grade meanings, quality codes, and station/channel visibility fields from the official XML label.
 - Parsed all 13,057 `levent` rows into a local analytical manifest and produced class/year/station/channel counts.
@@ -470,10 +472,12 @@ Commands/tests: regenerated and asserted headline evidence from all three frozen
 
 ## Exact next task
 
-Publish and verify the canonical `archeumstudios/LunaSeis-1` GitHub release and the `APRK01` fork.
+Create the optional Hugging Face model mirror with the four depthwise checkpoints and the existing model card.
 
 ## Public GitHub release preparation
 
 Files changed for v0.1.0 publication: `README.md`, `CITATION.cff`, `pyproject.toml`, `RELEASE_NOTES.md`, `paper/manuscript.md`, `output/pdf/lunaseis_1_manuscript_preprint.pdf`, `release/SHA256SUMS`, `docs/RELEASE_CHECKLIST.md`, `docs/DECISIONS.md`, `docs/decisions/0030-public-github-release.md`, and `docs/CURRENT_STATUS.md`.
 
 Verification: confirmed the active GitHub token resolves to `archeumstudios`; confirmed the canonical repository name was available; ran 60 tests, Python compilation, the frozen-result manuscript audit, all release checksums, a tracked-secret pattern scan, raw-data exclusion checks, and `git diff --check`; rebuilt the six-page manuscript PDF and visually reinspected the changed copyright and availability pages.
+
+Publication verification: GitHub reports the canonical repository as public with `main` as default; release `v0.1.0` is neither draft nor prerelease and includes `lunaseis_1_manuscript_preprint.pdf` plus `SHA256SUMS`; the remote branch and release tag both initially resolved to commit `8a453490508f263a34783ec0e94b46f406385763`; the APRK01 repository reports `isFork: true` with `archeumstudios/LunaSeis-1` as parent; the active CLI account was restored to the Archeum Studios token after fork creation.

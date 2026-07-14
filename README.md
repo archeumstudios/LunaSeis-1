@@ -12,7 +12,7 @@ The honest answer from the present study is: **not yet operationally**. The sele
 
 ### *LunaSeis-1: When Balanced Apollo Seismic Detection Fails Under Cross-Station Continuous Scanning*
 
-**Author:** Advaith Praveen (APRK) · **Publisher:** Archeum Studios · **Version:** 0.1.0
+**Author:** Advaith Praveen (APRK) · **Publisher:** Archeum Studios · **Version:** 0.1.1
 
 [**Read the research paper on GitHub**](output/pdf/LunaSeis-1_Research_Paper.pdf) · [**Download the PDF**](https://github.com/archeumstudios/LunaSeis-1/raw/main/output/pdf/LunaSeis-1_Research_Paper.pdf) · [**View the manuscript source**](paper/manuscript.md)
 

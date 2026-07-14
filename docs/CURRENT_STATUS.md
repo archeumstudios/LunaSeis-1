@@ -473,7 +473,13 @@ Commands/tests: regenerated and asserted headline evidence from all three frozen
 
 ## Exact next task
 
-Create the optional Hugging Face model mirror with the four depthwise checkpoints and the existing model card.
+Publish GitHub release v0.1.1, confirm Zenodo ingestion, and record the assigned DOI.
+
+## Zenodo archival preparation
+
+The user supplied visual confirmation that the Zenodo GitHub integration is ON for `archeumstudios/LunaSeis-1`. Version metadata was advanced to v0.1.1 because Zenodo archives releases created after repository enablement. Files changed: `pyproject.toml`, `CITATION.cff`, `README.md`, `RELEASE_NOTES.md`, `scripts/build_manuscript_pdf.py`, `output/pdf/LunaSeis-1_Research_Paper.pdf`, `paper/figures/research_paper_preview.png`, `release/SHA256SUMS`, `docs/RELEASE_CHECKLIST.md`, and `docs/CURRENT_STATUS.md`.
+
+Verification: 60 tests passed; frozen manuscript evidence recomputed; all release checksums passed; the six-page paper and cover were rebuilt with v0.1.1 metadata; `git diff --check` passed. No model, threshold, evaluation result, or source-data artifact changed.
 
 ## Research-paper visibility update
 

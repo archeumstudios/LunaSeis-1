@@ -20,7 +20,7 @@ def markup(text:str)->str:
 
 
 def footer(canvas,doc):
-    canvas.saveState();canvas.setStrokeColor(colors.HexColor("#CBD2D9"));canvas.line(22*mm,15*mm,188*mm,15*mm);canvas.setFont("Helvetica",7.5);canvas.setFillColor(colors.HexColor("#52606D"));canvas.drawString(22*mm,10*mm,"LunaSeis-1 - Research Paper v0.1.0 - Advaith Praveen (APRK)");canvas.drawRightString(188*mm,10*mm,str(doc.page));canvas.restoreState()
+    canvas.saveState();canvas.setStrokeColor(colors.HexColor("#CBD2D9"));canvas.line(22*mm,15*mm,188*mm,15*mm);canvas.setFont("Helvetica",7.5);canvas.setFillColor(colors.HexColor("#52606D"));canvas.drawString(22*mm,10*mm,"LunaSeis-1 - Research Paper v0.1.1 - Advaith Praveen (APRK)");canvas.drawRightString(188*mm,10*mm,str(doc.page));canvas.restoreState()
 
 
 def main()->None:

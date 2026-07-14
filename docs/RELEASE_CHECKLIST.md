@@ -19,4 +19,5 @@
 - [ ] Obtain written redistribution clarification if publishing labeled windows
 - [x] Obtain explicit user authorization for the public GitHub release
 - [x] Publish `archeumstudios/LunaSeis-1`, create release `v0.1.0`, and verify the `APRK01` fork/contributor attribution
-- [ ] Create optional Hugging Face and Zenodo mirrors in a later release
+- [x] Enable `archeumstudios/LunaSeis-1` in Zenodo GitHub integration
+- [ ] Create v0.1.1 and confirm Zenodo DOI ingestion

@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Praveen
     given-names: Advaith
-version: 0.1.0
+version: 0.1.1
 date-released: 2026-07-14
 license: MIT
 url: "https://github.com/archeumstudios/LunaSeis-1"

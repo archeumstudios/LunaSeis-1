@@ -1,6 +1,6 @@
-# LunaSeis-1 v0.1.0
+# LunaSeis-1 v0.1.1
 
-Initial public research-prototype release by Advaith Praveen (APRK), published under Archeum Studios.
+Public archival release by Advaith Praveen (APRK), published under Archeum Studios.
 
 ## Included
 
@@ -8,7 +8,8 @@ Initial public research-prototype release by Advaith Praveen (APRK), published u
 - Public Python inference API and `lunaseis-predict` command-line interface.
 - Checksum-backed source reconstruction, ATT/gap provenance, leakage-controlled manifests, and reproducible protocols.
 - Three prospectively frozen continuous evaluations totaling 6,748.22 station-hours.
-- Paper manuscript, publication figures, statistical tables, model card, dataset card, and exact release checksums.
+- Prominently linked six-page research paper, publication figures, statistical tables, model card, dataset card, and exact release checksums.
+- Metadata prepared for permanent Zenodo archival and DOI assignment.
 
 ## Evidence boundary
 

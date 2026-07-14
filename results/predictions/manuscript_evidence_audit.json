@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "scope": "headline_primary_180_second_continuous_results",
+  "intervals": "two-sided 95% Clopper-Pearson recall and exact Poisson false-trigger-rate intervals",
+  "verified_frames": 3,
+  "combined_station_hours": 6748.216666666667,
+  "output": "paper/tables/statistical_intervals.csv"
+}

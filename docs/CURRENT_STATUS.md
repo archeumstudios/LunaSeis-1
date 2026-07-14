@@ -4,7 +4,7 @@ Last updated: 2026-07-14 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility and the complete binary-detection experiment cycle are finished. Three prospectively frozen continuous frames are consumed and negative. The final lower-confidence Grade-C challenge contained 63 previously unexposed physical impacts over 1,505.35 station-hours; the frozen 2,761-parameter depthwise CNN recovered 12/63, produced 1,306 false triggers (0.868/hour), and retained 75.38% of the stream. Across all 6,748.22 frozen station-hours, the project does not establish an operational detector. It is packaged as a functioning negative-result research/software prototype authored by Advaith Praveen (APRK), with GitHub documentation, model/data cards, a visually audited preprint PDF, vector/300-DPI figures, tables, citation metadata, notebook, checkpoints, inference CLI, copyright separation, and a literature-backed public-claims boundary. On 2026-07-14, the user reported successful Linux and Google Colab reproduction; exact environment versions and execution transcripts were not supplied or independently archived. Independent scientific review, final account URLs/DOI, and explicit publication remain open.
+Phase 0 feasibility and the complete binary-detection experiment cycle are finished. Three prospectively frozen continuous frames are consumed and negative. The final lower-confidence Grade-C challenge contained 63 previously unexposed physical impacts over 1,505.35 station-hours; the frozen 2,761-parameter depthwise CNN recovered 12/63, produced 1,306 false triggers (0.868/hour), and retained 75.38% of the stream. Across all 6,748.22 frozen station-hours, the project does not establish an operational detector. It is packaged as a functioning negative-result research/software prototype authored by Advaith Praveen (APRK), with GitHub documentation, model/data cards, a six-page visually audited preprint PDF, vector/300-DPI figures, tables, citation metadata, notebook, checkpoints, inference CLI, copyright separation, and a literature-backed public-claims boundary. An internal adversarial pre-submission review passed after major revision: exact uncertainty intervals, reproducibility detail, cross-frame interpretation, ethics/source ownership, and PDF tables are now corrected and machine-audited. This internal audit is not independent peer review. On 2026-07-14, the user reported successful Linux and Google Colab reproduction; exact environment versions and execution transcripts were not supplied or independently archived. External human scientific review, final account URLs/DOI, and explicit publication remain open.
 
 ## Completed
 
@@ -30,6 +30,11 @@ Phase 0 feasibility and the complete binary-detection experiment cycle are finis
 - Matched published arrivals through ATT: nominal mapped time is +0.330 s at S12 and +5.233 s at S14 relative to published arrival.
 - Generated and visually verified the first unprocessed LunaSeis-1 waveform plot; a strong event signal is visible at both stations.
 - Recorded the Phase 0 feasibility result and the scientific limits of this one-event validation.
+- Completed an adversarial internal pre-submission review and resolved nine major manuscript/evidence/presentation findings.
+- Added exact 95% Clopper-Pearson recall intervals and exact Poisson false-trigger-rate intervals, with an explicit clustered-trigger caveat.
+- Expanded manuscript methods with data eligibility, independent-background shortcut evidence, preprocessing, architecture, training, threshold, scanning, matching, integrity, and statistical definitions.
+- Fixed the PDF renderer so Markdown result tables are included; rebuilt the manuscript as six A4 pages and visually inspected every rendered page without clipping or overlap.
+- Added a machine-checkable manuscript evidence audit and three interval regression tests.
 - Audited NASA science-data, PDS citation, and NASA brand policies; raw PSE observations are operationally treated as CC0, while bulk event-catalog/labeled-derivative republication is deferred pending written PDS clarification.
 - Decoded all PDS `T2` event codes, A/B/C grade meanings, quality codes, and station/channel visibility fields from the official XML label.
 - Parsed all 13,057 `levent` rows into a local analytical manifest and produced class/year/station/channel counts.
@@ -416,6 +421,7 @@ Exact files changed for the consumed Grade-C result and publication package: `re
 - Preserve test v0.2 as a second negative result; consume it permanently and treat H1/H6 as unsupported under the tested protocol.
 - Continue as a transparent research-prototype release authored by Advaith Praveen (APRK), not an operational/flight-ready detector claim.
 - Select the 2,761-parameter depthwise CNN for the public interface while preserving its persistent-activation limitation.
+- Adopt the corrected pre-submission manuscript, prohibit pooling heterogeneous frames, and preserve the distinction between internal audit and independent external review.
 
 ## Unresolved uncertainties
 
@@ -452,7 +458,14 @@ Exact files changed for the consumed Grade-C result and publication package: `re
 - All three continuous frames are consumed; additional detector optimization would require a new preregistered design and new untouched data.
 - The depthwise model improves development trigger rate but failed to transfer to the prospectively frozen Grade-C challenge and persistently activates on the documented S15 smoke day.
 - GitHub account/repository URL, Hugging Face location, and Zenodo DOI are intentionally unset until the user explicitly authorizes publication.
+- The manuscript has passed an internal adversarial audit, but no unaffiliated lunar-seismology or statistical reviewer has assessed it.
+
+## Latest pre-submission audit files and verification
+
+Files changed: `.gitattributes`, `paper/manuscript.md`, `paper/tables/statistical_intervals.csv`, `output/pdf/lunaseis_1_manuscript_preprint.pdf`, `scripts/audit_manuscript_evidence.py`, `scripts/build_manuscript_pdf.py`, `tests/test_audit_manuscript_evidence.py`, `results/predictions/manuscript_evidence_audit.json`, `docs/internal_presubmission_review.md`, `docs/decisions/0029-presubmission-evidence-audit.md`, `docs/DECISIONS.md`, `docs/CURRENT_STATUS.md`, and `release/SHA256SUMS`.
+
+Commands/tests: regenerated and asserted headline evidence from all three frozen result JSON files; computed exact intervals; rebuilt the PDF with the bundled ReportLab runtime; inspected PDF metadata; rasterized all six pages with Poppler and visually inspected them; ran the complete unit suite, Python compilation, manuscript/table/result invariants, release checksum verification, and `git diff --check`.
 
 ## Exact next task
 
-Obtain independent scientific review of the manuscript and repository, then resolve the author's GitHub/Hugging Face account URLs and publication authorization for the final tagged/DOI release.
+Obtain unaffiliated human review from a lunar-seismology/statistics reviewer before journal submission.

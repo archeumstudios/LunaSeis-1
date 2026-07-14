@@ -1,0 +1,78 @@
+{
+  "status": "reconstructed_from_training_station_validation_only_before_scan",
+  "target_validation_recall": 0.9,
+  "folds": {
+    "holdout_S12": {
+      "tiny_cnn": {
+        "primary": 0.4497147798538208,
+        "max_f1_sensitivity": 0.4676936864852905
+      },
+      "logistic_handcrafted": {
+        "primary": 0.3103397084262529,
+        "max_f1_sensitivity": 0.3073883882492001
+      },
+      "sta_lta": {
+        "primary": 2.3532889874239067,
+        "max_f1_sensitivity": 1.803455111862973
+      },
+      "validation_counts": {
+        "event": 57,
+        "background": 55
+      }
+    },
+    "holdout_S14": {
+      "tiny_cnn": {
+        "primary": 0.4807552099227905,
+        "max_f1_sensitivity": 0.48273757100105286
+      },
+      "logistic_handcrafted": {
+        "primary": 0.2853223847216981,
+        "max_f1_sensitivity": 0.2853223847216981
+      },
+      "sta_lta": {
+        "primary": 2.3604855898405153,
+        "max_f1_sensitivity": 2.3193473193402183
+      },
+      "validation_counts": {
+        "event": 26,
+        "background": 26
+      }
+    },
+    "holdout_S15": {
+      "tiny_cnn": {
+        "primary": 0.4404523968696594,
+        "max_f1_sensitivity": 0.43838128447532654
+      },
+      "logistic_handcrafted": {
+        "primary": 0.33795168507396117,
+        "max_f1_sensitivity": 0.32230130485018066
+      },
+      "sta_lta": {
+        "primary": 2.3604855898405153,
+        "max_f1_sensitivity": 2.3072463768089326
+      },
+      "validation_counts": {
+        "event": 67,
+        "background": 64
+      }
+    },
+    "holdout_S16": {
+      "tiny_cnn": {
+        "primary": 0.3907981216907501,
+        "max_f1_sensitivity": 0.4083012640476227
+      },
+      "logistic_handcrafted": {
+        "primary": 0.37709912487451797,
+        "max_f1_sensitivity": 0.37709912487451797
+      },
+      "sta_lta": {
+        "primary": 2.5976689976658163,
+        "max_f1_sensitivity": 2.556848484844414
+      },
+      "validation_counts": {
+        "event": 50,
+        "background": 48
+      }
+    }
+  }
+}

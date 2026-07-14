@@ -76,3 +76,8 @@ Contains authoritative code/grade decoding, full and conservative counts, year/s
 - `contiguous_evaluation_day_quality.csv`: ATT/MH rates, coverage, full-day gaps, day sensitivity status, passing 600-second windows, and scannable union duration.
 - `contiguous_evaluation_eligible_event_quality.csv`: ATT mapping, event-window gaps, descriptive RMS support, and integrity status for the seven prospective events.
 - `results/predictions/contiguous_evaluation_integrity_summary.json`: frozen window count, union duration, day/event status counts, and artifact hashes; contains no model inference.
+- `results/predictions/continuous_scanning_thresholds_v0.1.json`: validation-only primary and max-F1 sensitivity thresholds reconstructed before scan inference.
+- `results/predictions/continuous_scanning_window_scores_v0.1.csv.gz`: all 152,986 qualified windows with gap metadata and three method scores.
+- `results/predictions/continuous_scanning_triggers_v0.1.csv`: all primary ±180-second merged triggers and one-to-one match outcomes.
+- `results/predictions/continuous_scanning_results_v0.1.json`: primary and ±60/±300 sensitivity metrics, station results, retention, and artifact hashes.
+- `results/predictions/continuous_scanning_error_audit_v0.1.json`: positive-window fractions, gap correlations, block concentrations, run sizes, and top false triggers.

@@ -1,5 +1,5 @@
 name: continuous_scanning_v0.1
-status: frozen_before_first_contiguous_scan
+status: completed_negative_result_consumed_no_retuning
 scope: pilot_protocol_not_final_paper_result
 input:
   window_seconds: 600
@@ -37,3 +37,7 @@ final_gate:
   integrity_qualified_union_seconds: 9329280
   integrity_eligible_event_count: 6
   model_scoring: authorized_under_frozen_protocol
+  result: results/predictions/continuous_scanning_results_v0.1.json
+  window_scores: results/predictions/continuous_scanning_window_scores_v0.1.csv.gz
+  triggers: results/predictions/continuous_scanning_triggers_v0.1.csv
+  future_tuning_on_this_frame: prohibited

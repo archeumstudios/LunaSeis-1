@@ -4,7 +4,7 @@ Last updated: 2026-07-14 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility is achieved and Phase 1 is active. Positive QA, independent-background v0.1, and the mixed-result tiny-CNN pilot are complete. All 448 untouched contiguous-frame products are downloaded and twice size/MD5-verified. Full-day and sliding-window integrity QA freezes 152,986 scan windows spanning 2,591.47 union station-hours and six eligible events. Decision 0020 authorizes inference under frozen rules; no contiguous model score exists yet and paper claims remain blocked.
+Phase 0 feasibility is achieved and Phase 1 is active. The first frozen untouched continuous scan is complete and negative. Tiny CNN, logistic, and STA/LTA recall 1/6, 1/6, and 0/6 eligible events at ±180 seconds with 2,932, 313, and 732 false triggers over 2,591.47 station-hours. Retention is 75.5%, 40.3%, and 97.9%. Decision 0021 rejects H1 for this pilot and prohibits retuning on the consumed frame. Paper claims remain blocked.
 
 ## Completed
 
@@ -111,6 +111,18 @@ Phase 0 feasibility is achieved and Phase 1 is active. Positive QA, independent-
 - Audited and visually reviewed all seven untouched candidate windows without loading a model. Six pass integrity; `levent-10063` is rejected for 78.59% waveform gaps and 78.714-second ATT displacement.
 - Preserved descriptive signal evidence without relabeling: one weak post/pre RMS ratio, five without a clear increase, and one unquantifiable rejected window.
 - Authorized continuous inference under Decision 0020 while retaining the small-event-denominator and paper-claim blocks.
+- Reconstructed all CNN, logistic, and STA/LTA thresholds from prior training-station chronological validation data before reading any untouched scan score; the primary rule is the highest threshold retaining at least 90% validation event recall.
+- Scored all 152,986 integrity-qualified windows with all three methods and saved every score with station, block, time, and local gap provenance in compressed CSV form.
+- Applied frozen +120-second inferred references, 300-second trigger merging, one-to-one catalog matching, and ±60/±180/±300-second tolerances without tuning.
+- At the primary ±180-second rule, measured CNN/logistic/STA-LTA eligible recall of 1/6, 1/6, and 0/6 with 2,932, 313, and 732 false triggers.
+- Measured false-trigger rates of 1.131, 0.121, and 0.282 per union hour and 27.154, 2.899, and 6.779 per union day.
+- Simulated retained-duration fractions of 75.50%, 40.28%, and 97.92%; these are operational failures, not bandwidth-saving evidence.
+- Ran frozen matching sensitivities: at ±60 seconds all methods recall 0/6; at ±300 seconds CNN/logistic/STA-LTA recall 1/6, 2/6, and 0/6.
+- Determined that the sole CNN/logistic `levent-10093` match is not secure evidence because high false-trigger counts make coincidence plausible.
+- Audited false triggers by station and block, positive-window fractions, gap correlations, merged-run sizes, and the top 20 false triggers per method.
+- Found severe cross-station threshold shift: CNN and logistic mark essentially 100% of S14 windows positive, while STA/LTA marks 85.8–99.9% positive across stations.
+- Visually reviewed the highest-scoring false cases; large steps, ringing, plateau/saturation-like behavior, impulses, and high-frequency texture dominate.
+- Accepted continuous scan v0.1 as a preserved negative result, rejected H1 for this pilot, and prohibited all future tuning on this consumed frame.
 
 ## Files changed
 
@@ -247,8 +259,13 @@ Exact files changed for untouched contiguous evaluation planning: `configs/evalu
 
 Exact files changed for contiguous-frame download and integrity QA: `configs/evaluation/continuous_scanning_v0.1.yaml`, `data/manifests/contiguous_evaluation_download_receipt.json`, `data/manifests/contiguous_evaluation_day_quality.csv`, `data/manifests/contiguous_evaluation_eligible_event_quality.csv`, `docs/CURRENT_STATUS.md`, `docs/DECISIONS.md`, `docs/ROADMAP.md`, `docs/data_dictionary.md`, `docs/contiguous_evaluation_integrity_v0.1.md`, `docs/decisions/0020-contiguous-integrity-and-scan-frame.md`, `results/figures/contiguous_evaluation_eligible_events.png`, `results/predictions/contiguous_evaluation_integrity_summary.json`, `scripts/audit_contiguous_evaluation_data.py`, `scripts/download_contiguous_evaluation.py`, `tests/test_audit_contiguous_evaluation_data.py`, and `tests/test_download_contiguous_evaluation.py`. Raw products remain ignored.
 
+Exact files changed for continuous scanning v0.1: `configs/evaluation/continuous_scanning_v0.1.yaml`, `docs/CURRENT_STATUS.md`, `docs/DECISIONS.md`, `docs/ROADMAP.md`, `docs/data_dictionary.md`, `docs/continuous_scanning_result_v0.1.md`, `docs/decisions/0021-continuous-scan-negative-result.md`, `results/figures/continuous_scanning_results_v0.1.png`, `results/figures/continuous_scanning_top_false_triggers_v0.1.png`, `results/predictions/continuous_scanning_thresholds_v0.1.json`, `results/predictions/continuous_scanning_window_scores_v0.1.csv.gz`, `results/predictions/continuous_scanning_triggers_v0.1.csv`, `results/predictions/continuous_scanning_results_v0.1.json`, `results/predictions/continuous_scanning_error_audit_v0.1.json`, `scripts/run_contiguous_scanning_v0_1.py`, `scripts/audit_continuous_scanning_errors.py`, `tests/test_run_contiguous_scanning_v0_1.py`, and `tests/test_audit_continuous_scanning_errors.py`.
+
 ## Commands and verification
 
+- Reconstructed validation-only thresholds, ran all three methods over 152,986 untouched windows, generated compressed per-window predictions, merged triggers, matched catalogs at three frozen tolerances, computed retention, and ran post-result error analysis without retuning.
+- Repeated the complete scanner after deterministic-gzip hardening and confirmed byte-identical prediction, trigger, and threshold hashes; ran the full 50-test regression suite, compilation, YAML parsing, dependency-lock set comparison, artifact/count/rate/hash invariants, and `git diff --check` successfully.
+- Visually inspected the continuous-result figure and nine highest-scoring false-trigger waveforms; independently verified score/trigger counts, hashes, false-rate denominators, eligible-event numerators, station totals, sensitivity monotonicity, and retention bounds.
 - Ran the checksum-gated contiguous downloader twice, with the second run reusing and revalidating all 448 files; loaded/audited all 112 ATT/MH pairs; enumerated 160,272 frozen scan windows; computed local gap gates and merged union duration; audited and plotted seven eligible event windows without model inference.
 - Visually inspected the full-resolution seven-event raw-MH figure, reviewed the rejected candidate metrics, and independently asserted receipt, day, window, duration, event, and hash totals.
 - Ran the fixed-seed archive-block selector, inspected 112 official PDS day listings, resolved actual MiniSEED location codes from listings, attached official MD5s, reran selection for reproducibility, and ran the post-selection catalog/exposure audit without model scores.
@@ -340,6 +357,7 @@ Exact files changed for contiguous-frame download and integrity QA: `configs/eva
 - Retain the tiny-CNN pilot as mixed/negative evidence, preserve the failed averaging ablation, and freeze continuous-scanning v0.1 before selecting the untouched contiguous evaluation frame.
 - Accept the fixed 112-day frame without replacement, authorize only its checksum-gated 163.4 MiB download, and keep model scoring blocked until full-day integrity QA.
 - Freeze 152,986 local-gap-qualified windows and 2,591.47 union hours; exclude one severe-gap event and authorize continuous inference for six integrity-eligible events.
+- Accept continuous scan v0.1 as a negative result, reject H1 for this pilot, and prohibit tuning thresholds/models against the consumed untouched frame.
 
 ## Unresolved uncertainties
 
@@ -363,11 +381,14 @@ Exact files changed for contiguous-frame download and integrity QA: `configs/eva
 - Tiny-CNN cross-station behavior is unstable; S12 improvement does not generalize to S14–S16.
 - S14 CNN score has a 0.500 correlation with waveform RMS in the pilot test subset and needs amplitude/acquisition sensitivity analysis.
 - Local CPU latency and memory measurements are Apple-Silicon microbenchmarks, not portable deployment measurements.
-- The frozen scanning protocol has not yet been executed on a newly selected untouched contiguous-day frame.
-- The untouched frame has only seven prospectively eligible candidate events before waveform QA, so event recall cannot be a stable headline estimate.
+- The consumed continuous frame had only seven prospectively eligible candidates before waveform QA and six afterward, so its event recall is high-uncertainty and cannot be a stable headline estimate.
 - Only six untouched catalog events pass integrity, and five lack a clear raw RMS increase; event recall will be high-uncertainty and descriptive.
 - Full-day status uses a 10% sensitivity boundary while the primary per-window exclusion remains the established 20% gap gate.
+- Validation-derived thresholds show severe station/date distribution shift; persistent positive runs make trigger rate alone misleading.
+- The single CNN/logistic matched event may be coincidental given the false-trigger burden.
+- Top false triggers contain strong acquisition/instrument artifacts, but their physical causes have not been authoritatively classified.
+- Continuous frame v0.1 is consumed and cannot serve as an untouched test after model changes.
 
 ## Exact next task
 
-Run frozen tiny-CNN, logistic, and STA/LTA inference over the 152,986 qualified windows; merge triggers and report false triggers per union hour/day plus exact six-event recall without tuning on this frame.
+Construct separate training-station continuous-validation manifests from unconsumed archive days, then diagnose station normalization and artifact-robust preprocessing there without reading or retuning on consumed continuous frame v0.1.

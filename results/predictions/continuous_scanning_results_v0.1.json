@@ -1,0 +1,244 @@
+{
+  "status": "frozen_untouched_contiguous_scan_v0.1",
+  "eligible_event_count": 6,
+  "scannable_union_hours": 2591.4666666666667,
+  "models": {
+    "tiny_cnn": {
+      "trigger_count": 2979,
+      "retained_union_seconds": 7043940,
+      "retained_fraction_of_scannable_duration": 0.7550357583864993,
+      "matching_sensitivities": {
+        "60": {
+          "eligible_true_triggers": 0,
+          "matched_eligible_candidate_ids": [],
+          "false_triggers": 2961,
+          "protected_catalog_triggers": 18,
+          "latencies_seconds": [],
+          "eligible_event_recall": 0.0,
+          "precision_excluding_protected_catalog_triggers": 0.0,
+          "f1": 0.0,
+          "false_triggers_per_hour": 1.142596213212595,
+          "false_triggers_per_day": 27.422309117102284,
+          "median_latency_seconds": null
+        },
+        "180": {
+          "eligible_true_triggers": 1,
+          "matched_eligible_candidate_ids": [
+            "levent-10093"
+          ],
+          "false_triggers": 2932,
+          "protected_catalog_triggers": 46,
+          "latencies_seconds": [
+            120.0
+          ],
+          "eligible_event_recall": 0.16666666666666666,
+          "precision_excluding_protected_catalog_triggers": 0.00034094783498124785,
+          "f1": 0.0006805035726437563,
+          "false_triggers_per_hour": 1.1314056390203746,
+          "false_triggers_per_day": 27.15373533648899,
+          "median_latency_seconds": 120.0
+        },
+        "300": {
+          "eligible_true_triggers": 1,
+          "matched_eligible_candidate_ids": [
+            "levent-10093"
+          ],
+          "false_triggers": 2909,
+          "protected_catalog_triggers": 69,
+          "latencies_seconds": [
+            120.0
+          ],
+          "eligible_event_recall": 0.16666666666666666,
+          "precision_excluding_protected_catalog_triggers": 0.0003436426116838488,
+          "f1": 0.0006858710562414267,
+          "false_triggers_per_hour": 1.1225303560403375,
+          "false_triggers_per_day": 26.940728544968103,
+          "median_latency_seconds": 120.0
+        }
+      },
+      "primary_180s_by_station": {
+        "S12": {
+          "triggers": 1518,
+          "false_triggers": 1495,
+          "false_triggers_per_hour": 2.347552996597749,
+          "scan_hours": 636.8333333333334
+        },
+        "S14": {
+          "triggers": 53,
+          "false_triggers": 52,
+          "false_triggers_per_hour": 0.07892939360975486,
+          "scan_hours": 658.8166666666667
+        },
+        "S15": {
+          "triggers": 714,
+          "false_triggers": 700,
+          "false_triggers_per_hour": 1.0558865676144504,
+          "scan_hours": 662.95
+        },
+        "S16": {
+          "triggers": 694,
+          "false_triggers": 685,
+          "false_triggers_per_hour": 1.082376487938481,
+          "scan_hours": 632.8666666666667
+        }
+      }
+    },
+    "logistic_handcrafted": {
+      "trigger_count": 319,
+      "retained_union_seconds": 3757500,
+      "retained_fraction_of_scannable_duration": 0.40276420045276806,
+      "matching_sensitivities": {
+        "60": {
+          "eligible_true_triggers": 0,
+          "matched_eligible_candidate_ids": [],
+          "false_triggers": 318,
+          "protected_catalog_triggers": 1,
+          "latencies_seconds": [],
+          "eligible_event_recall": 0.0,
+          "precision_excluding_protected_catalog_triggers": 0.0,
+          "f1": 0.0,
+          "false_triggers_per_hour": 0.12271043424572957,
+          "false_triggers_per_day": 2.94505042189751,
+          "median_latency_seconds": null
+        },
+        "180": {
+          "eligible_true_triggers": 1,
+          "matched_eligible_candidate_ids": [
+            "levent-10093"
+          ],
+          "false_triggers": 313,
+          "protected_catalog_triggers": 5,
+          "latencies_seconds": [
+            180.0
+          ],
+          "eligible_event_recall": 0.16666666666666666,
+          "precision_excluding_protected_catalog_triggers": 0.0031847133757961785,
+          "f1": 0.00625,
+          "false_triggers_per_hour": 0.12078102490224325,
+          "false_triggers_per_day": 2.898744597653838,
+          "median_latency_seconds": 180.0
+        },
+        "300": {
+          "eligible_true_triggers": 2,
+          "matched_eligible_candidate_ids": [
+            "levent-10093",
+            "levent-10096"
+          ],
+          "false_triggers": 305,
+          "protected_catalog_triggers": 12,
+          "latencies_seconds": [
+            180.0,
+            -240.0
+          ],
+          "eligible_event_recall": 0.3333333333333333,
+          "precision_excluding_protected_catalog_triggers": 0.006514657980456026,
+          "f1": 0.012779552715654953,
+          "false_triggers_per_hour": 0.11769396995266515,
+          "false_triggers_per_day": 2.824655278863964,
+          "median_latency_seconds": -30.0
+        }
+      },
+      "primary_180s_by_station": {
+        "S12": {
+          "triggers": 16,
+          "false_triggers": 16,
+          "false_triggers_per_hour": 0.02512431300706621,
+          "scan_hours": 636.8333333333334
+        },
+        "S14": {
+          "triggers": 53,
+          "false_triggers": 53,
+          "false_triggers_per_hour": 0.0804472665637886,
+          "scan_hours": 658.8166666666667
+        },
+        "S15": {
+          "triggers": 184,
+          "false_triggers": 182,
+          "false_triggers_per_hour": 0.2745305075797571,
+          "scan_hours": 662.95
+        },
+        "S16": {
+          "triggers": 66,
+          "false_triggers": 62,
+          "false_triggers_per_hour": 0.09796692299589171,
+          "scan_hours": 632.8666666666667
+        }
+      }
+    },
+    "sta_lta": {
+      "trigger_count": 742,
+      "retained_union_seconds": 9135180,
+      "retained_fraction_of_scannable_duration": 0.9791945359127392,
+      "matching_sensitivities": {
+        "60": {
+          "eligible_true_triggers": 0,
+          "matched_eligible_candidate_ids": [],
+          "false_triggers": 738,
+          "protected_catalog_triggers": 4,
+          "latencies_seconds": [],
+          "eligible_event_recall": 0.0,
+          "precision_excluding_protected_catalog_triggers": 0.0,
+          "f1": 0.0,
+          "false_triggers_per_hour": 0.28478081909857994,
+          "false_triggers_per_day": 6.834739658365919,
+          "median_latency_seconds": null
+        },
+        "180": {
+          "eligible_true_triggers": 0,
+          "matched_eligible_candidate_ids": [],
+          "false_triggers": 732,
+          "protected_catalog_triggers": 10,
+          "latencies_seconds": [],
+          "eligible_event_recall": 0.0,
+          "precision_excluding_protected_catalog_triggers": 0.0,
+          "f1": 0.0,
+          "false_triggers_per_hour": 0.2824655278863964,
+          "false_triggers_per_day": 6.779172669273513,
+          "median_latency_seconds": null
+        },
+        "300": {
+          "eligible_true_triggers": 0,
+          "matched_eligible_candidate_ids": [],
+          "false_triggers": 728,
+          "protected_catalog_triggers": 14,
+          "latencies_seconds": [],
+          "eligible_event_recall": 0.0,
+          "precision_excluding_protected_catalog_triggers": 0.0,
+          "f1": 0.0,
+          "false_triggers_per_hour": 0.2809220004116073,
+          "false_triggers_per_day": 6.742128009878576,
+          "median_latency_seconds": null
+        }
+      },
+      "primary_180s_by_station": {
+        "S12": {
+          "triggers": 68,
+          "false_triggers": 67,
+          "false_triggers_per_hour": 0.10520806071708975,
+          "scan_hours": 636.8333333333334
+        },
+        "S14": {
+          "triggers": 378,
+          "false_triggers": 370,
+          "false_triggers_per_hour": 0.5616129929924865,
+          "scan_hours": 658.8166666666667
+        },
+        "S15": {
+          "triggers": 194,
+          "false_triggers": 194,
+          "false_triggers_per_hour": 0.29263142016743343,
+          "scan_hours": 662.95
+        },
+        "S16": {
+          "triggers": 102,
+          "false_triggers": 101,
+          "false_triggers_per_hour": 0.15959127778363005,
+          "scan_hours": 632.8666666666667
+        }
+      }
+    }
+  },
+  "window_score_sha256": "eba4d8d64ef79320ac51fcc32e25d03f1cd642b5ffa4bf149db485362f75d9e0",
+  "trigger_csv_sha256": "d4b015307d8ecc4da40f8c531ebeac652c8ce0edcc42b4db1b3ef5d66e03821d",
+  "threshold_json_sha256": "8dda56324b351112386cf1be00634aad591c84c8e7f8c444cd783cb24aff220b"
+}

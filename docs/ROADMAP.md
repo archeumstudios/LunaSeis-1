@@ -40,7 +40,10 @@ Phase 1 initial scoping completed on 2026-07-13:
 - audited catalog coverage only after selection: seven events remain prospectively recall-eligible pending waveform QA, so false-trigger measurement is primary and recall will be descriptive.
 - downloaded and twice size/MD5-verified all 448 contiguous-frame products, loaded all 112 ATT/MH pairs, and audited full-day plus 60-second-stride window integrity without model inference.
 - froze 152,986 scan windows spanning 2,591.47 union station-hours and six integrity-eligible events; one candidate was rejected for severe gaps/ATT displacement.
+- reconstructed validation-only 90%-recall thresholds before scoring and ran CNN, logistic, and STA/LTA across every qualified window under frozen merging/matching rules.
+- accepted a negative operational result: 1/6, 1/6, and 0/6 recall with 2,932, 313, and 732 false triggers; all methods retain an excessive 40–98% of evaluated duration.
+- audited station/block concentration and highest-scoring false cases; persistent activation and acquisition artifacts require separate continuous-validation development, not retuning on the consumed frame.
 
-Phase 1 remains active for exhaustive literature chaining, untouched contiguous scanning, and release/licensing clarification. Pilot neural development is permitted; final claims remain blocked.
+Phase 1 remains active for continuous-validation diagnostics on unconsumed training-station days, artifact-robust model development, exhaustive literature chaining, and release/licensing clarification. The first untouched frame is consumed; final claims remain blocked.
 
 Later phases: literature/data audit; reproducible preprocessing; baselines; compact neural models; generalization/calibration; continuous scanning/retention simulation; reproduction audit; paper; public release.

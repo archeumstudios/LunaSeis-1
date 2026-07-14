@@ -22,5 +22,6 @@
 | 2026-07-14 | 0018 | Retain the tiny-CNN pilot as mixed/negative evidence and freeze continuous-scanning v0.1 prospectively. | The CNN improves only S12, fails to consistently beat logistic regression, and requires untouched contiguous evaluation before any paper claim. | Accepted pilot result and scanning protocol |
 | 2026-07-14 | 0019 | Authorize the fixed-seed 112-day untouched contiguous frame without replacement. | It has zero prior station-day overlap, balanced station coverage, complete ATT/MH products, official checksums, and a 163.4 MiB budget; only seven events remain prospectively recall-eligible. | Accepted download plan; scoring blocked pending QA |
 | 2026-07-14 | 0020 | Freeze 152,986 integrity-qualified windows, 2,591.47 union hours, and six eligible events for continuous scan v0.1. | All products reverified; local ATT/MH gaps exclude one severe-gap candidate while preserving an untouched false-trigger frame. | Accepted; inference authorized, claims still blocked |
+| 2026-07-14 | 0021 | Accept continuous-scan v0.1 as a negative result and prohibit retuning on it. | CNN/logistic/STA-LTA recall 1/6, 1/6, 0/6 with 2,932/313/732 false triggers and excessive retention; balanced-window performance did not transfer. | Accepted negative result; frame consumed |
 
 Formal records live in `docs/decisions/`.

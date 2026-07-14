@@ -1,0 +1,8 @@
+frame,method,station_hours,eligible_events,recalled_events,false_triggers,false_triggers_per_hour,retained_fraction
+v0.1,tiny_cnn,2591.4667,6,1,2932,1.1314056,0.7550358
+v0.1,logistic_handcrafted,2591.4667,6,1,313,0.1207810,0.4027642
+v0.1,sta_lta,2591.4667,6,0,732,0.2824655,0.9791945
+v0.2,artifact_robust_cnn,2651.4,3,0,847,0.3194539,0.4557718
+v0.2,original_tiny_cnn,2651.4,3,0,2448,0.9232858,0.6248397
+v0.2,logistic_handcrafted,2651.4,3,0,490,0.1848080,0.3522039
+v0.2,sta_lta,2651.4,3,0,543,0.2047975,0.9649493

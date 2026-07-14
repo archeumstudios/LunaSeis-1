@@ -47,6 +47,10 @@ Phase 1 initial scoping completed on 2026-07-13:
 - trained robust-level and robust-difference CNN candidates using training-station hard negatives only; selected robust level at equal 0.9115 mean validation-event recall and lower merged validation trigger rate.
 - selected a second untouched 112-day frame with zero prior overlap, verified 448 products/171.07 MB, and froze 157,363 qualified windows/2,651.4 station-hours plus three eligible events before inference.
 - completed frozen test v0.2: robust CNN reduced original-CNN FP/hour from 0.9233 to 0.3195 but remained worse than logistic at 0.1848; every method recalled 0/3 events, so H1 and H6 remain unsupported.
+- completed post-test timing diagnostics; wide score peaks do not support a universal match-window expansion or timing offset.
+- compared robust tiny CNN, depthwise CNN, and compact TCN on development-only continuous data; selected the 2,761-parameter depthwise CNN at 0.2106 merged triggers/hour and 0.9115 mean validation-event recall.
+- added a public station-held-out inference package/CLI, four selected checkpoints, Colab-ready tutorial, model/data cards, manuscript draft, paper tables, citation metadata, and release documentation authored by Advaith Praveen (APRK).
+- preserved a full-day CLI failure diagnostic: all 1,418 scored S15 windows exceeded threshold, so the selected model remains a research prototype rather than an operational detector.
 
 Phase 1 detection experimentation is complete as a negative study. Both untouched frames are consumed, H1/H6 are unsupported under the tested protocol, and further detector iteration requires an explicitly revised protocol rather than more test-frame tuning. Literature completion, calibration relevance review, paper framing, reproducibility packaging, and release/licensing clarification remain.
 

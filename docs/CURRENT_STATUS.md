@@ -4,7 +4,7 @@ Last updated: 2026-07-14 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility is achieved and the planned binary-detection experiment cycle is complete as a negative study. Continuous development data selected robust-level preprocessing without reading test v0.1 or v0.2. On frozen test v0.2, robust CNN/original CNN/logistic/STA-LTA recall 0/3 events with 847/2,448/490/543 false triggers over 2,651.4 station-hours. Robust CNN improves materially over the original CNN but remains worse than logistic regression. Both untouched frames are consumed; H1 and H6 are unsupported under the tested protocol and paper claims remain blocked pending framing/reproducibility work.
+Phase 0 feasibility and the planned binary-detection experiment cycle are complete. Both frozen continuous tests remain negative and consumed. Subsequent development-only comparison selected a 2,761-parameter depthwise CNN at 0.9115 mean validation-event recall and 0.2106 merged triggers/hour, but a full-day S15 smoke scan persistently activated on all 1,418 scored windows. The model is packaged as a functioning research/software prototype authored by Advaith Praveen (APRK), not an operational detector. GitHub-facing documentation, cards, manuscript draft, tables, citation metadata, notebook, checkpoints, and inference CLI now exist; clean Linux/Colab reproduction, literature/claim freeze, and explicit publication remain open.
 
 ## Completed
 
@@ -131,6 +131,12 @@ Phase 0 feasibility is achieved and the planned binary-detection experiment cycl
 - Audited test v0.2 before inference: 157,363 qualified windows, 9,545,040 union seconds, 2,651.4 station-hours, and three integrity-usable prior-unexposed events.
 - Ran the frozen v0.2 comparison once. Robust CNN/original CNN/logistic/STA-LTA produced 847/2,448/490/543 false triggers, 0.3195/0.9233/0.1848/0.2048 FP/hour, and retained 45.58%/62.48%/35.22%/96.49% of duration.
 - Preserved the 0/3 recall for every method without threshold changes; rejected operational-success and retention claims and consumed test v0.2 permanently.
+- Audited every integrity-eligible continuous-test miss over ±2 hours and found no defensible universal timing correction; distant score peaks remain confounded by frequent background activation.
+- Trained 2,761-parameter depthwise CNN and 6,109-parameter compact TCN models in all four folds under the existing development-only hard-negative protocol.
+- Selected depthwise CNN at equal 0.9115 mean event recall and 0.2106 merged false triggers/hour, versus 0.4102 for robust tiny CNN and 0.4558 for TCN.
+- Implemented a public `lunaseis` package, station-held-out checkpoint selection, robust preprocessing, MiniSEED scanner, CLI, and inference tests.
+- Ran the CLI on one complete checksum-verified S15 day: 1,418/1,429 windows scored and all 1,418 exceeded threshold, preserving persistent activation as a release limitation.
+- Added author/release metadata for Advaith Praveen (APRK), MIT code license, citation metadata, polished README, model card, dataset card, reproducibility guide, release checklist, manuscript draft, paper tables, and Colab-ready tutorial notebook.
 
 ## Files changed
 
@@ -271,6 +277,8 @@ Exact files changed for continuous scanning v0.1: `configs/evaluation/continuous
 
 Exact files changed for artifact-robust development and test v0.2: `configs/model/artifact_robust_cnn_v0.1.yaml`, `configs/evaluation/continuous_scanning_v0.2.yaml`, `data/manifests/continuous_validation_*_v0.1.*`, `data/manifests/contiguous_evaluation_*_v0.2.*`, `models/checkpoints/artifact_robust_v0.1/*.pt`, `results/predictions/continuous_validation_audit_v0.1.json`, `results/predictions/artifact_robust_model_selection_v0.1.json`, `results/predictions/contiguous_evaluation_*_v0.2.json`, `results/predictions/continuous_scanning_*_v0.2.*`, `results/figures/continuous_validation_shift_v0.1.png`, `results/figures/contiguous_evaluation_eligible_events_v0.2.png`, `results/figures/continuous_scanning_results_v0.2.png`, `scripts/build_contiguous_evaluation_plan.py`, `scripts/audit_contiguous_evaluation_plan.py`, `scripts/audit_contiguous_evaluation_data.py`, `scripts/audit_continuous_validation.py`, `scripts/train_artifact_robust_models.py`, `scripts/run_contiguous_scanning_v0_2.py`, `docs/artifact_robust_continuous_validation_and_v0.2.md`, `docs/decisions/0022-artifact-robust-development-selection.md`, `docs/decisions/0023-continuous-scan-v0.2-negative-result.md`, and permanent context documents. Raw NASA products remain ignored.
 
+Exact files changed for the release-prototype cycle: `.github/workflows/tests.yml`, `.gitignore`, `AUTHORS.md`, `CONTRIBUTING.md`, `README.md`, `LICENSE`, `CITATION.cff`, `pyproject.toml`, `configs/model/depthwise_cnn_v0.1.yaml`, `lunaseis/__init__.py`, `lunaseis/model.py`, `lunaseis/inference.py`, `lunaseis/cli.py`, `scripts/audit_missed_continuous_events.py`, `scripts/train_compact_model_suite.py`, `scripts/predict_lunaseis.py`, `models/checkpoints/compact_model_suite_v0.1/*`, `results/predictions/missed_continuous_event_audit.json`, `results/predictions/compact_model_suite_v0.1.json`, `docs/MODEL_CARD.md`, `docs/DATASET_CARD.md`, `docs/REPRODUCIBILITY.md`, `docs/RELEASE_CHECKLIST.md`, `docs/decisions/0024-release-prototype-not-operational-claim.md`, `docs/decisions/0025-depthwise-release-prototype.md`, `paper/manuscript.md`, `paper/tables/continuous_tests.csv`, `paper/tables/development_models.csv`, `paper/tables/event_inventory.csv`, `output/jupyter-notebook/lunaseis_inference_colab.ipynb`, `tests/test_lunaseis_inference.py`, and permanent context documents.
+
 ## Commands and verification
 
 - Generalized contiguous selection/audit scripts to named frames, then asserted that validation and test v0.2 have zero overlap with every earlier manifest.
@@ -278,6 +286,8 @@ Exact files changed for artifact-robust development and test v0.2: `configs/mode
 - Ran continuous validation QA, both four-fold robust candidate training/selection passes, test-v0.2 day/event QA, and the frozen four-method operational comparison.
 - Visually inspected the station-shift, eligible-event, and final v0.2 comparison figures; verified primary trigger accounting, duration denominators, retention bounds, file hashes, and the three-event numerator.
 - Re-ran both checksum downloaders in disk-only mode (224/224 and 448/448 reused and reverified), ran all 53 tests, script compilation, YAML parsing, exact dependency-lock set comparison, cross-frame disjointness, result/hash invariants, and `git diff --check`; all passed.
+- Ran post-test missed-event timing diagnostics, eight depthwise/TCN development trainings, candidate selection invariants, public API/CLI full-day inference, and executed every notebook code cell top-to-bottom locally.
+- Installed the project editable, validated the `lunaseis-predict` console entry point, parsed citation/configuration metadata, verified selected checkpoint hashes/table counts, and ran the full 56-test suite successfully.
 - Reconstructed validation-only thresholds, ran all three methods over 152,986 untouched windows, generated compressed per-window predictions, merged triggers, matched catalogs at three frozen tolerances, computed retention, and ran post-result error analysis without retuning.
 - Repeated the complete scanner after deterministic-gzip hardening and confirmed byte-identical prediction, trigger, and threshold hashes; ran the full 50-test regression suite, compilation, YAML parsing, dependency-lock set comparison, artifact/count/rate/hash invariants, and `git diff --check` successfully.
 - Visually inspected the continuous-result figure and nine highest-scoring false-trigger waveforms; independently verified score/trigger counts, hashes, false-rate denominators, eligible-event numerators, station totals, sensitivity monotonicity, and retention bounds.
@@ -375,6 +385,8 @@ Exact files changed for artifact-robust development and test v0.2: `configs/mode
 - Accept continuous scan v0.1 as a negative result, reject H1 for this pilot, and prohibit tuning thresholds/models against the consumed untouched frame.
 - Select robust-level preprocessing on unconsumed training-station continuous validation and freeze it before test v0.2.
 - Preserve test v0.2 as a second negative result; consume it permanently and treat H1/H6 as unsupported under the tested protocol.
+- Continue as a transparent research-prototype release authored by Advaith Praveen (APRK), not an operational/flight-ready detector claim.
+- Select the 2,761-parameter depthwise CNN for the public interface while preserving its persistent-activation limitation.
 
 ## Unresolved uncertainties
 
@@ -409,7 +421,9 @@ Exact files changed for artifact-robust development and test v0.2: `configs/mode
 - Test v0.2 contains only three eligible events, so 0/3 recall is highly uncertain even though the false-trigger exposure is long.
 - Robust preprocessing improves the CNN relative to its original version but still fails to beat logistic regression operationally.
 - Both continuous frames are consumed; additional detector optimization would require a new preregistered design and new untouched data.
+- The depthwise model improves development trigger rate but has no prospectively untouched event-rich result and persistently activates on the documented S15 smoke day.
+- GitHub account/repository URL, Hugging Face location, and Zenodo DOI are intentionally unset until the user explicitly authorizes publication.
 
 ## Exact next task
 
-Freeze the negative-study paper scope and complete the literature/claim audit before deciding whether calibration remains scientifically meaningful for a detector with zero event recall on test v0.2.
+Recreate the release candidate in a clean Linux/Colab environment, then freeze literature-backed claims and manuscript scope before any GitHub/Hugging Face/Zenodo publication.

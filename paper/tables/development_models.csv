@@ -1,0 +1,4 @@
+model,parameters,mean_validation_event_recall,fold_hours,merged_false_triggers,false_triggers_per_hour,evidence_status
+robust_tiny_cnn,3057,0.9114513,1998.85,820,0.4102359,development_only
+depthwise_cnn,2761,0.9114513,1998.85,421,0.2106211,selected_development_prototype
+compact_tcn,6109,0.9114513,1998.85,911,0.4557621,development_only

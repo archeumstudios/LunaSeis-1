@@ -23,6 +23,8 @@ You must guide me step by step, explain unfamiliar concepts clearly, correct sci
 
 My name is Advaith Praveen.
 
+Public author credit: **Advaith Praveen**, also known by the alias **APRK**.
+
 I am 17 years old and currently doing my first serious research paper.
 
 This project is being developed under my independent software and research organization:

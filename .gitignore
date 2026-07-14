@@ -6,6 +6,7 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+*.egg-info/
 .ipynb_checkpoints/
 
 data/raw/*
@@ -23,6 +24,8 @@ models/checkpoints/*
 !models/checkpoints/tiny_cnn_pilot_v0.1/*
 !models/checkpoints/artifact_robust_v0.1/
 !models/checkpoints/artifact_robust_v0.1/*
+!models/checkpoints/compact_model_suite_v0.1/
+!models/checkpoints/compact_model_suite_v0.1/*
 models/exported/*
 !models/exported/.gitkeep
 results/logs/*

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use LunaSeis-1, please cite this software and the NASA PDS sources listed in the repository."
+title: "LunaSeis-1: Lightweight Apollo Lunar-Seismic Detection Research Prototype"
+type: software
+authors:
+  - family-names: Praveen
+    given-names: Advaith
+version: 0.1.0
+date-released: 2026-07-14
+license: MIT
+abstract: "Reproducible lightweight machine-learning models, evaluation protocols, and negative continuous-scanning evidence for Apollo Passive Seismic Experiment waveforms."
+keywords:
+  - lunar seismology
+  - Apollo
+  - moonquake detection
+  - machine learning
+  - continuous scanning

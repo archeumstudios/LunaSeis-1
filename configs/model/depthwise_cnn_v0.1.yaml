@@ -1,0 +1,33 @@
+name: depthwise_cnn_v0.1
+status: selected_development_research_prototype
+author: Advaith Praveen (APRK)
+architecture:
+  parameters: 2761
+  input_channels: 2
+  stem_channels: 16
+  depthwise_dilations: [1, 2, 4]
+  pooled_statistics: [mean, maximum]
+input:
+  waveform_seconds: 600
+  target_samples: 4096
+  channels: [robust_waveform, validity_mask]
+preprocessing:
+  center: per_window_valid_median
+  scale: max(1, 1.4826_MAD, p90_absolute_deviation_divided_by_2.5)
+  clipping: [-20, 20]
+  maximum_gap_fraction: 0.2
+training:
+  seed: 20260714
+  epochs: 14
+  optimizer: AdamW
+  learning_rate: 0.0007
+  weight_decay: 0.0003
+selection:
+  mean_development_event_recall: 0.9114513465063346
+  continuous_development_fold_hours: 1998.85
+  merged_false_triggers: 421
+  false_triggers_per_hour: 0.21062110713660356
+limitations:
+  evidence: development_only
+  untouched_depthwise_test: unavailable_after_prior_frames_consumed
+  operational_or_flight_ready: false

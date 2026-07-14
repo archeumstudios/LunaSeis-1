@@ -25,5 +25,7 @@
 | 2026-07-14 | 0021 | Accept continuous-scan v0.1 as a negative result and prohibit retuning on it. | CNN/logistic/STA-LTA recall 1/6, 1/6, 0/6 with 2,932/313/732 false triggers and excessive retention; balanced-window performance did not transfer. | Accepted negative result; frame consumed |
 | 2026-07-14 | 0022 | Select robust-level normalization using only unconsumed training-station continuous validation. | It retains 0.9115 mean positive-validation recall and lowers continuous-development triggers from 0.4618 to 0.4102 per hour versus robust differences. | Accepted and frozen before test v0.2 |
 | 2026-07-14 | 0023 | Preserve continuous scan v0.2 as a second negative result and consume the frame. | Robust CNN lowers original-CNN false triggers but remains worse than logistic regression; all methods recover 0/3 eligible events. | Accepted negative result; H1/H6 unsupported |
+| 2026-07-14 | 0024 | Continue toward a functioning research-prototype release authored by Advaith Praveen (APRK), without claiming operational reliability. | Both untouched tests failed; reproducible inference and development utility remain achievable, but a perfect-detector claim would be unsupported. | Accepted release boundary |
+| 2026-07-14 | 0025 | Select the 2,761-parameter depthwise CNN as the release research prototype. | It halves continuous-development trigger rate versus the robust tiny CNN at equal recall, but a full-day smoke scan still shows persistent activation. | Accepted prototype; operational claim prohibited |
 
 Formal records live in `docs/decisions/`.

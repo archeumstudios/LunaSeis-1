@@ -1,0 +1,268 @@
+{
+  "status": "development_only_no_claim_on_consumed_tests",
+  "seed": 20260714,
+  "models": {
+    "depthwise_cnn": {
+      "holdout_S12": {
+        "parameters": 2761,
+        "threshold": 0.28121069073677063,
+        "validation_event_count": 57,
+        "validation_event_recall": 0.9122807017543859,
+        "validation_event_pr_auc": 1.0,
+        "continuous_validation_windows": 21829,
+        "continuous_validation_hours": 498.2833333333333,
+        "merged_false_triggers": 99,
+        "false_triggers_per_hour": 0.19868214202093856,
+        "history": [
+          0.6712995202917802,
+          0.6492012299989399,
+          0.6370808293944911,
+          0.6347199082374573,
+          0.6313585356662148,
+          0.6294423498605427,
+          0.6301379517505044,
+          0.6285339562516463,
+          0.6277803308085391,
+          0.622718848680195,
+          0.6186923447408175,
+          0.6161459307921561,
+          0.6114570561208224,
+          0.606390517008932
+        ],
+        "checkpoint_sha256": "b5a02731df0817080833cbb033c0e63a33c5e7eb2cb3dc1d6eb17ee8e97702f4"
+      },
+      "holdout_S14": {
+        "parameters": 2761,
+        "threshold": 0.33063438534736633,
+        "validation_event_count": 26,
+        "validation_event_recall": 0.9230769230769231,
+        "validation_event_pr_auc": 1.0,
+        "continuous_validation_windows": 23983,
+        "continuous_validation_hours": 501.4666666666667,
+        "merged_false_triggers": 77,
+        "false_triggers_per_hour": 0.153549587875565,
+        "history": [
+          0.6656125850147672,
+          0.6557130416234335,
+          0.6444864537980821,
+          0.6457660264439053,
+          0.6396242711279128,
+          0.6382067733340793,
+          0.641911612616645,
+          0.6391391621695625,
+          0.6318983634312948,
+          0.6363237566418118,
+          0.6459627946217855,
+          0.6380768285857307,
+          0.6394086678822836,
+          0.6366082297431098
+        ],
+        "checkpoint_sha256": "f615f71055a7d0dd6cf0769b7d0317cbe5f5c6024427dab769d0a244451ebdaf"
+      },
+      "holdout_S15": {
+        "parameters": 2761,
+        "threshold": 0.23325473070144653,
+        "validation_event_count": 67,
+        "validation_event_recall": 0.9104477611940298,
+        "validation_event_pr_auc": 1.0,
+        "continuous_validation_windows": 21512,
+        "continuous_validation_hours": 500.81666666666666,
+        "merged_false_triggers": 70,
+        "false_triggers_per_hour": 0.13977170621318513,
+        "history": [
+          0.6611729711294174,
+          0.6485883951187134,
+          0.637378066778183,
+          0.6307151943445206,
+          0.6187353789806366,
+          0.6113364636898041,
+          0.6062245756387711,
+          0.5986420601606369,
+          0.5907635360956192,
+          0.5815133392810822,
+          0.5737164691090584,
+          0.5694969564676284,
+          0.5592746287584305,
+          0.5534489214420318
+        ],
+        "checkpoint_sha256": "b08e47e2f8cc0ec2f4962bd1fbfbb21ca821ab0d7cf80959c9a5b649e0ed13f1"
+      },
+      "holdout_S16": {
+        "parameters": 2761,
+        "threshold": 0.30865612626075745,
+        "validation_event_count": 50,
+        "validation_event_recall": 0.9,
+        "validation_event_pr_auc": 1.0,
+        "continuous_validation_windows": 22112,
+        "continuous_validation_hours": 498.2833333333333,
+        "merged_false_triggers": 175,
+        "false_triggers_per_hour": 0.3512058066026692,
+        "history": [
+          0.6602422920140353,
+          0.6459930024363778,
+          0.6394842971454967,
+          0.6323617507110942,
+          0.636474305933172,
+          0.624150116335262,
+          0.6217336072163149,
+          0.6451509323987094,
+          0.6362341398542578,
+          0.6259063888679851,
+          0.6208832087841901,
+          0.636558784679933,
+          0.6211936690590598,
+          0.6203595697879791
+        ],
+        "checkpoint_sha256": "adf17fee14df890663e603cf30bce9667266b64a0ebe233318ab5051d21c0562"
+      },
+      "aggregate": {
+        "mean_validation_event_recall": 0.9114513465063346,
+        "merged_false_triggers": 421,
+        "fold_hours": 1998.85,
+        "false_triggers_per_hour": 0.21062110713660356
+      }
+    },
+    "compact_tcn": {
+      "holdout_S12": {
+        "parameters": 6109,
+        "threshold": 0.19713632762432098,
+        "validation_event_count": 57,
+        "validation_event_recall": 0.9122807017543859,
+        "validation_event_pr_auc": 1.0,
+        "continuous_validation_windows": 21829,
+        "continuous_validation_hours": 498.2833333333333,
+        "merged_false_triggers": 149,
+        "false_triggers_per_hour": 0.2990266581931298,
+        "history": [
+          0.6819542834633275,
+          0.6245760102021066,
+          0.6011615583771154,
+          0.5794309691378945,
+          0.5662442163417214,
+          0.5490457290097287,
+          0.5390730688446447,
+          0.5271551985489694,
+          0.5140245305864435,
+          0.4959137831863604,
+          0.4947331688906017,
+          0.47518318420962286,
+          0.4648108105910452,
+          0.4662975621850867
+        ],
+        "checkpoint_sha256": "6e5d590d7be6caaeb9b3f2048ab2368f27e285204852f18213dac9e4ccf11dbd"
+      },
+      "holdout_S14": {
+        "parameters": 6109,
+        "threshold": 0.13214153051376343,
+        "validation_event_count": 26,
+        "validation_event_recall": 0.9230769230769231,
+        "validation_event_pr_auc": 1.0,
+        "continuous_validation_windows": 23983,
+        "continuous_validation_hours": 501.4666666666667,
+        "merged_false_triggers": 257,
+        "false_triggers_per_hour": 0.5124966764158468,
+        "history": [
+          0.6626166568862067,
+          0.6124883426560296,
+          0.578413638803694,
+          0.5685401260852814,
+          0.5535443292723762,
+          0.5262643496195475,
+          0.5074617465337118,
+          0.47846776578161454,
+          0.44698109560542637,
+          0.44008855356110466,
+          0.4344029857052697,
+          0.37748365932040745,
+          0.3548172414302826,
+          0.33853091133965385
+        ],
+        "checkpoint_sha256": "58bd381269594c7a2593b52bf57b1869aba87ecd037d226ef4db9983a1ac2acd"
+      },
+      "holdout_S15": {
+        "parameters": 6109,
+        "threshold": 0.09891963005065918,
+        "validation_event_count": 67,
+        "validation_event_recall": 0.9104477611940298,
+        "validation_event_pr_auc": 1.0,
+        "continuous_validation_windows": 21512,
+        "continuous_validation_hours": 500.81666666666666,
+        "merged_false_triggers": 248,
+        "false_triggers_per_hour": 0.49519118772671306,
+        "history": [
+          0.6680101186037064,
+          0.5931462347507477,
+          0.5444546133279801,
+          0.5077420905232429,
+          0.4695889726281166,
+          0.4353065565228462,
+          0.4023624792695045,
+          0.3950179174542427,
+          0.37805851846933364,
+          0.36047638282179834,
+          0.3623077549040318,
+          0.3592390209436417,
+          0.3540444366633892,
+          0.32890361323952677
+        ],
+        "checkpoint_sha256": "1285edd677acf7f6a1883ae91ac709b26ca15891a1351b26d7938b5bd0fea086"
+      },
+      "holdout_S16": {
+        "parameters": 6109,
+        "threshold": 0.25413596630096436,
+        "validation_event_count": 50,
+        "validation_event_recall": 0.9,
+        "validation_event_pr_auc": 1.0,
+        "continuous_validation_windows": 22112,
+        "continuous_validation_hours": 498.2833333333333,
+        "merged_false_triggers": 257,
+        "false_triggers_per_hour": 0.5157708131250628,
+        "history": [
+          0.6657567295161161,
+          0.6100358231501146,
+          0.5684915726835077,
+          0.5319038304415616,
+          0.507574275135994,
+          0.4784667403860526,
+          0.4748433950272473,
+          0.44550023024732416,
+          0.4414347599853169,
+          0.42879959669980133,
+          0.4054678190838207,
+          0.39973077042536304,
+          0.39668195423754776,
+          0.3924610127102245
+        ],
+        "checkpoint_sha256": "b5d94d658f3e20ce38cb29a0ae9dae25247e0003c46479428597d6a8cc6b9438"
+      },
+      "aggregate": {
+        "mean_validation_event_recall": 0.9114513465063346,
+        "merged_false_triggers": 911,
+        "fold_hours": 1998.85,
+        "false_triggers_per_hour": 0.45576206318633217
+      }
+    }
+  },
+  "all_candidate_aggregates": {
+    "robust_tiny_cnn": {
+      "validation_event_recall_mean": 0.9114513465063346,
+      "merged_false_triggers": 820,
+      "continuous_validation_hours": 1998.85,
+      "false_triggers_per_hour": 0.4102358856342397
+    },
+    "depthwise_cnn": {
+      "mean_validation_event_recall": 0.9114513465063346,
+      "merged_false_triggers": 421,
+      "fold_hours": 1998.85,
+      "false_triggers_per_hour": 0.21062110713660356
+    },
+    "compact_tcn": {
+      "mean_validation_event_recall": 0.9114513465063346,
+      "merged_false_triggers": 911,
+      "fold_hours": 1998.85,
+      "false_triggers_per_hour": 0.45576206318633217
+    }
+  },
+  "selected_model": "depthwise_cnn",
+  "selection_rule": "lowest merged continuous-development triggers/hour subject to >=0.90 mean positive-validation recall"
+}

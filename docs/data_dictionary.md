@@ -89,3 +89,8 @@ Contains authoritative code/grade decoding, full and conservative counts, year/s
 - `contiguous_evaluation_*_v0.2.*`: second untouched frame selection, checksums, catalog audit, integrity QA, and eligible-event evidence.
 - `results/predictions/continuous_scanning_window_scores_v0.2.csv.gz`: all four frozen model scores for 157,363 qualified test-v0.2 windows.
 - `results/predictions/continuous_scanning_triggers_v0.2.csv` and `continuous_scanning_results_v0.2.json`: merged triggers and final operational comparison.
+- `results/predictions/missed_continuous_event_audit.json`: post-test ±2-hour score/timing diagnostic; cannot alter frozen metrics.
+- `results/predictions/compact_model_suite_v0.1.json`: depthwise CNN versus compact TCN development selection and checkpoint hashes.
+- `models/checkpoints/compact_model_suite_v0.1/`: per-fold depthwise CNN and TCN development checkpoints; depthwise checkpoints power the release prototype.
+- `lunaseis/`: public depthwise architecture, robust preprocessing, inference class, and CLI entry point.
+- `paper/tables/*.csv`: compact machine-readable inventory, continuous-test, and development-model tables.

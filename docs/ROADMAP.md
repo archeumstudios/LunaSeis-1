@@ -54,4 +54,6 @@ Phase 1 initial scoping completed on 2026-07-13:
 
 Phase 1 detection experimentation is complete as a negative study. Both untouched frames are consumed, H1/H6 are unsupported under the tested protocol, and further detector iteration requires an explicitly revised protocol rather than more test-frame tuning. Literature completion, calibration relevance review, paper framing, reproducibility packaging, and release/licensing clarification remain.
 
+The final confirmation cycle adds a frozen 63-event Grade-C natural-impact challenge. It reproduced the operational failure pattern (12/63 recall, 0.868 false triggers/hour, 75.38% retention), so detector development is closed for this release and all three continuous frames are consumed. The release is positioned as a rigorous negative-result research prototype.
+
 Later phases: literature/data audit; reproducible preprocessing; baselines; compact neural models; generalization/calibration; continuous scanning/retention simulation; reproduction audit; paper; public release.

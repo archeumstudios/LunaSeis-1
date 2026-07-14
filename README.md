@@ -17,7 +17,10 @@ The honest answer from the present study is: **not yet operationally**. The sele
 - Severe station-specific quantization and artifact shift documented directly.
 - Robust normalization reduced the original CNN’s test-v0.2 false-trigger rate by 65.4%.
 - A depthwise CNN subsequently reduced development false triggers to **0.211/hour at 91.15% development event recall**.
+- A frozen 63-event Grade-C impact challenge then yielded only **19.0% recall and 0.868 false triggers/hour**, confirming the development-to-operation gap.
 - Every failure, threshold, prediction, trigger, manifest, and checkpoint is retained.
+
+![Frozen continuous results](paper/figures/figure_2_frozen_continuous_results.png)
 
 ## Selected research prototype
 
@@ -53,6 +56,14 @@ The public interface automatically loads the checkpoint trained without the requ
 | STA/LTA | 0/3 | 0.205 | 96.49% |
 
 The newer depthwise model was selected only after both frames were consumed and therefore is **not** retroactively evaluated or claimed to succeed on them.
+
+### Challenge v0.3 — 1,505.35 station-hours, 63 unseen Grade-C impacts
+
+| Method | Recall | False triggers/hour | Retained duration |
+|---|---:|---:|---:|
+| Frozen depthwise CNN | 12/63 | 0.868 | 75.38% |
+
+Grade C is lower-confidence catalog evidence than Grades A/B. This challenge is reported separately and does not convert the prototype into an operational detector.
 
 See [release claims](docs/RELEASE_CLAIMS.md) for the exact evidence boundary. LunaSeis-1 does not claim to be the first lunar ML detector, the first compact raw-waveform model, or an operational detector.
 
@@ -115,4 +126,4 @@ Use [CITATION.cff](CITATION.cff). Primary author: **Advaith Praveen (APRK)**.
 
 ## License and data
 
-Code and repository-authored documentation are released under the MIT License. NASA source data and third-party catalog material retain their original terms; see [dataset card](docs/DATASET_CARD.md) before redistribution.
+Code is released under the MIT License. The manuscript and original paper figures remain copyright © 2026 Advaith Praveen (APRK), all rights reserved pending publication. NASA source data and third-party catalog material retain their original terms; see [copyright and attribution](COPYRIGHT.md) and the [dataset card](docs/DATASET_CARD.md) before redistribution.

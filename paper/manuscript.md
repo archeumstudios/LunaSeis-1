@@ -3,9 +3,11 @@
 **Advaith Praveen (APRK)**
 Archeum Studios
 
+Copyright © 2026 Advaith Praveen (APRK). All rights reserved pending publication.
+
 ## Abstract
 
-Machine-learning models for lunar seismic detection are commonly developed from isolated event and background windows, but operational use requires low false-alarm rates across long continuous recordings and transfer to unseen stations. LunaSeis-1 constructs a checksum-verifiable Apollo Passive Seismic Experiment pipeline, reconciles 1,314 physical-event candidates, preserves Apollo timing/gap provenance, and evaluates lightweight detectors under event-, family-, chronology-, and station-aware controls. A 3,057-parameter tiny CNN appeared competitive on balanced windows but failed two prospectively frozen continuous evaluations. In the first frame (2,591.47 station-hours; six integrity-eligible events), the CNN recovered one event and produced 2,932 false triggers. In the second frame (2,651.4 station-hours; three events), an artifact-robust CNN recovered none and produced 847 false triggers. Station-specific quantization and acquisition artifacts caused persistent activation and severe background shift. A later 2,761-parameter depthwise CNN reduced development triggers to 0.2106/hour at 0.9115 mean development-event recall, but no untouched event-rich evaluation remained and a full-day smoke scan showed persistent activation. These results do not establish an operational lunar detector. Instead, they demonstrate that balanced-window evaluation can substantially overstate Apollo cross-station detection utility and provide a reproducible benchmark, failure analysis, and open research prototype for future work.
+Machine-learning models for lunar seismic detection are commonly developed from isolated event and background windows, but operational use requires low false-alarm rates across long continuous recordings and transfer to unseen stations. LunaSeis-1 constructs a checksum-verifiable Apollo Passive Seismic Experiment pipeline, reconciles 1,314 physical-event candidates, preserves Apollo timing/gap provenance, and evaluates lightweight detectors under event-, family-, chronology-, and station-aware controls. A 3,057-parameter tiny CNN failed two prospectively frozen continuous evaluations: it recovered 1/6 events with 2,932 false triggers over 2,591.47 station-hours, while an artifact-robust successor recovered 0/3 with 847 false triggers over 2,651.4 hours. A later 2,761-parameter depthwise CNN achieved 0.9115 mean development-event recall at 0.2106 merged triggers/hour. We froze an additional lower-confidence challenge containing 63 previously unexposed Grade-C natural impacts across 1,505.35 station-hours. The depthwise model recovered 12/63 at ±180 seconds, produced 1,306 false triggers (0.868/hour), and retained 75.4% of the stream. These results do not establish an operational lunar detector. They demonstrate that balanced-window and development-continuous evaluation can substantially overstate Apollo cross-station utility, and provide a reproducible benchmark, failure analysis, and open research prototype.
 
 ## 1. Introduction
 
@@ -23,7 +25,9 @@ All downloaded products are checked against official sizes and NASA MD5 hashes. 
 
 ## 3. Leakage controls
 
-Physical events and known repeating families are indivisible within folds. Station-held-out models cannot use statistics from the test station. Background dates are selected independently of event dates. Architecture and threshold decisions use training/validation data only. Two continuous test frames were selected and frozen before their corresponding inference runs; both are now permanently consumed.
+Physical events and known repeating families are indivisible within folds. Station-held-out models cannot use statistics from the test station. Background dates are selected independently of event dates. Architecture and threshold decisions use training/validation data only. Three continuous frames were selected and committed before their corresponding inference runs; each is permanently consumed.
+
+The third frame was constructed only after the depthwise model and station thresholds were fixed. It contains 64 station-day observations representing 63 Grade-C natural impacts that were absent from all prior model splits and station-day manifests. Sixteen observations were selected per station by fixed SHA-256 rank from catalog records with positive MH visibility. All 3,426 previously exposed station-days were excluded, missing products could not be replaced, and waveform integrity was audited before inference. Grade C is weaker label evidence than Grades A/B, so this frame is reported separately as a lower-confidence challenge.
 
 ## 4. Models
 
@@ -47,15 +51,21 @@ Development data revealed strong station differences in quantized plateaus, step
 
 At identical mean positive-development recall of 0.9115, the depthwise CNN produced 0.2106 merged triggers/hour, compared with 0.4102 for robust tiny CNN and 0.4558 for compact TCN. This selection occurred after both tests and cannot be promoted to untouched-test evidence. A full-day CLI smoke scan also revealed persistent activation.
 
+### 6.4 Event-rich Grade-C challenge
+
+All 256 planned products (97,596,992 bytes) passed exact-size and NASA-MD5 verification. All 64 selected event-station windows passed the frozen integrity gate, yielding 1,505.35 scannable station-hours. The selected observations represented 63 unique physical impacts because one event was independently selected at two stations. An additional 102 catalog references on the selected days were protected from false-trigger counting.
+
+At the primary ±180-second tolerance, the frozen depthwise CNN recovered 12/63 physical events (recall 0.190), generated 1,306 false triggers (0.868/hour or 20.82/day), and retained 75.38% of the scannable duration. Precision excluding protected catalog triggers was 0.0091. Recall was 4/63 at ±60 seconds and 16/63 at ±300 seconds. The frame is now consumed and no threshold or model retuning is permitted.
+
 ## 7. Discussion
 
 Balanced event/background windows did not predict continuous behavior. Station and acquisition regimes create powerful shortcuts, and trigger merging can hide nearly continuous positive-window activation behind apparently moderate trigger counts. Retained-duration reporting is therefore essential alongside trigger frequency.
 
-The small event denominators prevent stable recall estimates, but the long background exposure robustly demonstrates operational false-alarm problems. The missed-event audit does not support a universal timing correction: score peaks occur widely over ±2 hours and expanding tolerance would mainly relabel background triggers.
+The first two event denominators are small, but the third challenge provides a larger, deliberately weaker-label confirmation. Its 19.0% recall and 0.868 false triggers/hour reproduce the operational failure pattern despite the depthwise model's 91.15% development recall. The missed-event audit does not support a universal timing correction: score peaks occur widely over ±2 hours and expanding tolerance mainly relabels background triggers.
 
 ## 8. Limitations
 
-- No untouched event-rich set remains after the iterative pilot program.
+- The event-rich challenge uses Grade-C catalog labels, which are lower-confidence than the Grade-A/B development pool.
 - Catalog references may not correspond to consistent physical arrivals.
 - Many eligible test windows have weak raw signal evidence.
 - Artifact proxy categories are not authoritative physical diagnoses.
@@ -64,7 +74,17 @@ The small event denominators prevent stable recall estimates, but the long backg
 
 ## 9. Conclusion
 
-LunaSeis-1 does not demonstrate an operational moonquake detector. It demonstrates why apparently successful compact models can fail on continuous Apollo data and supplies a reproducible platform for improving them. Future confirmation requires better arrival-aligned labels, explicit artifact taxonomy, event-rich prospective reservation, and a new untouched evaluation.
+LunaSeis-1 does not demonstrate an operational moonquake detector. Across 6,748.22 frozen station-hours, all tested neural variants failed the intended recall/false-alarm objective. The work demonstrates why apparently successful compact models can fail on continuous Apollo data and supplies a reproducible platform for improving them. Future confirmation requires better arrival-aligned labels, an explicit artifact taxonomy, and a new prospectively reserved high-confidence evaluation.
+
+## Figure captions
+
+**Figure 1.** LunaSeis-1 study design. Product reconstruction, provenance-aware window construction, leakage-controlled development, and frozen continuous evaluation are separated explicitly. Consumed frames are never reused for tuning.
+
+**Figure 2.** Primary ±180-second results for the three frozen continuous evaluations. Grade-A/B tests used the contemporary tiny/robust CNN; the lower-confidence Grade-C challenge used the later frozen depthwise CNN. Retained fraction measures the union of positive windows and exposes persistent activation not visible from merged-trigger counts alone.
+
+**Figure 3.** Transfer gap for the selected depthwise CNN. Development selection reported 91.15% mean event recall and 0.211 merged triggers/hour; the subsequent frozen Grade-C challenge yielded 19.05% recall and 0.868 false triggers/hour.
+
+**Figure 4.** Physical-event composition of the unified 1,314-candidate registry. Counts are candidates with reconciled provenance, not automatically interchangeable training examples.
 
 ## Data and code availability
 

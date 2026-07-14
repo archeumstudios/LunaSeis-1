@@ -4,7 +4,7 @@ Last updated: 2026-07-14 (Asia/Kolkata)
 
 ## State
 
-Phase 0 feasibility and the planned binary-detection experiment cycle are complete. Both frozen continuous tests remain negative and consumed. Subsequent development-only comparison selected a 2,761-parameter depthwise CNN at 0.9115 mean validation-event recall and 0.2106 merged triggers/hour, but a full-day S15 smoke scan persistently activated on all 1,418 scored windows. The model is packaged as a functioning research/software prototype authored by Advaith Praveen (APRK), not an operational detector. GitHub-facing documentation, cards, manuscript draft, tables, citation metadata, notebook, checkpoints, inference CLI, and a literature-backed public-claims boundary now exist. On 2026-07-14, the user reported successful Linux and Google Colab reproduction; exact environment versions and execution transcripts were not supplied or independently archived. Explicit publication remains open.
+Phase 0 feasibility and the complete binary-detection experiment cycle are finished. Three prospectively frozen continuous frames are consumed and negative. The final lower-confidence Grade-C challenge contained 63 previously unexposed physical impacts over 1,505.35 station-hours; the frozen 2,761-parameter depthwise CNN recovered 12/63, produced 1,306 false triggers (0.868/hour), and retained 75.38% of the stream. Across all 6,748.22 frozen station-hours, the project does not establish an operational detector. It is packaged as a functioning negative-result research/software prototype authored by Advaith Praveen (APRK), with GitHub documentation, model/data cards, a visually audited preprint PDF, vector/300-DPI figures, tables, citation metadata, notebook, checkpoints, inference CLI, copyright separation, and a literature-backed public-claims boundary. On 2026-07-14, the user reported successful Linux and Google Colab reproduction; exact environment versions and execution transcripts were not supplied or independently archived. Independent scientific review, final account URLs/DOI, and explicit publication remain open.
 
 ## Completed
 
@@ -289,7 +289,15 @@ Exact files changed for the Grade-C challenge freeze: `scripts/build_grade_c_cha
 
 Exact files changed for pre-inference Grade-C integrity and context QA: `scripts/build_grade_c_catalog_context.py`, `scripts/run_grade_c_challenge.py`, `data/manifests/grade_c_challenge_1_download_receipt.json`, `data/manifests/grade_c_challenge_day_quality.csv`, `data/manifests/grade_c_challenge_event_quality.csv`, `data/manifests/grade_c_challenge_catalog_context.csv`, `results/predictions/grade_c_challenge_integrity_summary.json`, `results/predictions/grade_c_challenge_catalog_context.json`, `results/figures/grade_c_challenge_event_windows.png`, `configs/evaluation/grade_c_challenge_v0.3.yaml`, `docs/decisions/0027-grade-c-confirmatory-challenge-freeze.md`, and `docs/CURRENT_STATUS.md`. Raw products remain ignored.
 
+Exact files changed for the consumed Grade-C result and publication package: `results/predictions/grade_c_challenge_window_scores.csv.gz`, `results/predictions/grade_c_challenge_triggers.csv`, `results/predictions/grade_c_challenge_results.json`, `configs/evaluation/grade_c_challenge_v0.3.yaml`, `docs/DECISIONS.md`, `docs/decisions/0028-grade-c-challenge-negative-result.md`, `docs/RELEASE_CLAIMS.md`, `docs/DATASET_CARD.md`, `docs/MODEL_CARD.md`, `docs/COPYRIGHT_AND_RELEASE_GUIDE.md`, `docs/RELEASE_CHECKLIST.md`, `docs/ROADMAP.md`, `docs/data_dictionary.md`, `COPYRIGHT.md`, `README.md`, `paper/manuscript.md`, `paper/tables/continuous_tests.csv`, `paper/figures/*`, `scripts/build_paper_figures.py`, `scripts/build_manuscript_pdf.py`, `output/pdf/lunaseis_1_manuscript_preprint.pdf`, `release/SHA256SUMS`, and `docs/CURRENT_STATUS.md`.
+
 ## Commands and verification
+
+- Ran the committed depthwise model and frozen station thresholds exactly once over all 89,159 integrity-qualified Grade-C windows. At ±180 seconds it recovered 12/63 physical events, produced 1,306 false triggers over 1,505.35 hours, and retained 75.38% of duration; the frame is consumed and prohibited from retuning.
+- Generated four consistent paper figures in vector PDF and 300-DPI PNG, visually reviewed all four, corrected label collisions, and regenerated them from committed result evidence.
+- Rendered the manuscript as an A4 preprint PDF with author metadata, page numbers, figures, captions, references, and copyright notice; rendered every page to PNG and visually checked the complete document for clipping, overlap, and legibility.
+- Reviewed official Copyright Office of India, GitHub licensing, and WIPO guidance; separated code, paper/figure, checkpoint, NASA-data, and third-party rights and recorded the DOI/tag/registration provenance strategy without promising that copyright can prevent all plagiarism.
+- Ran all 57 unit tests, compiled public package/scripts/tests, parsed all YAML plus `CITATION.cff`, verified Grade-C plan/result/table/checkpoint hashes and headline invariants, checked the PDF metadata, and ran `git diff --check`; all passed.
 
 - Downloaded and exact-size/NASA-MD5 verified all 256 Grade-C challenge products (97,596,992 bytes). Audited 64 event-station observations representing 63 physical impacts without loading the model; all event windows passed integrity, providing 1,505.35 scannable station-hours. Froze 102 additional catalog references as protected context before inference.
 
@@ -441,10 +449,10 @@ Exact files changed for pre-inference Grade-C integrity and context QA: `scripts
 - Artifact proxies expose severe station differences but do not establish the physical cause of plateaus, steps, or extreme values.
 - Test v0.2 contains only three eligible events, so 0/3 recall is highly uncertain even though the false-trigger exposure is long.
 - Robust preprocessing improves the CNN relative to its original version but still fails to beat logistic regression operationally.
-- Both continuous frames are consumed; additional detector optimization would require a new preregistered design and new untouched data.
-- The depthwise model improves development trigger rate but has no prospectively untouched event-rich result and persistently activates on the documented S15 smoke day.
+- All three continuous frames are consumed; additional detector optimization would require a new preregistered design and new untouched data.
+- The depthwise model improves development trigger rate but failed to transfer to the prospectively frozen Grade-C challenge and persistently activates on the documented S15 smoke day.
 - GitHub account/repository URL, Hugging Face location, and Zenodo DOI are intentionally unset until the user explicitly authorizes publication.
 
 ## Exact next task
 
-Run the already frozen depthwise detector once on the integrity-audited Grade-C challenge and permanently consume the frame without retuning.
+Obtain independent scientific review of the manuscript and repository, then resolve the author's GitHub/Hugging Face account URLs and publication authorization for the final tagged/DOI release.

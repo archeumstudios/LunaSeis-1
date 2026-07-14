@@ -38,9 +38,11 @@ A full-day S15 CLI smoke scan produced 1,429 windows, of which 1,418 passed inte
 
 Earlier model generations failed two frozen continuous scans. Test v0.1 recovered at most 1/6 events; test v0.2 recovered 0/3. The depthwise CNN was developed afterward and is not retroactively claimed to pass those consumed frames.
 
+After model selection, the checkpoint and station thresholds were frozen and evaluated once on 64 previously unexposed Grade-C natural-impact station-days representing 63 physical events. Across 1,505.35 scannable station-hours, the model recovered 12/63 events at ±180 seconds, produced 1,306 false triggers (0.868/hour), and retained 75.38% of the stream. Grade C is lower-confidence evidence than Grades A/B, but the larger event denominator confirms that the development metrics do not support operational deployment.
+
 ## Known limitations
 
-- No prospectively untouched event-rich test remains in the current catalog pool.
+- The consumed event-rich confirmation set uses lower-confidence Grade-C labels; no high-confidence untouched pool remains.
 - Station quantization and artifact distributions differ greatly.
 - Many catalog events have weak or unclear waveform evidence near their recorded references.
 - Development thresholds may transfer poorly to new years, stations, channels, or acquisition regimes.

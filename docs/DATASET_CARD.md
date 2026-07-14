@@ -34,6 +34,7 @@ Written PDS clarification is still recommended before redistributing catalog-der
 - Catalog completeness and timing semantics vary by source.
 - Weak events may be indistinguishable from background in a single channel/window.
 - Shallow-event additions are concentrated around S15 discovery conditions.
+- The final confirmation frame contains 64 Grade-C natural-impact station-day observations representing 63 physical events. Grade C is lower-confidence catalog evidence than the Grade-A/B pool, is reported separately, and must not be merged into a headline high-confidence accuracy figure.
 
 ## Citation
 

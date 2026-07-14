@@ -13,6 +13,9 @@
 - [ ] Replace repository URL in release metadata after the user chooses a GitHub account
 - [x] Complete direct-predecessor literature and public-claim audit
 - [x] Draft manuscript and machine-readable headline tables
+- [x] Generate consistent 300-DPI PNG and vector-PDF paper figures
+- [x] Separate software, manuscript/figure, model, NASA-data, and third-party rights
+- [x] Run and preserve the frozen event-rich confirmation challenge
 - [ ] Complete independent scientific review and journal-format manuscript revision
 - [ ] Obtain written redistribution clarification if publishing labeled windows
 - [ ] Create GitHub/Hugging Face/Zenodo releases only with explicit user authorization

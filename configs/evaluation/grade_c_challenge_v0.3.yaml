@@ -1,5 +1,5 @@
 name: grade_c_natural_impact_challenge_v0.3
-status: frozen_integrity_audited_no_model_inference
+status: completed_consumed_no_retuning
 selection_seed: lunaseis-grade-c-impact-challenge-v0.3
 scope: lower_confidence_confirmatory_challenge_not_grade_ab_ground_truth
 frame:
@@ -29,3 +29,5 @@ rules:
   - Missing products are never replaced.
   - Grade-C results remain separate from Grade-A/B results and cannot upgrade the operational claim alone.
   - The frozen depthwise model and thresholds cannot be changed after this freeze.
+result: results/predictions/grade_c_challenge_results.json
+future_tuning_on_this_frame: prohibited

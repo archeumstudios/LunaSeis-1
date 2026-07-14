@@ -13,6 +13,7 @@ This document controls public wording for the LunaSeis-1 repository, model card,
 - Two prospectively frozen continuous evaluations totaling 5,242.87 station-hours failed the intended recall/false-alarm objective.
 - The selected depthwise model reduced development trigger rate relative to the tiny CNN and compact TCN at matched development recall. This is development evidence only.
 - A real full-day command-line smoke scan completed successfully but showed persistent activation, which is a documented model limitation.
+- A later frozen lower-confidence Grade-C challenge covered 63 previously unexposed physical impacts and 1,505.35 station-hours. The depthwise model recovered 12/63 with 1,306 false triggers and 75.38% retention, confirming rather than resolving the operational failure.
 
 ## Claims prohibited by current evidence
 
@@ -32,4 +33,3 @@ Knapmeyer-Endrun and Hammer (2015) already demonstrated automated Apollo 16 dete
 LunaSeis-1 therefore positions its contribution as the combined, openly auditable protocol and negative result: checksum-backed reconstruction; ATT/gap provenance; event-, family-, chronology-, and station-aware leakage controls; independently selected background days; prospectively frozen continuous scans; false-trigger and retained-duration reporting; artifact diagnosis; and preservation of failed operational hypotheses.
 
 This combination is a defensible study focus, not an absolute priority claim. The manuscript must say that the reviewed literature did not reveal an equivalent combined protocol, not that none exists.
-

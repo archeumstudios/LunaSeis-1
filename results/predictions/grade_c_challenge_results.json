@@ -1,0 +1,127 @@
+{
+  "status": "frozen_grade_c_challenge_consumed_no_retuning",
+  "label_scope": "lower_confidence_confirmatory_challenge_not_grade_ab_ground_truth",
+  "eligible_event_count": 63,
+  "scannable_union_hours": 1505.35,
+  "parameters": 2761,
+  "trigger_count": 1338,
+  "retained_fraction_of_scannable_duration": 0.7537892627406694,
+  "matching_sensitivities": {
+    "60": {
+      "eligible_true_triggers": 4,
+      "matched_eligible_candidate_ids": [
+        "levent-04504",
+        "levent-08466",
+        "levent-08767",
+        "levent-12782"
+      ],
+      "false_triggers": 1326,
+      "protected_catalog_triggers": 8,
+      "latencies_seconds": [
+        -60.0,
+        60.0,
+        60.0,
+        0.0
+      ],
+      "eligible_event_recall": 0.06349206349206349,
+      "precision_excluding_protected_catalog_triggers": 0.0030075187969924814,
+      "f1": 0.005743000717875089,
+      "false_triggers_per_hour": 0.88085827216262,
+      "false_triggers_per_day": 21.14059853190288
+    },
+    "180": {
+      "eligible_true_triggers": 12,
+      "matched_eligible_candidate_ids": [
+        "levent-04504",
+        "levent-05953",
+        "levent-06546",
+        "levent-07147",
+        "levent-07657",
+        "levent-08466",
+        "levent-08767",
+        "levent-08768",
+        "levent-09431",
+        "levent-11191",
+        "levent-12381",
+        "levent-12782"
+      ],
+      "false_triggers": 1306,
+      "protected_catalog_triggers": 19,
+      "latencies_seconds": [
+        180.0,
+        180.0,
+        -60.0,
+        180.0,
+        180.0,
+        120.0,
+        180.0,
+        60.0,
+        60.0,
+        -120.0,
+        120.0,
+        120.0,
+        0.0
+      ],
+      "eligible_event_recall": 0.19047619047619047,
+      "precision_excluding_protected_catalog_triggers": 0.009104704097116844,
+      "f1": 0.017378711078928313,
+      "false_triggers_per_hour": 0.8675723253728369,
+      "false_triggers_per_day": 20.821735808948088
+    },
+    "300": {
+      "eligible_true_triggers": 16,
+      "matched_eligible_candidate_ids": [
+        "levent-02604",
+        "levent-04504",
+        "levent-04786",
+        "levent-05953",
+        "levent-06546",
+        "levent-07147",
+        "levent-07657",
+        "levent-08466",
+        "levent-08492",
+        "levent-08767",
+        "levent-08768",
+        "levent-09431",
+        "levent-11191",
+        "levent-12117",
+        "levent-12381",
+        "levent-12782"
+      ],
+      "false_triggers": 1291,
+      "protected_catalog_triggers": 30,
+      "latencies_seconds": [
+        -300.0,
+        180.0,
+        180.0,
+        -60.0,
+        -300.0,
+        300.0,
+        180.0,
+        180.0,
+        120.0,
+        180.0,
+        60.0,
+        60.0,
+        -300.0,
+        -120.0,
+        120.0,
+        120.0,
+        0.0
+      ],
+      "eligible_event_recall": 0.25396825396825395,
+      "precision_excluding_protected_catalog_triggers": 0.01224177505738332,
+      "f1": 0.02335766423357664,
+      "false_triggers_per_hour": 0.8576078652804996,
+      "false_triggers_per_day": 20.58258876673199
+    }
+  },
+  "station_thresholds": {
+    "S12": 0.28121069073677063,
+    "S14": 0.33063438534736633,
+    "S15": 0.23325473070144653,
+    "S16": 0.30865612626075745
+  },
+  "window_score_sha256": "9c5b8012432e0b2102057c943765c5b74d46925be22713f5cd2a805708186c2c",
+  "trigger_csv_sha256": "7b15e106ced46e20c977a884c79c94ae9613d5a1dc53e438def3b9924b43a4f4"
+}

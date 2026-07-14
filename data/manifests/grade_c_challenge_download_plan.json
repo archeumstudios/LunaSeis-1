@@ -1,0 +1,2084 @@
+{
+  "status": "frozen_planned_not_downloaded",
+  "source_bundle": "urn:nasa:pds:apollo_pse::1.0",
+  "selection_seed": "lunaseis-grade-c-impact-challenge-v0.3",
+  "selection": "16 hash-ranked Grade-C natural impacts per station with positive catalog MH visibility, unique station-days, and no prior-manifest station-day overlap; fixed before waveform/model inspection; unavailable products are not replaced",
+  "label_scope": "lower_confidence_confirmatory_challenge_not_grade_ab_ground_truth",
+  "prior_station_days_excluded": 3426,
+  "station_days_selected": 64,
+  "station_days_complete": 64,
+  "station_days_incomplete": 0,
+  "complete_days_by_station": {
+    "S12": 16,
+    "S14": 16,
+    "S15": 16,
+    "S16": 16
+  },
+  "product_count": 256,
+  "total_bytes": 97596992,
+  "batch_summaries": [
+    {
+      "batch_id": 1,
+      "station_day_count": 64,
+      "product_count": 256,
+      "bytes": 97596992
+    }
+  ],
+  "station_days_csv_sha256": "ec301692129679a49fd0b17f0b8cf1230910839f60b382195a81084387b822ad",
+  "catalog_csv_sha256": "0dc0308145ae2ca1056963867ceb59895977fae8e098e216854ef345c3d06e87",
+  "products": [
+    {
+      "path": "data/xa/continuous_waveform/s12/1970/155/xa.s12..att.1970.155.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1970/155/xa.s12..att.1970.155.0.mseed",
+      "bytes": 1163264,
+      "md5": "6d6fff930aa57aa2b6b56baf1daf0e76",
+      "batch_id": 1,
+      "block_id": "levent-00337"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1970/155/xa.s12..att.1970.155.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1970/155/xa.s12..att.1970.155.0.xml",
+      "bytes": 5106,
+      "md5": "4dde95da7db43263bb2013dda94433d1",
+      "batch_id": 1,
+      "block_id": "levent-00337"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1970/155/xa.s12.00.mhz.1970.155.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1970/155/xa.s12.00.mhz.1970.155.0.mseed",
+      "bytes": 360448,
+      "md5": "65c9fffba33d30a37763699310154739",
+      "batch_id": 1,
+      "block_id": "levent-00337"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1970/155/xa.s12.00.mhz.1970.155.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1970/155/xa.s12.00.mhz.1970.155.0.xml",
+      "bytes": 5159,
+      "md5": "60c803a9e1b2c83ed3f2a78568800583",
+      "batch_id": 1,
+      "block_id": "levent-00337"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/066/xa.s12..att.1971.066.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/066/xa.s12..att.1971.066.0.mseed",
+      "bytes": 1163264,
+      "md5": "bf02aec920b2cebc13b2093a872cf53c",
+      "batch_id": 1,
+      "block_id": "levent-00861"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/066/xa.s12..att.1971.066.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/066/xa.s12..att.1971.066.0.xml",
+      "bytes": 5106,
+      "md5": "dc044ef658212ffb6b5ea27bb41a1535",
+      "batch_id": 1,
+      "block_id": "levent-00861"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/066/xa.s12.00.mhz.1971.066.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/066/xa.s12.00.mhz.1971.066.0.mseed",
+      "bytes": 356352,
+      "md5": "3934c23b9bfd5bfec0f0d43828fbf987",
+      "batch_id": 1,
+      "block_id": "levent-00861"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/066/xa.s12.00.mhz.1971.066.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/066/xa.s12.00.mhz.1971.066.0.xml",
+      "bytes": 5159,
+      "md5": "4c2d34a3c63298fb7c4b5b8d35c0b99b",
+      "batch_id": 1,
+      "block_id": "levent-00861"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/184/xa.s12..att.1971.184.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/184/xa.s12..att.1971.184.0.mseed",
+      "bytes": 1163264,
+      "md5": "f2111530a359ef517bd16bbc04936741",
+      "batch_id": 1,
+      "block_id": "levent-01496"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/184/xa.s12..att.1971.184.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/184/xa.s12..att.1971.184.0.xml",
+      "bytes": 5106,
+      "md5": "81caebac8ff1753826e0aee44cbd1eb4",
+      "batch_id": 1,
+      "block_id": "levent-01496"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/184/xa.s12.00.mhz.1971.184.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/184/xa.s12.00.mhz.1971.184.0.mseed",
+      "bytes": 356352,
+      "md5": "a642d0673eb30ce1fafd332ddee60af6",
+      "batch_id": 1,
+      "block_id": "levent-01496"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/184/xa.s12.00.mhz.1971.184.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/184/xa.s12.00.mhz.1971.184.0.xml",
+      "bytes": 5159,
+      "md5": "0661ba3901c7ba42c8d59a81800cb1e6",
+      "batch_id": 1,
+      "block_id": "levent-01496"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/365/xa.s12..att.1971.365.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/365/xa.s12..att.1971.365.0.mseed",
+      "bytes": 1163264,
+      "md5": "a526ec202bc5559b60494ac36a00af1c",
+      "batch_id": 1,
+      "block_id": "levent-02604"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/365/xa.s12..att.1971.365.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/365/xa.s12..att.1971.365.0.xml",
+      "bytes": 5106,
+      "md5": "f14c9019dd87a354f163b9cbaa06811e",
+      "batch_id": 1,
+      "block_id": "levent-02604"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/365/xa.s12.00.mh1.1971.365.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/365/xa.s12.00.mh1.1971.365.0.mseed",
+      "bytes": 356352,
+      "md5": "71d3258d7523bee665e82d09ceb3f809",
+      "batch_id": 1,
+      "block_id": "levent-02604"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1971/365/xa.s12.00.mh1.1971.365.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1971/365/xa.s12.00.mh1.1971.365.0.xml",
+      "bytes": 5159,
+      "md5": "a9d7d14e4d1f4eac7b072c4763588094",
+      "batch_id": 1,
+      "block_id": "levent-02604"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1972/158/xa.s12..att.1972.158.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1972/158/xa.s12..att.1972.158.0.mseed",
+      "bytes": 1163264,
+      "md5": "1f3cb2a53c5969c1dd0df81b6480e10c",
+      "batch_id": 1,
+      "block_id": "levent-03639"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1972/158/xa.s12..att.1972.158.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1972/158/xa.s12..att.1972.158.0.xml",
+      "bytes": 5106,
+      "md5": "e6a79ae864e4c335f50bf6ba5dccfd31",
+      "batch_id": 1,
+      "block_id": "levent-03639"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1972/158/xa.s12.00.mh1.1972.158.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1972/158/xa.s12.00.mh1.1972.158.0.mseed",
+      "bytes": 360448,
+      "md5": "8c7d9c93c740077e3dff14cc144888d3",
+      "batch_id": 1,
+      "block_id": "levent-03639"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1972/158/xa.s12.00.mh1.1972.158.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1972/158/xa.s12.00.mh1.1972.158.0.xml",
+      "bytes": 5159,
+      "md5": "45efa332b25a1db09da5c4a1bd503b5b",
+      "batch_id": 1,
+      "block_id": "levent-03639"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1972/170/xa.s12..att.1972.170.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1972/170/xa.s12..att.1972.170.0.mseed",
+      "bytes": 1163264,
+      "md5": "57d388c223db65b82b5c6c5587d6b1b5",
+      "batch_id": 1,
+      "block_id": "levent-03786"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1972/170/xa.s12..att.1972.170.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1972/170/xa.s12..att.1972.170.0.xml",
+      "bytes": 5106,
+      "md5": "8c889f83a18f194f36b10c6616960587",
+      "batch_id": 1,
+      "block_id": "levent-03786"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1972/170/xa.s12.00.mhz.1972.170.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1972/170/xa.s12.00.mhz.1972.170.0.mseed",
+      "bytes": 356352,
+      "md5": "ba242db084b8eaac0c6268c8f4f6abd2",
+      "batch_id": 1,
+      "block_id": "levent-03786"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1972/170/xa.s12.00.mhz.1972.170.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1972/170/xa.s12.00.mhz.1972.170.0.xml",
+      "bytes": 5159,
+      "md5": "36190487574c306b3e0b5b3fb4cda4b5",
+      "batch_id": 1,
+      "block_id": "levent-03786"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1973/047/xa.s12..att.1973.047.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1973/047/xa.s12..att.1973.047.0.mseed",
+      "bytes": 1163264,
+      "md5": "25749a77b7e38d87012d11f0cd0e38b6",
+      "batch_id": 1,
+      "block_id": "levent-05953"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1973/047/xa.s12..att.1973.047.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1973/047/xa.s12..att.1973.047.0.xml",
+      "bytes": 5106,
+      "md5": "5a9c8375d538360f97dd2a70b2a2993b",
+      "batch_id": 1,
+      "block_id": "levent-05953"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1973/047/xa.s12.00.mhz.1973.047.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1973/047/xa.s12.00.mhz.1973.047.0.mseed",
+      "bytes": 356352,
+      "md5": "38e316284dc896964b994787032d8535",
+      "batch_id": 1,
+      "block_id": "levent-05953"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1973/047/xa.s12.00.mhz.1973.047.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1973/047/xa.s12.00.mhz.1973.047.0.xml",
+      "bytes": 5159,
+      "md5": "1b6e17299f3f53abc6fbf93819dd8563",
+      "batch_id": 1,
+      "block_id": "levent-05953"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1973/165/xa.s12..att.1973.165.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1973/165/xa.s12..att.1973.165.0.mseed",
+      "bytes": 1163264,
+      "md5": "90ad10325b49fd67f68d4426e8ed5bb5",
+      "batch_id": 1,
+      "block_id": "levent-06546"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1973/165/xa.s12..att.1973.165.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1973/165/xa.s12..att.1973.165.0.xml",
+      "bytes": 5106,
+      "md5": "9763f70baff4ea97267f47228043590c",
+      "batch_id": 1,
+      "block_id": "levent-06546"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1973/165/xa.s12.00.mh1.1973.165.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1973/165/xa.s12.00.mh1.1973.165.0.mseed",
+      "bytes": 356352,
+      "md5": "a3571074efcc9f067d335311a82b425e",
+      "batch_id": 1,
+      "block_id": "levent-06546"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1973/165/xa.s12.00.mh1.1973.165.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1973/165/xa.s12.00.mh1.1973.165.0.xml",
+      "bytes": 5159,
+      "md5": "3b2133235d8af10e5746f6a850f882bf",
+      "batch_id": 1,
+      "block_id": "levent-06546"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/069/xa.s12..att.1974.069.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/069/xa.s12..att.1974.069.0.mseed",
+      "bytes": 1163264,
+      "md5": "7e73c9ca8b6ec941ff48383bc7370cc0",
+      "batch_id": 1,
+      "block_id": "levent-07837"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/069/xa.s12..att.1974.069.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/069/xa.s12..att.1974.069.0.xml",
+      "bytes": 5106,
+      "md5": "5382270108ea2d412d2ca6ab5ba15ee5",
+      "batch_id": 1,
+      "block_id": "levent-07837"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/069/xa.s12.00.mh1.1974.069.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/069/xa.s12.00.mh1.1974.069.0.mseed",
+      "bytes": 356352,
+      "md5": "4ba726ef2b85f27d3fd196567ef6e57e",
+      "batch_id": 1,
+      "block_id": "levent-07837"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/069/xa.s12.00.mh1.1974.069.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/069/xa.s12.00.mh1.1974.069.0.xml",
+      "bytes": 5159,
+      "md5": "432d8f4e05e1c921aefb1241acf43206",
+      "batch_id": 1,
+      "block_id": "levent-07837"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/092/xa.s12..att.1974.092.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/092/xa.s12..att.1974.092.0.mseed",
+      "bytes": 1163264,
+      "md5": "ab33c09050f9fab0f8b64dc159b16b53",
+      "batch_id": 1,
+      "block_id": "levent-07927"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/092/xa.s12..att.1974.092.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/092/xa.s12..att.1974.092.0.xml",
+      "bytes": 5106,
+      "md5": "04cd75191129d1d12907e905494c1b42",
+      "batch_id": 1,
+      "block_id": "levent-07927"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/092/xa.s12.00.mh1.1974.092.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/092/xa.s12.00.mh1.1974.092.0.mseed",
+      "bytes": 356352,
+      "md5": "cfe8584b4d289a97abd9fe4adcc58926",
+      "batch_id": 1,
+      "block_id": "levent-07927"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/092/xa.s12.00.mh1.1974.092.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/092/xa.s12.00.mh1.1974.092.0.xml",
+      "bytes": 5159,
+      "md5": "4b269e3f9cb14836aaa112d262614ca3",
+      "batch_id": 1,
+      "block_id": "levent-07927"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/246/xa.s12..att.1974.246.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/246/xa.s12..att.1974.246.0.mseed",
+      "bytes": 1163264,
+      "md5": "a4710b5ae34972c44a367f42b1757667",
+      "batch_id": 1,
+      "block_id": "levent-08466"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/246/xa.s12..att.1974.246.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/246/xa.s12..att.1974.246.0.xml",
+      "bytes": 5106,
+      "md5": "55ca285099e246b455c3995def48c139",
+      "batch_id": 1,
+      "block_id": "levent-08466"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/246/xa.s12.00.mh1.1974.246.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/246/xa.s12.00.mh1.1974.246.0.mseed",
+      "bytes": 356352,
+      "md5": "96ba1fed960c392fb1f29a4c1ff9ce19",
+      "batch_id": 1,
+      "block_id": "levent-08466"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/246/xa.s12.00.mh1.1974.246.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/246/xa.s12.00.mh1.1974.246.0.xml",
+      "bytes": 5159,
+      "md5": "852afac361812509401941582736c8c0",
+      "batch_id": 1,
+      "block_id": "levent-08466"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/252/xa.s12..att.1974.252.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/252/xa.s12..att.1974.252.0.mseed",
+      "bytes": 1163264,
+      "md5": "5f84e7f7cf5f1495e8c9e1445a94acfd",
+      "batch_id": 1,
+      "block_id": "levent-08492"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/252/xa.s12..att.1974.252.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/252/xa.s12..att.1974.252.0.xml",
+      "bytes": 5106,
+      "md5": "d4567e347f8f25653d9aea08655714f1",
+      "batch_id": 1,
+      "block_id": "levent-08492"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/252/xa.s12.00.mh1.1974.252.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/252/xa.s12.00.mh1.1974.252.0.mseed",
+      "bytes": 356352,
+      "md5": "5e44921e9b4e9b1d3d21b141127fa3d0",
+      "batch_id": 1,
+      "block_id": "levent-08492"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1974/252/xa.s12.00.mh1.1974.252.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1974/252/xa.s12.00.mh1.1974.252.0.xml",
+      "bytes": 5159,
+      "md5": "71e90e94888404f9d33e7b25f9f79d44",
+      "batch_id": 1,
+      "block_id": "levent-08492"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1976/220/xa.s12..att.1976.220.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1976/220/xa.s12..att.1976.220.0.mseed",
+      "bytes": 1163264,
+      "md5": "166635d45159c0d385f2ab222adea57b",
+      "batch_id": 1,
+      "block_id": "levent-10918"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1976/220/xa.s12..att.1976.220.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1976/220/xa.s12..att.1976.220.0.xml",
+      "bytes": 5106,
+      "md5": "08532dbf8c9babda6aae7c93b7ea99f9",
+      "batch_id": 1,
+      "block_id": "levent-10918"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1976/220/xa.s12.01.mhz.1976.220.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1976/220/xa.s12.01.mhz.1976.220.0.mseed",
+      "bytes": 356352,
+      "md5": "bad9059533a1c33c7a2a5932c41bcd4a",
+      "batch_id": 1,
+      "block_id": "levent-10918"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1976/220/xa.s12.01.mhz.1976.220.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1976/220/xa.s12.01.mhz.1976.220.0.xml",
+      "bytes": 5159,
+      "md5": "ac932827dd62b63a937316f0243b57d2",
+      "batch_id": 1,
+      "block_id": "levent-10918"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/090/xa.s12..att.1977.090.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/090/xa.s12..att.1977.090.0.mseed",
+      "bytes": 1163264,
+      "md5": "200071ff112a04ab097bccc5f1e4ad19",
+      "batch_id": 1,
+      "block_id": "levent-11964"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/090/xa.s12..att.1977.090.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/090/xa.s12..att.1977.090.0.xml",
+      "bytes": 5106,
+      "md5": "fc6c2abf2956b39d431f541b37369cbc",
+      "batch_id": 1,
+      "block_id": "levent-11964"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/090/xa.s12.00.mhz.1977.090.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/090/xa.s12.00.mhz.1977.090.0.mseed",
+      "bytes": 356352,
+      "md5": "a975332967b62049a51a003c1cd24fd5",
+      "batch_id": 1,
+      "block_id": "levent-11964"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/090/xa.s12.00.mhz.1977.090.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/090/xa.s12.00.mhz.1977.090.0.xml",
+      "bytes": 5159,
+      "md5": "50a588ffde18ea997d5d4d182cb1b704",
+      "batch_id": 1,
+      "block_id": "levent-11964"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/113/xa.s12..att.1977.113.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/113/xa.s12..att.1977.113.0.mseed",
+      "bytes": 1163264,
+      "md5": "a7c6cc7e8eb19070d33a1f449fe32857",
+      "batch_id": 1,
+      "block_id": "levent-12117"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/113/xa.s12..att.1977.113.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/113/xa.s12..att.1977.113.0.xml",
+      "bytes": 5106,
+      "md5": "7e5a71d436b05b3fdd83cd2a2627465e",
+      "batch_id": 1,
+      "block_id": "levent-12117"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/113/xa.s12.00.mh2.1977.113.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/113/xa.s12.00.mh2.1977.113.0.mseed",
+      "bytes": 356352,
+      "md5": "190da03d3221935c2c5062acede50bf9",
+      "batch_id": 1,
+      "block_id": "levent-12117"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/113/xa.s12.00.mh2.1977.113.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/113/xa.s12.00.mh2.1977.113.0.xml",
+      "bytes": 5159,
+      "md5": "c44939e6fd02b7996b1afde41bfe3b61",
+      "batch_id": 1,
+      "block_id": "levent-12117"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/119/xa.s12..att.1977.119.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/119/xa.s12..att.1977.119.0.mseed",
+      "bytes": 1163264,
+      "md5": "deb5a44c9123260534e4478ccf6a1970",
+      "batch_id": 1,
+      "block_id": "levent-12187"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/119/xa.s12..att.1977.119.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/119/xa.s12..att.1977.119.0.xml",
+      "bytes": 5106,
+      "md5": "e6c7ab19383e5d45fe06d95b06a2f885",
+      "batch_id": 1,
+      "block_id": "levent-12187"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/119/xa.s12.00.mhz.1977.119.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/119/xa.s12.00.mhz.1977.119.0.mseed",
+      "bytes": 356352,
+      "md5": "6870fe9941cfea6800bbaad6cee580b2",
+      "batch_id": 1,
+      "block_id": "levent-12187"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s12/1977/119/xa.s12.00.mhz.1977.119.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s12/1977/119/xa.s12.00.mhz.1977.119.0.xml",
+      "bytes": 5159,
+      "md5": "16a30add39a608fe6eb3042973794628",
+      "batch_id": 1,
+      "block_id": "levent-12187"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/059/xa.s14..att.1971.059.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/059/xa.s14..att.1971.059.0.mseed",
+      "bytes": 1163264,
+      "md5": "79b6f636e0e07bc009707a8ebfb5807c",
+      "batch_id": 1,
+      "block_id": "levent-00838"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/059/xa.s14..att.1971.059.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/059/xa.s14..att.1971.059.0.xml",
+      "bytes": 5106,
+      "md5": "4f7da6c61402197f9f6e387d0881c1a2",
+      "batch_id": 1,
+      "block_id": "levent-00838"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/059/xa.s14.00.mhz.1971.059.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/059/xa.s14.00.mhz.1971.059.0.mseed",
+      "bytes": 356352,
+      "md5": "509e0921c8f2af621656f407ca4f8960",
+      "batch_id": 1,
+      "block_id": "levent-00838"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/059/xa.s14.00.mhz.1971.059.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/059/xa.s14.00.mhz.1971.059.0.xml",
+      "bytes": 5159,
+      "md5": "9a77d9331e478640bbc6dcc975a454de",
+      "batch_id": 1,
+      "block_id": "levent-00838"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/072/xa.s14..att.1971.072.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/072/xa.s14..att.1971.072.0.mseed",
+      "bytes": 1163264,
+      "md5": "c2a09e31aad48ddb6f6ef5a363a6f876",
+      "batch_id": 1,
+      "block_id": "levent-00892"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/072/xa.s14..att.1971.072.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/072/xa.s14..att.1971.072.0.xml",
+      "bytes": 5106,
+      "md5": "8ad226240905382a77f595956581ef23",
+      "batch_id": 1,
+      "block_id": "levent-00892"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/072/xa.s14.00.mhz.1971.072.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/072/xa.s14.00.mhz.1971.072.0.mseed",
+      "bytes": 356352,
+      "md5": "671a12bbdb74e44a5ad2f13fc03a2318",
+      "batch_id": 1,
+      "block_id": "levent-00892"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/072/xa.s14.00.mhz.1971.072.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/072/xa.s14.00.mhz.1971.072.0.xml",
+      "bytes": 5159,
+      "md5": "4a4ba01f479292dcbd67ee1efb8b86c1",
+      "batch_id": 1,
+      "block_id": "levent-00892"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/303/xa.s14..att.1971.303.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/303/xa.s14..att.1971.303.0.mseed",
+      "bytes": 1163264,
+      "md5": "d705b38467e0e90b51b9e980c76048d6",
+      "batch_id": 1,
+      "block_id": "levent-02131"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/303/xa.s14..att.1971.303.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/303/xa.s14..att.1971.303.0.xml",
+      "bytes": 5106,
+      "md5": "3260bce5f3cbc0b2a9c59798fabf8e47",
+      "batch_id": 1,
+      "block_id": "levent-02131"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/303/xa.s14.00.mhz.1971.303.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/303/xa.s14.00.mhz.1971.303.0.mseed",
+      "bytes": 360448,
+      "md5": "1aefda5aca31cb5ba9e7f21dd49a04f8",
+      "batch_id": 1,
+      "block_id": "levent-02131"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1971/303/xa.s14.00.mhz.1971.303.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1971/303/xa.s14.00.mhz.1971.303.0.xml",
+      "bytes": 5159,
+      "md5": "88d93babe136336ed931d4b1426c3b5f",
+      "batch_id": 1,
+      "block_id": "levent-02131"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1972/046/xa.s14..att.1972.046.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1972/046/xa.s14..att.1972.046.0.mseed",
+      "bytes": 1163264,
+      "md5": "83bcc5e05dd946384ec8c17e359e9b48",
+      "batch_id": 1,
+      "block_id": "levent-02796"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1972/046/xa.s14..att.1972.046.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1972/046/xa.s14..att.1972.046.0.xml",
+      "bytes": 5106,
+      "md5": "ac0d15a153465731cdd9ddcf6dcbbeaf",
+      "batch_id": 1,
+      "block_id": "levent-02796"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1972/046/xa.s14.00.mh1.1972.046.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1972/046/xa.s14.00.mh1.1972.046.0.mseed",
+      "bytes": 356352,
+      "md5": "33a29d05dbe35abccce9ab51d4cf00f7",
+      "batch_id": 1,
+      "block_id": "levent-02796"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1972/046/xa.s14.00.mh1.1972.046.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1972/046/xa.s14.00.mh1.1972.046.0.xml",
+      "bytes": 5159,
+      "md5": "dd29e466b75cde73e23c2923012749aa",
+      "batch_id": 1,
+      "block_id": "levent-02796"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1972/167/xa.s14..att.1972.167.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1972/167/xa.s14..att.1972.167.0.mseed",
+      "bytes": 1163264,
+      "md5": "30d8368432f3e3e153f71788f19692d5",
+      "batch_id": 1,
+      "block_id": "levent-03770"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1972/167/xa.s14..att.1972.167.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1972/167/xa.s14..att.1972.167.0.xml",
+      "bytes": 5106,
+      "md5": "ffc5b6c0464167753e7f035e74c9a3ee",
+      "batch_id": 1,
+      "block_id": "levent-03770"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1972/167/xa.s14.00.mh1.1972.167.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1972/167/xa.s14.00.mh1.1972.167.0.mseed",
+      "bytes": 356352,
+      "md5": "c2d8d7475c5df0aaf8fb471203867cbd",
+      "batch_id": 1,
+      "block_id": "levent-03770"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1972/167/xa.s14.00.mh1.1972.167.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1972/167/xa.s14.00.mh1.1972.167.0.xml",
+      "bytes": 5159,
+      "md5": "4c2bb904af84e3eb488e658d6b7e4894",
+      "batch_id": 1,
+      "block_id": "levent-03770"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/040/xa.s14..att.1974.040.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/040/xa.s14..att.1974.040.0.mseed",
+      "bytes": 1163264,
+      "md5": "cc331bc18d63bb76084da65d6aa6f214",
+      "batch_id": 1,
+      "block_id": "levent-07657"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/040/xa.s14..att.1974.040.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/040/xa.s14..att.1974.040.0.xml",
+      "bytes": 5106,
+      "md5": "196c05dddbaeaa499f7bc127f538c4bc",
+      "batch_id": 1,
+      "block_id": "levent-07657"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/040/xa.s14.00.mh1.1974.040.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/040/xa.s14.00.mh1.1974.040.0.mseed",
+      "bytes": 356352,
+      "md5": "69b4c3ae4b279c280f233975687929fd",
+      "batch_id": 1,
+      "block_id": "levent-07657"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/040/xa.s14.00.mh1.1974.040.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/040/xa.s14.00.mh1.1974.040.0.xml",
+      "bytes": 5159,
+      "md5": "472ac60c498e5e7dd92b80d5e4bb6303",
+      "batch_id": 1,
+      "block_id": "levent-07657"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/096/xa.s14..att.1974.096.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/096/xa.s14..att.1974.096.0.mseed",
+      "bytes": 1163264,
+      "md5": "5147c6d037665cc6ff7b7ba77cdbd8de",
+      "batch_id": 1,
+      "block_id": "levent-07930"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/096/xa.s14..att.1974.096.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/096/xa.s14..att.1974.096.0.xml",
+      "bytes": 5106,
+      "md5": "d5a6be791dab86df4743924645c44c00",
+      "batch_id": 1,
+      "block_id": "levent-07930"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/096/xa.s14.00.mh1.1974.096.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/096/xa.s14.00.mh1.1974.096.0.mseed",
+      "bytes": 360448,
+      "md5": "5b26b62c0e850dc746be941dfdc7ca16",
+      "batch_id": 1,
+      "block_id": "levent-07930"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/096/xa.s14.00.mh1.1974.096.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/096/xa.s14.00.mh1.1974.096.0.xml",
+      "bytes": 5159,
+      "md5": "1516c2549fde77cdbd391a2fceb563c9",
+      "batch_id": 1,
+      "block_id": "levent-07930"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/246/xa.s14..att.1974.246.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/246/xa.s14..att.1974.246.0.mseed",
+      "bytes": 1163264,
+      "md5": "d0814c6a16d262e4ac5cafde37163fc9",
+      "batch_id": 1,
+      "block_id": "levent-08466"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/246/xa.s14..att.1974.246.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/246/xa.s14..att.1974.246.0.xml",
+      "bytes": 5106,
+      "md5": "e34370fa72b845f5c7523747fa2a024f",
+      "batch_id": 1,
+      "block_id": "levent-08466"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/246/xa.s14.00.mh1.1974.246.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/246/xa.s14.00.mh1.1974.246.0.mseed",
+      "bytes": 356352,
+      "md5": "936edb6bd85a5cf5e1234af9687f00b5",
+      "batch_id": 1,
+      "block_id": "levent-08466"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/246/xa.s14.00.mh1.1974.246.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/246/xa.s14.00.mh1.1974.246.0.xml",
+      "bytes": 5159,
+      "md5": "bbd1faf5a8c408d806346399bbbb1d51",
+      "batch_id": 1,
+      "block_id": "levent-08466"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/303/xa.s14..att.1974.303.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/303/xa.s14..att.1974.303.0.mseed",
+      "bytes": 1163264,
+      "md5": "4bdd82e8df833bc3f7e7a0bc0f91b591",
+      "batch_id": 1,
+      "block_id": "levent-08667"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/303/xa.s14..att.1974.303.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/303/xa.s14..att.1974.303.0.xml",
+      "bytes": 5106,
+      "md5": "cc55777f35b8e155bdece047f14a00f1",
+      "batch_id": 1,
+      "block_id": "levent-08667"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/303/xa.s14.00.mh1.1974.303.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/303/xa.s14.00.mh1.1974.303.0.mseed",
+      "bytes": 356352,
+      "md5": "915442e852dbb017ca55042cc495612a",
+      "batch_id": 1,
+      "block_id": "levent-08667"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/303/xa.s14.00.mh1.1974.303.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/303/xa.s14.00.mh1.1974.303.0.xml",
+      "bytes": 5159,
+      "md5": "0eca2fedec97e0083a995aad32f69661",
+      "batch_id": 1,
+      "block_id": "levent-08667"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/360/xa.s14..att.1974.360.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/360/xa.s14..att.1974.360.0.mseed",
+      "bytes": 1163264,
+      "md5": "7de8024278cb90f196c43b191d2eab6c",
+      "batch_id": 1,
+      "block_id": "levent-08870"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/360/xa.s14..att.1974.360.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/360/xa.s14..att.1974.360.0.xml",
+      "bytes": 5106,
+      "md5": "42ff330698bcc3290add5a9c251f4ca7",
+      "batch_id": 1,
+      "block_id": "levent-08870"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/360/xa.s14.00.mh1.1974.360.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/360/xa.s14.00.mh1.1974.360.0.mseed",
+      "bytes": 360448,
+      "md5": "7379f1b8d57a682d33bdaaffd5feb595",
+      "batch_id": 1,
+      "block_id": "levent-08870"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1974/360/xa.s14.00.mh1.1974.360.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1974/360/xa.s14.00.mh1.1974.360.0.xml",
+      "bytes": 5159,
+      "md5": "49f8a84dda84c3b9fd3f4e9ab04e301c",
+      "batch_id": 1,
+      "block_id": "levent-08870"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1975/188/xa.s14..att.1975.188.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1975/188/xa.s14..att.1975.188.0.mseed",
+      "bytes": 1163264,
+      "md5": "49028a1da1392a438da949d61f297dfc",
+      "batch_id": 1,
+      "block_id": "levent-09431"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1975/188/xa.s14..att.1975.188.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1975/188/xa.s14..att.1975.188.0.xml",
+      "bytes": 5106,
+      "md5": "79f053974921b83dc0d4088b0dd20879",
+      "batch_id": 1,
+      "block_id": "levent-09431"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1975/188/xa.s14.00.mh2.1975.188.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1975/188/xa.s14.00.mh2.1975.188.0.mseed",
+      "bytes": 356352,
+      "md5": "0145e78b46987a51e3fedb7ba3fb0842",
+      "batch_id": 1,
+      "block_id": "levent-09431"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1975/188/xa.s14.00.mh2.1975.188.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1975/188/xa.s14.00.mh2.1975.188.0.xml",
+      "bytes": 5159,
+      "md5": "e8d9e17cfaccc511f15ee78913fd563c",
+      "batch_id": 1,
+      "block_id": "levent-09431"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/209/xa.s14..att.1976.209.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/209/xa.s14..att.1976.209.0.mseed",
+      "bytes": 1163264,
+      "md5": "7321b40b85f2860189fbc78c42122cc7",
+      "batch_id": 1,
+      "block_id": "levent-10837"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/209/xa.s14..att.1976.209.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/209/xa.s14..att.1976.209.0.xml",
+      "bytes": 5106,
+      "md5": "5f4f17cd96e826b649a3fc773a87773f",
+      "batch_id": 1,
+      "block_id": "levent-10837"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/209/xa.s14.01.mh2.1976.209.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/209/xa.s14.01.mh2.1976.209.0.mseed",
+      "bytes": 356352,
+      "md5": "d9f9558373f7451444dc9fd85ab79b8e",
+      "batch_id": 1,
+      "block_id": "levent-10837"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/209/xa.s14.01.mh2.1976.209.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/209/xa.s14.01.mh2.1976.209.0.xml",
+      "bytes": 5159,
+      "md5": "572ae95c6c686e38b3b972030e2db30c",
+      "batch_id": 1,
+      "block_id": "levent-10837"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/246/xa.s14..att.1976.246.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/246/xa.s14..att.1976.246.0.mseed",
+      "bytes": 1163264,
+      "md5": "a722912eae08797a039bf23c23a6633d",
+      "batch_id": 1,
+      "block_id": "levent-11038"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/246/xa.s14..att.1976.246.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/246/xa.s14..att.1976.246.0.xml",
+      "bytes": 5106,
+      "md5": "5a0950e4be26b140c3335e6c032af62a",
+      "batch_id": 1,
+      "block_id": "levent-11038"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/246/xa.s14.01.mh1.1976.246.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/246/xa.s14.01.mh1.1976.246.0.mseed",
+      "bytes": 356352,
+      "md5": "445d52c9b8a2f6f0000c9ac55a118607",
+      "batch_id": 1,
+      "block_id": "levent-11038"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/246/xa.s14.01.mh1.1976.246.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/246/xa.s14.01.mh1.1976.246.0.xml",
+      "bytes": 5159,
+      "md5": "50b7f1b68c344e5508a7c127c7648d11",
+      "batch_id": 1,
+      "block_id": "levent-11038"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/280/xa.s14..att.1976.280.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/280/xa.s14..att.1976.280.0.mseed",
+      "bytes": 1163264,
+      "md5": "8d49b8ae74aba3a48941cf3c475def59",
+      "batch_id": 1,
+      "block_id": "levent-11191"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/280/xa.s14..att.1976.280.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/280/xa.s14..att.1976.280.0.xml",
+      "bytes": 5106,
+      "md5": "2d8553a84d907fd540286475d7b2adae",
+      "batch_id": 1,
+      "block_id": "levent-11191"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/280/xa.s14.01.mh1.1976.280.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/280/xa.s14.01.mh1.1976.280.0.mseed",
+      "bytes": 368640,
+      "md5": "e5125d0b131f336034636f28f8e43595",
+      "batch_id": 1,
+      "block_id": "levent-11191"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1976/280/xa.s14.01.mh1.1976.280.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1976/280/xa.s14.01.mh1.1976.280.0.xml",
+      "bytes": 5159,
+      "md5": "0df351c08f2cc423e7d6dc876b0d06d2",
+      "batch_id": 1,
+      "block_id": "levent-11191"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1977/121/xa.s14..att.1977.121.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1977/121/xa.s14..att.1977.121.0.mseed",
+      "bytes": 1163264,
+      "md5": "74584769ac904e7d5c7c7a94e9b86ce7",
+      "batch_id": 1,
+      "block_id": "levent-12227"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1977/121/xa.s14..att.1977.121.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1977/121/xa.s14..att.1977.121.0.xml",
+      "bytes": 5106,
+      "md5": "bd2a356279aa67fde3cd2515184de09a",
+      "batch_id": 1,
+      "block_id": "levent-12227"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1977/121/xa.s14.00.mh1.1977.121.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1977/121/xa.s14.00.mh1.1977.121.0.mseed",
+      "bytes": 360448,
+      "md5": "49ca1c85ae35066c44f18a55cdc0e0c9",
+      "batch_id": 1,
+      "block_id": "levent-12227"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1977/121/xa.s14.00.mh1.1977.121.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1977/121/xa.s14.00.mh1.1977.121.0.xml",
+      "bytes": 5159,
+      "md5": "03f8dd6c54100840057bdf17ad5232bc",
+      "batch_id": 1,
+      "block_id": "levent-12227"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1977/236/xa.s14..att.1977.236.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1977/236/xa.s14..att.1977.236.0.mseed",
+      "bytes": 1163264,
+      "md5": "cd4071e55daa25bcce0328b051e3772d",
+      "batch_id": 1,
+      "block_id": "levent-12900"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1977/236/xa.s14..att.1977.236.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1977/236/xa.s14..att.1977.236.0.xml",
+      "bytes": 5106,
+      "md5": "1cfa515a0e23aaf1684d416639671389",
+      "batch_id": 1,
+      "block_id": "levent-12900"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1977/236/xa.s14.00.mhz.1977.236.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1977/236/xa.s14.00.mhz.1977.236.0.mseed",
+      "bytes": 356352,
+      "md5": "c8678d31cc060af21d62b6a1a7a8ae50",
+      "batch_id": 1,
+      "block_id": "levent-12900"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s14/1977/236/xa.s14.00.mhz.1977.236.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s14/1977/236/xa.s14.00.mhz.1977.236.0.xml",
+      "bytes": 5159,
+      "md5": "7bd2c6d29347899dc89f73e9cb456e43",
+      "batch_id": 1,
+      "block_id": "levent-12900"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1972/271/xa.s15..att.1972.271.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1972/271/xa.s15..att.1972.271.0.mseed",
+      "bytes": 1163264,
+      "md5": "d4ef07594473d687fa5e169dbc7373a0",
+      "batch_id": 1,
+      "block_id": "levent-04800"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1972/271/xa.s15..att.1972.271.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1972/271/xa.s15..att.1972.271.0.xml",
+      "bytes": 5106,
+      "md5": "b67c03314da3e62df1376fb9aee60753",
+      "batch_id": 1,
+      "block_id": "levent-04800"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1972/271/xa.s15.00.mh2.1972.271.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1972/271/xa.s15.00.mh2.1972.271.0.mseed",
+      "bytes": 360448,
+      "md5": "d158d9c341c2380d4bfa5960c6ed0ac0",
+      "batch_id": 1,
+      "block_id": "levent-04800"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1972/271/xa.s15.00.mh2.1972.271.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1972/271/xa.s15.00.mh2.1972.271.0.xml",
+      "bytes": 5159,
+      "md5": "84c36930fe14ebc91a3bcc7ce567dbf0",
+      "batch_id": 1,
+      "block_id": "levent-04800"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1972/278/xa.s15..att.1972.278.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1972/278/xa.s15..att.1972.278.0.mseed",
+      "bytes": 1163264,
+      "md5": "a18b0b5c98cb73fb856733036aebd7b2",
+      "batch_id": 1,
+      "block_id": "levent-04835"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1972/278/xa.s15..att.1972.278.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1972/278/xa.s15..att.1972.278.0.xml",
+      "bytes": 5106,
+      "md5": "5d30b496f83dee75fae31e1cecf99c16",
+      "batch_id": 1,
+      "block_id": "levent-04835"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1972/278/xa.s15.00.mh1.1972.278.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1972/278/xa.s15.00.mh1.1972.278.0.mseed",
+      "bytes": 356352,
+      "md5": "0727397dde475a441964ab43634009c5",
+      "batch_id": 1,
+      "block_id": "levent-04835"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1972/278/xa.s15.00.mh1.1972.278.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1972/278/xa.s15.00.mh1.1972.278.0.xml",
+      "bytes": 5159,
+      "md5": "6aa46b1b762ea2fea5b67d6adf6c305b",
+      "batch_id": 1,
+      "block_id": "levent-04835"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1973/280/xa.s15..att.1973.280.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1973/280/xa.s15..att.1973.280.0.mseed",
+      "bytes": 1163264,
+      "md5": "182b68494ff73d9e7073ba6fd2cac068",
+      "batch_id": 1,
+      "block_id": "levent-07147"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1973/280/xa.s15..att.1973.280.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1973/280/xa.s15..att.1973.280.0.xml",
+      "bytes": 5106,
+      "md5": "61a626938ac8715efca12cba8689b49d",
+      "batch_id": 1,
+      "block_id": "levent-07147"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1973/280/xa.s15.00.mh1.1973.280.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1973/280/xa.s15.00.mh1.1973.280.0.mseed",
+      "bytes": 360448,
+      "md5": "bb815ffd97aa74dc290b4222745b40c5",
+      "batch_id": 1,
+      "block_id": "levent-07147"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1973/280/xa.s15.00.mh1.1973.280.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1973/280/xa.s15.00.mh1.1973.280.0.xml",
+      "bytes": 5159,
+      "md5": "e86038fc2ac8c28452f40d8a2d9691b4",
+      "batch_id": 1,
+      "block_id": "levent-07147"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/193/xa.s15..att.1974.193.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/193/xa.s15..att.1974.193.0.mseed",
+      "bytes": 1163264,
+      "md5": "672cd57d47c36efba53f055c139eecce",
+      "batch_id": 1,
+      "block_id": "levent-08273"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/193/xa.s15..att.1974.193.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/193/xa.s15..att.1974.193.0.xml",
+      "bytes": 5106,
+      "md5": "b6c0914fc8958e945b1f4df2d5e66e63",
+      "batch_id": 1,
+      "block_id": "levent-08273"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/193/xa.s15.00.mh1.1974.193.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/193/xa.s15.00.mh1.1974.193.0.mseed",
+      "bytes": 360448,
+      "md5": "c5e7dca01b7db44803e1cace12ba84dc",
+      "batch_id": 1,
+      "block_id": "levent-08273"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/193/xa.s15.00.mh1.1974.193.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/193/xa.s15.00.mh1.1974.193.0.xml",
+      "bytes": 5159,
+      "md5": "ae56f3ea2c1cfe197cbfaf066673215c",
+      "batch_id": 1,
+      "block_id": "levent-08273"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/295/xa.s15..att.1974.295.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/295/xa.s15..att.1974.295.0.mseed",
+      "bytes": 1163264,
+      "md5": "32b596936ebdb54ddf0516aaa11b2082",
+      "batch_id": 1,
+      "block_id": "levent-08634"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/295/xa.s15..att.1974.295.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/295/xa.s15..att.1974.295.0.xml",
+      "bytes": 5106,
+      "md5": "6c101318dd52116e717d86f627b0338a",
+      "batch_id": 1,
+      "block_id": "levent-08634"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/295/xa.s15.00.mh1.1974.295.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/295/xa.s15.00.mh1.1974.295.0.mseed",
+      "bytes": 356352,
+      "md5": "f24ea5475697ce049129e17e61a5bf0b",
+      "batch_id": 1,
+      "block_id": "levent-08634"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/295/xa.s15.00.mh1.1974.295.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/295/xa.s15.00.mh1.1974.295.0.xml",
+      "bytes": 5159,
+      "md5": "87a87f23182b6088f17f9633fbfd7895",
+      "batch_id": 1,
+      "block_id": "levent-08634"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/328/xa.s15..att.1974.328.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/328/xa.s15..att.1974.328.0.mseed",
+      "bytes": 1163264,
+      "md5": "51641d33059acef516c563c876a74b6a",
+      "batch_id": 1,
+      "block_id": "levent-08762"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/328/xa.s15..att.1974.328.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/328/xa.s15..att.1974.328.0.xml",
+      "bytes": 5106,
+      "md5": "77cc8209265c02d014498943fc2d1c8e",
+      "batch_id": 1,
+      "block_id": "levent-08762"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/328/xa.s15.00.mhz.1974.328.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/328/xa.s15.00.mhz.1974.328.0.mseed",
+      "bytes": 356352,
+      "md5": "72d7afb9d10845b9af3957f03ecd9c19",
+      "batch_id": 1,
+      "block_id": "levent-08762"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/328/xa.s15.00.mhz.1974.328.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/328/xa.s15.00.mhz.1974.328.0.xml",
+      "bytes": 5159,
+      "md5": "f6b76ecf150022205769f175f5e4605b",
+      "batch_id": 1,
+      "block_id": "levent-08762"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/330/xa.s15..att.1974.330.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/330/xa.s15..att.1974.330.0.mseed",
+      "bytes": 1163264,
+      "md5": "e638193dc49a6e0087b4c858e1fad578",
+      "batch_id": 1,
+      "block_id": "levent-08767"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/330/xa.s15..att.1974.330.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/330/xa.s15..att.1974.330.0.xml",
+      "bytes": 5106,
+      "md5": "379a1a65703a4073e88d06c7ba9606b8",
+      "batch_id": 1,
+      "block_id": "levent-08767"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/330/xa.s15.00.mh1.1974.330.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/330/xa.s15.00.mh1.1974.330.0.mseed",
+      "bytes": 356352,
+      "md5": "b2b6c9bb78aec94676a47b93facecf8b",
+      "batch_id": 1,
+      "block_id": "levent-08767"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1974/330/xa.s15.00.mh1.1974.330.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1974/330/xa.s15.00.mh1.1974.330.0.xml",
+      "bytes": 5159,
+      "md5": "b4d68d0c321664927597238ce5830ef5",
+      "batch_id": 1,
+      "block_id": "levent-08767"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/016/xa.s15..att.1975.016.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/016/xa.s15..att.1975.016.0.mseed",
+      "bytes": 1163264,
+      "md5": "033211643516662e7b1bcf79051e7ad9",
+      "batch_id": 1,
+      "block_id": "levent-08919"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/016/xa.s15..att.1975.016.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/016/xa.s15..att.1975.016.0.xml",
+      "bytes": 5106,
+      "md5": "ce61ee3e9d3d3deb29abd265d7872688",
+      "batch_id": 1,
+      "block_id": "levent-08919"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/016/xa.s15.00.mh1.1975.016.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/016/xa.s15.00.mh1.1975.016.0.mseed",
+      "bytes": 356352,
+      "md5": "f2b2e28c893a6659dc293278f4da8832",
+      "batch_id": 1,
+      "block_id": "levent-08919"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/016/xa.s15.00.mh1.1975.016.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/016/xa.s15.00.mh1.1975.016.0.xml",
+      "bytes": 5159,
+      "md5": "9c6bae37cc55e067326c19e387cf0f59",
+      "batch_id": 1,
+      "block_id": "levent-08919"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/079/xa.s15..att.1975.079.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/079/xa.s15..att.1975.079.0.mseed",
+      "bytes": 1163264,
+      "md5": "064c679a56ac51ca61b159e61c842207",
+      "batch_id": 1,
+      "block_id": "levent-09107"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/079/xa.s15..att.1975.079.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/079/xa.s15..att.1975.079.0.xml",
+      "bytes": 5106,
+      "md5": "07e2b1ca6730db49a21f6c617e357dd6",
+      "batch_id": 1,
+      "block_id": "levent-09107"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/079/xa.s15.00.mh2.1975.079.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/079/xa.s15.00.mh2.1975.079.0.mseed",
+      "bytes": 368640,
+      "md5": "6e0b00f306a9925108d4701b1889b6c9",
+      "batch_id": 1,
+      "block_id": "levent-09107"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/079/xa.s15.00.mh2.1975.079.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/079/xa.s15.00.mh2.1975.079.0.xml",
+      "bytes": 5159,
+      "md5": "715ab7ddf6219178cbe9c20f8763cf53",
+      "batch_id": 1,
+      "block_id": "levent-09107"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/171/xa.s15..att.1975.171.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/171/xa.s15..att.1975.171.0.mseed",
+      "bytes": 1163264,
+      "md5": "d340217e3b636af12fbbd9e72bb3eb33",
+      "batch_id": 1,
+      "block_id": "levent-09343"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/171/xa.s15..att.1975.171.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/171/xa.s15..att.1975.171.0.xml",
+      "bytes": 5106,
+      "md5": "81e0916b5e302565656639b695b53bf1",
+      "batch_id": 1,
+      "block_id": "levent-09343"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/171/xa.s15.00.mh1.1975.171.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/171/xa.s15.00.mh1.1975.171.0.mseed",
+      "bytes": 356352,
+      "md5": "3faea3366a7b0b2c950dbe841e64d2b6",
+      "batch_id": 1,
+      "block_id": "levent-09343"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/171/xa.s15.00.mh1.1975.171.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/171/xa.s15.00.mh1.1975.171.0.xml",
+      "bytes": 5159,
+      "md5": "26ba5993cbc106a33247f76e35e09f49",
+      "batch_id": 1,
+      "block_id": "levent-09343"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/361/xa.s15..att.1975.361.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/361/xa.s15..att.1975.361.0.mseed",
+      "bytes": 1163264,
+      "md5": "18efc833dfb1e22a007aa831d0fdae5f",
+      "batch_id": 1,
+      "block_id": "levent-09963"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/361/xa.s15..att.1975.361.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/361/xa.s15..att.1975.361.0.xml",
+      "bytes": 5106,
+      "md5": "33dcdb6087773d1d431a80a0e81001e1",
+      "batch_id": 1,
+      "block_id": "levent-09963"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/361/xa.s15.01.mh1.1975.361.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/361/xa.s15.01.mh1.1975.361.0.mseed",
+      "bytes": 360448,
+      "md5": "b330ad8f64285a851b22ea803d6bc5a6",
+      "batch_id": 1,
+      "block_id": "levent-09963"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1975/361/xa.s15.01.mh1.1975.361.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1975/361/xa.s15.01.mh1.1975.361.0.xml",
+      "bytes": 5159,
+      "md5": "ad6513498f68088e0caaed01b8663ebf",
+      "batch_id": 1,
+      "block_id": "levent-09963"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1976/075/xa.s15..att.1976.075.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1976/075/xa.s15..att.1976.075.0.mseed",
+      "bytes": 1163264,
+      "md5": "b71ec43e291a9eab4e28463215f04339",
+      "batch_id": 1,
+      "block_id": "levent-10229"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1976/075/xa.s15..att.1976.075.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1976/075/xa.s15..att.1976.075.0.xml",
+      "bytes": 5106,
+      "md5": "20afadf9960524e9491a5086a3fd9319",
+      "batch_id": 1,
+      "block_id": "levent-10229"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1976/075/xa.s15.01.mh1.1976.075.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1976/075/xa.s15.01.mh1.1976.075.0.mseed",
+      "bytes": 356352,
+      "md5": "49664290c387d912271a74832f4fa0e1",
+      "batch_id": 1,
+      "block_id": "levent-10229"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1976/075/xa.s15.01.mh1.1976.075.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1976/075/xa.s15.01.mh1.1976.075.0.xml",
+      "bytes": 5159,
+      "md5": "5fdfba4a12a747bf4bd8813660b44798",
+      "batch_id": 1,
+      "block_id": "levent-10229"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1976/136/xa.s15..att.1976.136.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1976/136/xa.s15..att.1976.136.0.mseed",
+      "bytes": 1163264,
+      "md5": "ed313d694e62abfb646dc4b80c8624b1",
+      "batch_id": 1,
+      "block_id": "levent-10495"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1976/136/xa.s15..att.1976.136.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1976/136/xa.s15..att.1976.136.0.xml",
+      "bytes": 5106,
+      "md5": "37ca318df0b8c7368b927d158fc574f3",
+      "batch_id": 1,
+      "block_id": "levent-10495"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1976/136/xa.s15.01.mh1.1976.136.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1976/136/xa.s15.01.mh1.1976.136.0.mseed",
+      "bytes": 356352,
+      "md5": "ca322dc48a3b3a58a861c43f5e293d38",
+      "batch_id": 1,
+      "block_id": "levent-10495"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1976/136/xa.s15.01.mh1.1976.136.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1976/136/xa.s15.01.mh1.1976.136.0.xml",
+      "bytes": 5159,
+      "md5": "1c9fc4e6ae9711b290b5335a71416576",
+      "batch_id": 1,
+      "block_id": "levent-10495"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/017/xa.s15..att.1977.017.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/017/xa.s15..att.1977.017.0.mseed",
+      "bytes": 1163264,
+      "md5": "06df85158d94bdc4b59635477708efab",
+      "batch_id": 1,
+      "block_id": "levent-11666"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/017/xa.s15..att.1977.017.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/017/xa.s15..att.1977.017.0.xml",
+      "bytes": 5106,
+      "md5": "22229e9fb52ede48d42c1357cfd84798",
+      "batch_id": 1,
+      "block_id": "levent-11666"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/017/xa.s15.01.mh1.1977.017.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/017/xa.s15.01.mh1.1977.017.0.mseed",
+      "bytes": 356352,
+      "md5": "2eb27a94d6a8e0feccbc2cd48be4b60a",
+      "batch_id": 1,
+      "block_id": "levent-11666"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/017/xa.s15.01.mh1.1977.017.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/017/xa.s15.01.mh1.1977.017.0.xml",
+      "bytes": 5159,
+      "md5": "1242935f8c725b24c78ccda3255d83ea",
+      "batch_id": 1,
+      "block_id": "levent-11666"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/111/xa.s15..att.1977.111.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/111/xa.s15..att.1977.111.0.mseed",
+      "bytes": 1163264,
+      "md5": "4419d3995567bd50a87bedb0b2336f5f",
+      "batch_id": 1,
+      "block_id": "levent-12112"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/111/xa.s15..att.1977.111.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/111/xa.s15..att.1977.111.0.xml",
+      "bytes": 5106,
+      "md5": "c00b8d6f8d0d1a7f33ecc4eae502f9f8",
+      "batch_id": 1,
+      "block_id": "levent-12112"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/111/xa.s15.00.mh2.1977.111.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/111/xa.s15.00.mh2.1977.111.0.mseed",
+      "bytes": 356352,
+      "md5": "d398523ea5c17a8e2e292e84f9be3c27",
+      "batch_id": 1,
+      "block_id": "levent-12112"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/111/xa.s15.00.mh2.1977.111.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/111/xa.s15.00.mh2.1977.111.0.xml",
+      "bytes": 5159,
+      "md5": "970912e4a7a714ec548f9db6646b79bb",
+      "batch_id": 1,
+      "block_id": "levent-12112"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/115/xa.s15..att.1977.115.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/115/xa.s15..att.1977.115.0.mseed",
+      "bytes": 1163264,
+      "md5": "bd9e62ed7e5de74a39e60654bf22567c",
+      "batch_id": 1,
+      "block_id": "levent-12124"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/115/xa.s15..att.1977.115.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/115/xa.s15..att.1977.115.0.xml",
+      "bytes": 5106,
+      "md5": "b0bfc92ad71932b24d9fcf8dbe4527dc",
+      "batch_id": 1,
+      "block_id": "levent-12124"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/115/xa.s15.00.mh2.1977.115.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/115/xa.s15.00.mh2.1977.115.0.mseed",
+      "bytes": 356352,
+      "md5": "531d410ed76c5065a945f07623b087bd",
+      "batch_id": 1,
+      "block_id": "levent-12124"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s15/1977/115/xa.s15.00.mh2.1977.115.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s15/1977/115/xa.s15.00.mh2.1977.115.0.xml",
+      "bytes": 5159,
+      "md5": "264bfa3512c38a3c02f580cd963db932",
+      "batch_id": 1,
+      "block_id": "levent-12124"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/156/xa.s16..att.1972.156.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/156/xa.s16..att.1972.156.0.mseed",
+      "bytes": 1163264,
+      "md5": "eb14ba92c9e320c358d391ea217edcac",
+      "batch_id": 1,
+      "block_id": "levent-03617"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/156/xa.s16..att.1972.156.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/156/xa.s16..att.1972.156.0.xml",
+      "bytes": 5106,
+      "md5": "7b77c7b02c9be136c1913a06f6f7b831",
+      "batch_id": 1,
+      "block_id": "levent-03617"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/156/xa.s16.00.mh1.1972.156.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/156/xa.s16.00.mh1.1972.156.0.mseed",
+      "bytes": 356352,
+      "md5": "445ad1f2653ed22464820be92f8daf95",
+      "batch_id": 1,
+      "block_id": "levent-03617"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/156/xa.s16.00.mh1.1972.156.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/156/xa.s16.00.mh1.1972.156.0.xml",
+      "bytes": 5159,
+      "md5": "f5315fdfff10f513c390850133e64f6a",
+      "batch_id": 1,
+      "block_id": "levent-03617"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/236/xa.s16..att.1972.236.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/236/xa.s16..att.1972.236.0.mseed",
+      "bytes": 1163264,
+      "md5": "233755501cf773e75c13a1dce959e065",
+      "batch_id": 1,
+      "block_id": "levent-04504"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/236/xa.s16..att.1972.236.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/236/xa.s16..att.1972.236.0.xml",
+      "bytes": 5106,
+      "md5": "1ab8e5df8837b50578243cbb32477bbc",
+      "batch_id": 1,
+      "block_id": "levent-04504"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/236/xa.s16.00.mh1.1972.236.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/236/xa.s16.00.mh1.1972.236.0.mseed",
+      "bytes": 356352,
+      "md5": "96d6810a0c13e810503e3dda4a3a6b1d",
+      "batch_id": 1,
+      "block_id": "levent-04504"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/236/xa.s16.00.mh1.1972.236.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/236/xa.s16.00.mh1.1972.236.0.xml",
+      "bytes": 5159,
+      "md5": "56fc858d17f79284297304b622470a5d",
+      "batch_id": 1,
+      "block_id": "levent-04504"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/263/xa.s16..att.1972.263.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/263/xa.s16..att.1972.263.0.mseed",
+      "bytes": 1142784,
+      "md5": "9d1d580817f78f3d8ed7ad40f426f5ce",
+      "batch_id": 1,
+      "block_id": "levent-04716"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/263/xa.s16..att.1972.263.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/263/xa.s16..att.1972.263.0.xml",
+      "bytes": 5106,
+      "md5": "fc5230b937578ea21cf1a4517c46efc4",
+      "batch_id": 1,
+      "block_id": "levent-04716"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/263/xa.s16.00.mhz.1972.263.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/263/xa.s16.00.mhz.1972.263.0.mseed",
+      "bytes": 352256,
+      "md5": "1a27745c356c6f07b0a372e34c2cc0ff",
+      "batch_id": 1,
+      "block_id": "levent-04716"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/263/xa.s16.00.mhz.1972.263.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/263/xa.s16.00.mhz.1972.263.0.xml",
+      "bytes": 5159,
+      "md5": "23029ca5c054a32045c08855ef110a9c",
+      "batch_id": 1,
+      "block_id": "levent-04716"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/269/xa.s16..att.1972.269.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/269/xa.s16..att.1972.269.0.mseed",
+      "bytes": 1163264,
+      "md5": "83fd1e9d417395214a1aad967f57b368",
+      "batch_id": 1,
+      "block_id": "levent-04786"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/269/xa.s16..att.1972.269.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/269/xa.s16..att.1972.269.0.xml",
+      "bytes": 5106,
+      "md5": "817c2511baceba65f095a597fe693941",
+      "batch_id": 1,
+      "block_id": "levent-04786"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/269/xa.s16.00.mh1.1972.269.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/269/xa.s16.00.mh1.1972.269.0.mseed",
+      "bytes": 356352,
+      "md5": "02a2de7730d293af934e3aa51cbc3268",
+      "batch_id": 1,
+      "block_id": "levent-04786"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1972/269/xa.s16.00.mh1.1972.269.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1972/269/xa.s16.00.mh1.1972.269.0.xml",
+      "bytes": 5159,
+      "md5": "63b882caed7b49a958d1dae4ab804a72",
+      "batch_id": 1,
+      "block_id": "levent-04786"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1973/264/xa.s16..att.1973.264.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1973/264/xa.s16..att.1973.264.0.mseed",
+      "bytes": 1163264,
+      "md5": "1a6b6007e439b0ee0211375b0409da73",
+      "batch_id": 1,
+      "block_id": "levent-07080"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1973/264/xa.s16..att.1973.264.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1973/264/xa.s16..att.1973.264.0.xml",
+      "bytes": 5106,
+      "md5": "891f9ac87dc502c06f9688be7e1bd5ec",
+      "batch_id": 1,
+      "block_id": "levent-07080"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1973/264/xa.s16.00.mh1.1973.264.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1973/264/xa.s16.00.mh1.1973.264.0.mseed",
+      "bytes": 356352,
+      "md5": "98e9f62934d59d5fd4fcb9d23afd9700",
+      "batch_id": 1,
+      "block_id": "levent-07080"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1973/264/xa.s16.00.mh1.1973.264.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1973/264/xa.s16.00.mh1.1973.264.0.xml",
+      "bytes": 5159,
+      "md5": "aa0154835bf16282fe4fbbc82327561e",
+      "batch_id": 1,
+      "block_id": "levent-07080"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/071/xa.s16..att.1974.071.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/071/xa.s16..att.1974.071.0.mseed",
+      "bytes": 1163264,
+      "md5": "2cce0fa12aca9e532e5d2004e27c7f1b",
+      "batch_id": 1,
+      "block_id": "levent-07847"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/071/xa.s16..att.1974.071.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/071/xa.s16..att.1974.071.0.xml",
+      "bytes": 5106,
+      "md5": "e5b16be3763d92949a44c0b98658c1ac",
+      "batch_id": 1,
+      "block_id": "levent-07847"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/071/xa.s16.00.mh1.1974.071.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/071/xa.s16.00.mh1.1974.071.0.mseed",
+      "bytes": 360448,
+      "md5": "3c6782dcc71ab86b76bd5b5c641ca0d3",
+      "batch_id": 1,
+      "block_id": "levent-07847"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/071/xa.s16.00.mh1.1974.071.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/071/xa.s16.00.mh1.1974.071.0.xml",
+      "bytes": 5159,
+      "md5": "088f2b23dcfed995c5ce0ef127138b00",
+      "batch_id": 1,
+      "block_id": "levent-07847"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/119/xa.s16..att.1974.119.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/119/xa.s16..att.1974.119.0.mseed",
+      "bytes": 880640,
+      "md5": "521bdd922256916e2915af0e1d5b7573",
+      "batch_id": 1,
+      "block_id": "levent-08023"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/119/xa.s16..att.1974.119.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/119/xa.s16..att.1974.119.0.xml",
+      "bytes": 5106,
+      "md5": "85b6e712ed346d7aa656eb0061b590d9",
+      "batch_id": 1,
+      "block_id": "levent-08023"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/119/xa.s16.00.mhz.1974.119.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/119/xa.s16.00.mhz.1974.119.0.mseed",
+      "bytes": 270336,
+      "md5": "5bd971af4c71a8b7dc479aea622370e8",
+      "batch_id": 1,
+      "block_id": "levent-08023"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/119/xa.s16.00.mhz.1974.119.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/119/xa.s16.00.mhz.1974.119.0.xml",
+      "bytes": 5159,
+      "md5": "7669de8a58726e0b29507da661264c78",
+      "batch_id": 1,
+      "block_id": "levent-08023"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/330/xa.s16..att.1974.330.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/330/xa.s16..att.1974.330.0.mseed",
+      "bytes": 1163264,
+      "md5": "2f24d0111649fd8b2811ef6314d1cacd",
+      "batch_id": 1,
+      "block_id": "levent-08768"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/330/xa.s16..att.1974.330.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/330/xa.s16..att.1974.330.0.xml",
+      "bytes": 5106,
+      "md5": "c064f8d1930ed3f9d99607c83c6206f8",
+      "batch_id": 1,
+      "block_id": "levent-08768"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/330/xa.s16.00.mh1.1974.330.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/330/xa.s16.00.mh1.1974.330.0.mseed",
+      "bytes": 356352,
+      "md5": "24c32cc1d4cd565602b33c0951ad7432",
+      "batch_id": 1,
+      "block_id": "levent-08768"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1974/330/xa.s16.00.mh1.1974.330.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1974/330/xa.s16.00.mh1.1974.330.0.xml",
+      "bytes": 5159,
+      "md5": "74487006abd74eb95d60aacc7b2cba19",
+      "batch_id": 1,
+      "block_id": "levent-08768"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/020/xa.s16..att.1975.020.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/020/xa.s16..att.1975.020.0.mseed",
+      "bytes": 1163264,
+      "md5": "bc84e6718ce015900ac7b8085bbc1047",
+      "batch_id": 1,
+      "block_id": "levent-08925"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/020/xa.s16..att.1975.020.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/020/xa.s16..att.1975.020.0.xml",
+      "bytes": 5106,
+      "md5": "a887144f2c7d9c914cb94988f1da2767",
+      "batch_id": 1,
+      "block_id": "levent-08925"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/020/xa.s16.00.mhz.1975.020.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/020/xa.s16.00.mhz.1975.020.0.mseed",
+      "bytes": 356352,
+      "md5": "ec253d67fae2e93f05f7780459a4dd9d",
+      "batch_id": 1,
+      "block_id": "levent-08925"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/020/xa.s16.00.mhz.1975.020.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/020/xa.s16.00.mhz.1975.020.0.xml",
+      "bytes": 5159,
+      "md5": "271c4cbc30bab2fbc8c151da35024594",
+      "batch_id": 1,
+      "block_id": "levent-08925"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/105/xa.s16..att.1975.105.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/105/xa.s16..att.1975.105.0.mseed",
+      "bytes": 1163264,
+      "md5": "36bc594a080437699a4d26afc5863769",
+      "batch_id": 1,
+      "block_id": "levent-09181"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/105/xa.s16..att.1975.105.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/105/xa.s16..att.1975.105.0.xml",
+      "bytes": 5106,
+      "md5": "0880fdb0b7d87712c79ab75df93916d9",
+      "batch_id": 1,
+      "block_id": "levent-09181"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/105/xa.s16.00.mh1.1975.105.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/105/xa.s16.00.mh1.1975.105.0.mseed",
+      "bytes": 356352,
+      "md5": "fd84ab60c6ee83aee3983562525af638",
+      "batch_id": 1,
+      "block_id": "levent-09181"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/105/xa.s16.00.mh1.1975.105.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/105/xa.s16.00.mh1.1975.105.0.xml",
+      "bytes": 5159,
+      "md5": "2e0a3b8d201312bed8e11410a6b194bd",
+      "batch_id": 1,
+      "block_id": "levent-09181"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/272/xa.s16..att.1975.272.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/272/xa.s16..att.1975.272.0.mseed",
+      "bytes": 1163264,
+      "md5": "aaf2bd2c0b2153251fa92f91aa4756a7",
+      "batch_id": 1,
+      "block_id": "levent-09664"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/272/xa.s16..att.1975.272.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/272/xa.s16..att.1975.272.0.xml",
+      "bytes": 5106,
+      "md5": "0b5061501f68040f3b5577a1315988b3",
+      "batch_id": 1,
+      "block_id": "levent-09664"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/272/xa.s16.01.mh1.1975.272.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/272/xa.s16.01.mh1.1975.272.0.mseed",
+      "bytes": 356352,
+      "md5": "355a856e8cb682a17df4d7d2cc94741d",
+      "batch_id": 1,
+      "block_id": "levent-09664"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/272/xa.s16.01.mh1.1975.272.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/272/xa.s16.01.mh1.1975.272.0.xml",
+      "bytes": 5159,
+      "md5": "1bcaf07f03269d455efba369a01e914b",
+      "batch_id": 1,
+      "block_id": "levent-09664"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/348/xa.s16..att.1975.348.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/348/xa.s16..att.1975.348.0.mseed",
+      "bytes": 1163264,
+      "md5": "15d8ed2218258e7bc28a7e72aa7bad62",
+      "batch_id": 1,
+      "block_id": "levent-09924"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/348/xa.s16..att.1975.348.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/348/xa.s16..att.1975.348.0.xml",
+      "bytes": 5106,
+      "md5": "7e09887783952bffed5b87de61ac0da8",
+      "batch_id": 1,
+      "block_id": "levent-09924"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/348/xa.s16.01.mh1.1975.348.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/348/xa.s16.01.mh1.1975.348.0.mseed",
+      "bytes": 360448,
+      "md5": "b51c2e458264d97682fa9c4ec5aedabc",
+      "batch_id": 1,
+      "block_id": "levent-09924"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/348/xa.s16.01.mh1.1975.348.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/348/xa.s16.01.mh1.1975.348.0.xml",
+      "bytes": 5159,
+      "md5": "f31d27452a1592d1e72926c9de60a6bd",
+      "batch_id": 1,
+      "block_id": "levent-09924"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/358/xa.s16..att.1975.358.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/358/xa.s16..att.1975.358.0.mseed",
+      "bytes": 1163264,
+      "md5": "3f9ef0db60615c808f87e469ddecfbc7",
+      "batch_id": 1,
+      "block_id": "levent-09956"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/358/xa.s16..att.1975.358.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/358/xa.s16..att.1975.358.0.xml",
+      "bytes": 5106,
+      "md5": "4fc8f520b9e7fdf2c10fccc51e59c072",
+      "batch_id": 1,
+      "block_id": "levent-09956"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/358/xa.s16.01.mhz.1975.358.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/358/xa.s16.01.mhz.1975.358.0.mseed",
+      "bytes": 356352,
+      "md5": "b1233730b229f934231d86425001acf4",
+      "batch_id": 1,
+      "block_id": "levent-09956"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1975/358/xa.s16.01.mhz.1975.358.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1975/358/xa.s16.01.mhz.1975.358.0.xml",
+      "bytes": 5159,
+      "md5": "f5ecdc9afec70043df2a98194b9623a6",
+      "batch_id": 1,
+      "block_id": "levent-09956"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/117/xa.s16..att.1977.117.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/117/xa.s16..att.1977.117.0.mseed",
+      "bytes": 1163264,
+      "md5": "112f2d37f7d7f6fc9cd060c5d42ba896",
+      "batch_id": 1,
+      "block_id": "levent-12159"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/117/xa.s16..att.1977.117.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/117/xa.s16..att.1977.117.0.xml",
+      "bytes": 5106,
+      "md5": "129ccac2da4ca72ebc064a24140c8c59",
+      "batch_id": 1,
+      "block_id": "levent-12159"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/117/xa.s16.00.mhz.1977.117.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/117/xa.s16.00.mhz.1977.117.0.mseed",
+      "bytes": 356352,
+      "md5": "514d335b6ee7055eaf84ff0cfc4ed582",
+      "batch_id": 1,
+      "block_id": "levent-12159"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/117/xa.s16.00.mhz.1977.117.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/117/xa.s16.00.mhz.1977.117.0.xml",
+      "bytes": 5159,
+      "md5": "8e3753bd89a427e71b018a906dcbe258",
+      "batch_id": 1,
+      "block_id": "levent-12159"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/143/xa.s16..att.1977.143.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/143/xa.s16..att.1977.143.0.mseed",
+      "bytes": 1163264,
+      "md5": "ce4726622306db9761767dc7c1c4d8b4",
+      "batch_id": 1,
+      "block_id": "levent-12381"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/143/xa.s16..att.1977.143.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/143/xa.s16..att.1977.143.0.xml",
+      "bytes": 5106,
+      "md5": "c42a56adb8bf7b35536540dbcd881433",
+      "batch_id": 1,
+      "block_id": "levent-12381"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/143/xa.s16.00.mh1.1977.143.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/143/xa.s16.00.mh1.1977.143.0.mseed",
+      "bytes": 356352,
+      "md5": "f949f7d80d39743bc0d5554aee175147",
+      "batch_id": 1,
+      "block_id": "levent-12381"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/143/xa.s16.00.mh1.1977.143.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/143/xa.s16.00.mh1.1977.143.0.xml",
+      "bytes": 5159,
+      "md5": "b53c02e94f02330f7ac503b2c9c04520",
+      "batch_id": 1,
+      "block_id": "levent-12381"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/206/xa.s16..att.1977.206.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/206/xa.s16..att.1977.206.0.mseed",
+      "bytes": 1163264,
+      "md5": "53c86717913796cbe15f6293c5a53735",
+      "batch_id": 1,
+      "block_id": "levent-12782"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/206/xa.s16..att.1977.206.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/206/xa.s16..att.1977.206.0.xml",
+      "bytes": 5106,
+      "md5": "8b2ab48240c856ad6c28542162e10169",
+      "batch_id": 1,
+      "block_id": "levent-12782"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/206/xa.s16.00.mh2.1977.206.0.mseed",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/206/xa.s16.00.mh2.1977.206.0.mseed",
+      "bytes": 360448,
+      "md5": "1bfdd61890fff30f1bce864070cc0422",
+      "batch_id": 1,
+      "block_id": "levent-12782"
+    },
+    {
+      "path": "data/xa/continuous_waveform/s16/1977/206/xa.s16.00.mh2.1977.206.0.xml",
+      "url": "https://pds-geosciences.wustl.edu/Lunar/urn-nasa-pds-apollo_pse/data/xa/continuous_waveform/s16/1977/206/xa.s16.00.mh2.1977.206.0.xml",
+      "bytes": 5159,
+      "md5": "ff408c31dfd19606945386cf8d7667b9",
+      "batch_id": 1,
+      "block_id": "levent-12782"
+    }
+  ],
+  "notes": [
+    "No model scores were read.",
+    "Grade C is weaker catalog evidence and must remain separate from Grade A/B claims.",
+    "Selected days are never replaced for missing products."
+  ]
+}

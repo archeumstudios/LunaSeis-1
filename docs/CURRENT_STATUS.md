@@ -285,7 +285,11 @@ Exact files changed for the user-reported portability checkpoint: `docs/RELEASE_
 
 Exact files changed for public authorship normalization: `AGENTS.md`, `AUTHORS.md`, `docs/PROJECT_CONTEXT.md`, `docs/RELEASE_CHECKLIST.md`, and `docs/CURRENT_STATUS.md`.
 
+Exact files changed for the Grade-C challenge freeze: `scripts/build_grade_c_challenge_plan.py`, `tests/test_build_grade_c_challenge_plan.py`, `data/manifests/grade_c_challenge_station_days.csv`, `data/manifests/grade_c_challenge_catalog.csv`, `data/manifests/grade_c_challenge_download_plan.json`, `configs/evaluation/grade_c_challenge_v0.3.yaml`, `docs/DECISIONS.md`, `docs/decisions/0027-grade-c-confirmatory-challenge-freeze.md`, and `docs/CURRENT_STATUS.md`.
+
 ## Commands and verification
+
+- Built the Grade-C challenge plan from the decoded PDS catalog and official PDS day listings without loading waveforms or model scores. Fixed 64 unique, previously unexposed station-days (16 per station), confirmed zero overlap with 3,426 prior station-days, and attached official MD5 values to all 256 planned products totaling 97,596,992 bytes.
 
 - Audited tracked text for tool-brand, automated-assistance, and shared-authorship wording; normalized repository context headings/instructions, changed the review checklist to independent scientific review, and confirmed public metadata consistently names Advaith Praveen (APRK) as the sole project author. Scientific source citations remain intact.
 
@@ -439,4 +443,4 @@ Exact files changed for public authorship normalization: `AGENTS.md`, `AUTHORS.m
 
 ## Exact next task
 
-Design and reserve a genuinely new event-rich untouched continuous evaluation set before further detector optimization or any operational-performance claim.
+Download and checksum-verify the frozen 97,596,992-byte Grade-C challenge, then run waveform integrity QA without loading the model.

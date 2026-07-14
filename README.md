@@ -70,7 +70,7 @@ See [release claims](docs/RELEASE_CLAIMS.md) for the exact evidence boundary. Lu
 ## Quick start
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/archeumstudios/LunaSeis-1.git
 cd LunaSeis-1
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements-lock.txt
@@ -124,6 +124,8 @@ Raw NASA files are intentionally excluded from Git. Download scripts reconstruct
 
 Use [CITATION.cff](CITATION.cff). Primary author: **Advaith Praveen (APRK)**.
 
+Canonical repository: [archeumstudios/LunaSeis-1](https://github.com/archeumstudios/LunaSeis-1). Development commits are attributed to the `APRK01` GitHub identity.
+
 ## License and data
 
-Code is released under the MIT License. The manuscript and original paper figures remain copyright © 2026 Advaith Praveen (APRK), all rights reserved pending publication. NASA source data and third-party catalog material retain their original terms; see [copyright and attribution](COPYRIGHT.md) and the [dataset card](docs/DATASET_CARD.md) before redistribution.
+Code is released under the MIT License. The manuscript and original paper figures remain copyright © 2026 Advaith Praveen (APRK), all rights reserved. NASA source data and third-party catalog material retain their original terms; see [copyright and attribution](COPYRIGHT.md) and the [dataset card](docs/DATASET_CARD.md) before redistribution.

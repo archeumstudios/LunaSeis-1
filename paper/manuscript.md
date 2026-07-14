@@ -3,7 +3,7 @@
 **Advaith Praveen (APRK)**
 Archeum Studios
 
-Copyright © 2026 Advaith Praveen (APRK). All rights reserved pending publication.
+Copyright © 2026 Advaith Praveen (APRK). All rights reserved.
 
 ## Abstract
 
@@ -106,7 +106,7 @@ LunaSeis-1 does not demonstrate an operational moonquake detector. Across three 
 
 ## Data and code availability
 
-Code, manifests, small checkpoints, configurations, predictions, and derived figures are prepared for public release. Raw NASA files are reconstructed from official PDS sources and are not mirrored. Release URLs and archival DOI will be inserted only after explicit publication authorization.
+Code, manifests, small checkpoints, configurations, predictions, and derived figures are publicly available at https://github.com/archeumstudios/LunaSeis-1. Raw NASA files are reconstructed from official PDS sources and are not mirrored. An archival DOI may be added in a later repository release.
 
 ## Reproducibility, ethics, and competing interests
 

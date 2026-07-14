@@ -10,12 +10,12 @@
 - [x] Small checkpoints versioned
 - [x] Recreate environment on Linux (user-reported successful, 2026-07-14; exact distribution/version not recorded)
 - [x] Execute the Colab notebook (user-reported successful, 2026-07-14; runtime/package transcript not archived)
-- [ ] Replace repository URL in release metadata after the user chooses a GitHub account
+- [x] Set canonical repository URL to `https://github.com/archeumstudios/LunaSeis-1`
 - [x] Complete direct-predecessor literature and public-claim audit
 - [x] Draft manuscript and machine-readable headline tables
 - [x] Generate consistent 300-DPI PNG and vector-PDF paper figures
 - [x] Separate software, manuscript/figure, model, NASA-data, and third-party rights
 - [x] Run and preserve the frozen event-rich confirmation challenge
-- [ ] Complete independent scientific review and journal-format manuscript revision
 - [ ] Obtain written redistribution clarification if publishing labeled windows
-- [ ] Create GitHub/Hugging Face/Zenodo releases only with explicit user authorization
+- [x] Obtain explicit user authorization for the public GitHub release
+- [ ] Create optional Hugging Face and Zenodo mirrors in a later release

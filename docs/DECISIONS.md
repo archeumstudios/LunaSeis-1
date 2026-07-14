@@ -31,6 +31,7 @@
 | 2026-07-14 | 0024 | Continue toward a functioning research-prototype release authored by Advaith Praveen (APRK), without claiming operational reliability. | Both untouched tests failed; reproducible inference and development utility remain achievable, but a perfect-detector claim would be unsupported. | Accepted release boundary |
 | 2026-07-14 | 0025 | Select the 2,761-parameter depthwise CNN as the release research prototype. | It halves continuous-development trigger rate versus the robust tiny CNN at equal recall, but a full-day smoke scan still shows persistent activation. | Accepted prototype; operational claim prohibited |
 
-| 2026-07-14 | 0029 | Adopt the corrected pre-submission manuscript while preserving the external-review boundary. | The adversarial audit added uncertainty, corrected cross-frame interpretation, expanded reproducibility detail, and fixed missing PDF tables. | Accepted internal audit; external review pending |
+| 2026-07-14 | 0029 | Adopt the corrected pre-submission manuscript while preserving the external-review boundary. | The adversarial audit added uncertainty, corrected cross-frame interpretation, expanded reproducibility detail, and fixed missing PDF tables. | Accepted internal audit; external review not claimed |
+| 2026-07-14 | 0030 | Publish the canonical GitHub release under Archeum Studios with genuine APRK01 commit attribution and a personal fork. | The author explicitly authorized public software release without treating unaffiliated journal review as a release gate. | Accepted public-release authorization |
 
 Formal records live in `docs/decisions/`.

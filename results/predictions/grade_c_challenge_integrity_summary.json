@@ -1,0 +1,35 @@
+{
+  "status": "integrity_audited_no_model_inference",
+  "verified_product_count": 256,
+  "verified_total_bytes": 97596992,
+  "selected_station_days": 64,
+  "day_integrity_counts": {
+    "usable_integrity": 61,
+    "questionable_integrity": 3
+  },
+  "day_integrity_by_station": {
+    "S12|questionable_integrity": 1,
+    "S12|usable_integrity": 15,
+    "S14|questionable_integrity": 1,
+    "S14|usable_integrity": 15,
+    "S15|usable_integrity": 16,
+    "S16|questionable_integrity": 1,
+    "S16|usable_integrity": 15
+  },
+  "candidate_scan_windows": 91584,
+  "passing_scan_windows": 89159,
+  "scannable_union_seconds": 5419260,
+  "scannable_union_hours": 1505.35,
+  "eligible_event_count": 64,
+  "eligible_event_integrity_counts": {
+    "usable_integrity": 64
+  },
+  "eligible_event_signal_support_descriptive": {
+    "strong_ratio": 18,
+    "weak_ratio": 25,
+    "no_clear_ratio": 21
+  },
+  "day_quality_sha256": "a85db189a39e3d2d469c911390eccbab85880f7c3ca724c85809911371643e45",
+  "eligible_event_quality_sha256": "ac528f7e8827ba1e41ea90a4caec4c86cd75c06e5d327889e298b1d33e87dbbd",
+  "warning": "Signal ratios are descriptive and do not change catalog labels or integrity. No model was loaded or scored."
+}

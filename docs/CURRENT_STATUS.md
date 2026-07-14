@@ -287,7 +287,11 @@ Exact files changed for public authorship normalization: `AGENTS.md`, `AUTHORS.m
 
 Exact files changed for the Grade-C challenge freeze: `scripts/build_grade_c_challenge_plan.py`, `tests/test_build_grade_c_challenge_plan.py`, `data/manifests/grade_c_challenge_station_days.csv`, `data/manifests/grade_c_challenge_catalog.csv`, `data/manifests/grade_c_challenge_download_plan.json`, `configs/evaluation/grade_c_challenge_v0.3.yaml`, `docs/DECISIONS.md`, `docs/decisions/0027-grade-c-confirmatory-challenge-freeze.md`, and `docs/CURRENT_STATUS.md`.
 
+Exact files changed for pre-inference Grade-C integrity and context QA: `scripts/build_grade_c_catalog_context.py`, `scripts/run_grade_c_challenge.py`, `data/manifests/grade_c_challenge_1_download_receipt.json`, `data/manifests/grade_c_challenge_day_quality.csv`, `data/manifests/grade_c_challenge_event_quality.csv`, `data/manifests/grade_c_challenge_catalog_context.csv`, `results/predictions/grade_c_challenge_integrity_summary.json`, `results/predictions/grade_c_challenge_catalog_context.json`, `results/figures/grade_c_challenge_event_windows.png`, `configs/evaluation/grade_c_challenge_v0.3.yaml`, `docs/decisions/0027-grade-c-confirmatory-challenge-freeze.md`, and `docs/CURRENT_STATUS.md`. Raw products remain ignored.
+
 ## Commands and verification
+
+- Downloaded and exact-size/NASA-MD5 verified all 256 Grade-C challenge products (97,596,992 bytes). Audited 64 event-station observations representing 63 physical impacts without loading the model; all event windows passed integrity, providing 1,505.35 scannable station-hours. Froze 102 additional catalog references as protected context before inference.
 
 - Built the Grade-C challenge plan from the decoded PDS catalog and official PDS day listings without loading waveforms or model scores. Fixed 64 unique, previously unexposed station-days (16 per station), confirmed zero overlap with 3,426 prior station-days, and attached official MD5 values to all 256 planned products totaling 97,596,992 bytes.
 
@@ -443,4 +447,4 @@ Exact files changed for the Grade-C challenge freeze: `scripts/build_grade_c_cha
 
 ## Exact next task
 
-Download and checksum-verify the frozen 97,596,992-byte Grade-C challenge, then run waveform integrity QA without loading the model.
+Run the already frozen depthwise detector once on the integrity-audited Grade-C challenge and permanently consume the frame without retuning.

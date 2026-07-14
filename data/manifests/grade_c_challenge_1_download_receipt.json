@@ -1,0 +1,9 @@
+{
+  "source_plan": "data/manifests/grade_c_challenge_download_plan.json",
+  "batch_id": 1,
+  "verified_product_count": 256,
+  "verified_total_bytes": 97596992,
+  "downloaded_product_count_this_run": 256,
+  "reused_product_count_this_run": 0,
+  "integrity": "exact size and MD5 verified for every batch product"
+}
